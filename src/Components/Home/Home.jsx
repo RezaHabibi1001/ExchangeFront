@@ -6,6 +6,7 @@ export function Home() {
             salam i am home 
             salam i am home 
             salam i am home 
+            salam i am home 
 
         </div>
     )
