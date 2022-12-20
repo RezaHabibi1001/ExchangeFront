@@ -1,0 +1,7 @@
+.sideBar-container{
+    width: 15%;
+    height: calc(100vh - 80px);
+    float: right;
+    direction: rtl;
+    background-color: #67809c;
+}
