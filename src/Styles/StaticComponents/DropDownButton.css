@@ -1,12 +1,15 @@
 .drop-btn{
     width: 100%;
-    padding:15px 0;
+    padding:18px 0;
     background-color: #1DC690;
     border: none;
     outline: none;
     font-size: 18px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
+}
+.drop-btn:hover{
+    opacity: 0.8;
 }
 .dropdown-content{
     width: 100%;
