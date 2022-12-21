@@ -4,5 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif;
+}
+:root{
+    --color-first: #1DC690;
+    --color-second:#278AB0;
+    --color-third:#1C4670;
+    --color-fourth:#EAEAE0;
+    --color-white:#fff;
+    --color-black:#000;
 }

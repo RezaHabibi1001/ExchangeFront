@@ -1,9 +1,13 @@
+@import url('../StaticComponents/Global.css');
 .sideBar-container{
     width: 15%;
     min-height: calc(100vh - 80px);
     float: right;
     direction: rtl;
-    background-color: #da6464;
+    background-color: var(--color-fourth);
+    position: absolute;
+    top: 80px;
+    right: 0;
 }
 .dropdown-content a{
     text-decoration: none;
