@@ -13,6 +13,7 @@ body{
     --color-fourth:#EAEAE0;
     --color-white:#fff;
     --color-black:#000;
+    --color-orange:#ffb229;
 }
 .content{
     width: 85%;
