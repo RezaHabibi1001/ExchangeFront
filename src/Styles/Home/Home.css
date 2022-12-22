@@ -1,0 +1,13 @@
+@import url('../../Styles/StaticComponents/Global.css');
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+    /* height: 80vh; */
+    margin: 0 auto;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
