@@ -11,15 +11,15 @@ export function Home() {
             <div className="content"> 
                 <div className="card-container">
                     <div className="row">
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card cardTitle="دارو ها" cardCount="2000"/>
+                    <Card cardTitle="فاکتور ها" cardCount="1000"/>
+                    <Card cardTitle="مشتریان" cardCount="2000"/>
                     </div>
 
                     <div className="row">
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card cardTitle="اسناد" cardCount="3000"/>
+                    <Card cardTitle="گدام ها" cardCount="1000"/>
+                    <Card cardTitle="کاربران" cardCount="5"/>
                     </div>
                   
                 </div>
