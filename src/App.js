@@ -2,6 +2,7 @@ import React, { Fragment} from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './Components/Home/Home';
 import './App.css';
+import { AddDrug } from './Components/Drugs/AddDrug';
 
 function App() {
   return (
@@ -23,6 +24,15 @@ function App() {
                 <Home />
             </Fragment>
           }
+        />
+        <Route 
+        path='/addDrug'
+        element={
+          <Fragment>
+            <AddDrug />
+          </Fragment>
+        }
+        
         />
 
    </Routes>

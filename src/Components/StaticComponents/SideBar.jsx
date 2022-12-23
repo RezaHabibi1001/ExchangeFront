@@ -5,7 +5,7 @@ export function SideBar() {
         <div className="sideBar-container">
             <DropDownButton  
             dropdownName="دارو ها" 
-            dropdownLink={[{linkName:'ثبت دارو',linkUrl:'#'},{linkName:'لیست داروها',linkUrl:'#'},{linkName:'ثبت نوعیت',linkUrl:'#'},{linkName:'لیست نوعیت ها',linkUrl:'#'}]} 
+            dropdownLink={[{linkName:'ثبت دارو',linkUrl:'AddDrug'},{linkName:'لیست داروها',linkUrl:'#'},{linkName:'ثبت نوعیت',linkUrl:'#'},{linkName:'لیست نوعیت ها',linkUrl:'#'}]} 
             />
             <DropDownButton  
             dropdownName="فاکتور ها" 
