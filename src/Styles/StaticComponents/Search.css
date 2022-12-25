@@ -2,8 +2,12 @@
 .search{
     border: none;
     outline: none;
-    width: 170px;
+    width: 220px;
+    height: 40px;
     padding: 10px;
     border-radius: 10px;
     direction: rtl;
+}
+.search::placeholder{
+    font-size: 15px;
 }

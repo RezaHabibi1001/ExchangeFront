@@ -4,7 +4,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
+    /* justify-content: space-between; */
 }
 .drugs-header{
     width: 90%;
@@ -16,6 +16,8 @@
     align-items: center;
     margin: 0 auto;
     direction: rtl;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .btn{
     width: 120px;
@@ -37,4 +39,12 @@
 }
 .btn-save{
     background-color: var(--color-first);
+}
+/* drugs content */
+.drugs-content{
+    width: 90%;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: #ccc;
+    border-radius: 5px;
 }

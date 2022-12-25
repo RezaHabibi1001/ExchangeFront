@@ -18,6 +18,9 @@ export function Drugs() {
                     <span className="btn ">لیست نوعیت ها</span>
                     <span className="btn ">لیست داروها</span>
                 </div>
+                <div className="drugs-content">
+                    salam
+                </div>
             </div>
             </div>
         </div>
