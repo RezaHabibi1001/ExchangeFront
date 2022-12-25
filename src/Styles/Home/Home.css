@@ -1,13 +1,21 @@
 @import url('../../Styles/StaticComponents/Global.css');
 .card-container{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 80%;
+    height: 600px;
     /* height: 80vh; */
     margin: 0 auto;
     position: absolute;
     left: 10%;
     top: 5%;
+}
+.card-parent{
+    width: 270px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

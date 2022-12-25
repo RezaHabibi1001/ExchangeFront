@@ -2,8 +2,8 @@
 .drop-btn{
     width: 100%;
     padding:14px 5% ;
-    color: var(--color-black);
-    background-color: #1DC690;
+    color: var(--color-fourth);
+    background-color: var(--color-mashi);
     border: none;
     outline: none;
     font-size: 18px;
