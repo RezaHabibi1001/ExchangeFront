@@ -1,0 +1,9 @@
+@import url('../../Styles/StaticComponents/Global.css');
+.search{
+    border: none;
+    outline: none;
+    width: 170px;
+    padding: 10px;
+    border-radius: 10px;
+    direction: rtl;
+}
