@@ -18,9 +18,10 @@ body{
 }
 .content{
     width: 85%;
-    min-height: calc(100vh - 80px);
+    height:100vh;
+    /* min-height: calc(100vh - 80px); */
     background-color: var(--color-fourth);
-    position: fixed;
+    position: absolute;
     top: 80px;
     padding:2% 0;
 }

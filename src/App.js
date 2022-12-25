@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './Components/Home/Home';
 import './App.css';
 import { AddDrug } from './Components/Drugs/AddDrug';
+import { Drugs } from './Components/Drugs/Drugs';
 
 function App() {
   return (
@@ -32,7 +33,14 @@ function App() {
             <AddDrug />
           </Fragment>
         }
-        
+        />
+        <Route 
+        path='/drugs'
+        element={
+          <Fragment>
+            <Drugs />
+          </Fragment>
+        }
         />
 
    </Routes>
