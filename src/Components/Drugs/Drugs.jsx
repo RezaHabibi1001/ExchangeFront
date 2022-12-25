@@ -12,11 +12,11 @@ export function Drugs() {
             <div className="drugs-container">
                 <div className="drugs-header">
                     <Search  searchPlaceHolder="جستجوی دارو"/>
-                    <span className="btn-print">چاپ</span>
-                    <span className="btn-print">ثبت دارو</span>
-                    <span className="btn-print">ثبت نوعیت</span>
-                    <span className="btn-print">لیست نوعیت</span>
-                    <span className="btn-print">لیست داروها</span>
+                    <span className="btn btn-print">چاپ</span>
+                    <span className="btn btn-save">ثبت دارو</span>
+                    <span className="btn btn-save">ثبت نوعیت</span>
+                    <span className="btn ">لیست نوعیت ها</span>
+                    <span className="btn ">لیست داروها</span>
                 </div>
             </div>
             </div>

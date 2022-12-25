@@ -7,15 +7,17 @@
     /* justify-content: space-around; */
 }
 .drugs-header{
-    width: 100%;
+    width: 90%;
     height: 60px;
-    background-color: #aaa;
+    background-color: #ccc;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
+    margin: 0 auto;
+    direction: rtl;
 }
-.btn-print{
+.btn{
     width: 120px;
     height: 40px;
     padding: 10px;
@@ -23,8 +25,16 @@
     background-color: var(--color-second);
     border-radius: 10px;
     text-align: center;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
 }
-.btn-print:hover{
+.btn:hover{
     opacity: 0.8;
+}
+.btn-print{
+    background-color: var(--color-lightRed);
+}
+.btn-save{
+    background-color: var(--color-first);
 }
