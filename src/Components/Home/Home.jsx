@@ -11,7 +11,7 @@ export function Home() {
             <div className="content"> 
                 <div className="card-container">
                     <div className="row">
-                        <div className="card-parent"><Card cardTitle="دارو ها" cardCount="2000" cardImg="drug.png"/></div>
+                        <div className="card-parent"><Card cardTitle="دارو ها" cardCount="2000" cardImg="drugss.png"/></div>
                         <div className="card-parent"><Card cardTitle="فاکتور ها" cardCount="1000" cardImg="factors.png"/></div>
                         <div className="card-parent"><Card cardTitle="مشتریان" cardCount="2000" cardImg="customers.png"/></div>
                     </div>
