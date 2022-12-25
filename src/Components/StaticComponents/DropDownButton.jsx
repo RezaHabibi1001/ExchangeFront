@@ -15,7 +15,7 @@ export function DropDownButton(props) {
       const dropdownIcon = props.dropdownIcon
     return(
         <div className="dropdown">
-            <button className="drop-btn" onClick={showDropDown}><img className="dropBtn-icon" src={dropdownIcon} alt="drug" /> {dropdownName} <img src="chevron.png" alt="down" /></button>
+            <button className="drop-btn" onClick={showDropDown}><img className="dropBtn-icon" src={dropdownIcon} alt="drug" /> {dropdownName} <img src="down-arrow.png" alt="down" /></button>
                 <div id="dropdownContent" style={{display:display}} className="dropdown-content">
                    {
                     dropdownLink.map(link=>{
