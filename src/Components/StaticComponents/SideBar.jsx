@@ -1,4 +1,5 @@
 import "../../Styles/StaticComponents/SideBar.css"
+import { Button } from "./Button"
 import { DropDownButton } from "./DropDownButton"
 export function SideBar() {
     return(
@@ -35,14 +36,8 @@ export function SideBar() {
             dropdownName="کاربران" 
             dropdownLink={[{linkName:'ثبت کاربر',linkUrl:'#'},{linkName:'لیست کاربران',linkUrl:'#'}]} 
             />
-            <DropDownButton  
-            dropdownName="تنظیمات" 
-            dropdownLink={[{linkName:'تنظیمات',linkUrl:'#'}]} 
-            />
-            <DropDownButton  
-            dropdownName="درباره ما" 
-            dropdownLink={[{linkName:'درباره ما',linkUrl:'#'}]} 
-            />
+            <Button buttonText="تنظیمات"/>
+            <Button buttonText="درباره ما"/>
         </div>
     )
 }
