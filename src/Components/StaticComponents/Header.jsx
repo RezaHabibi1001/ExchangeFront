@@ -5,7 +5,7 @@ export function Header() {
         <div className="header-container">
             <a href="#"><img src="turn-off.png" alt="خروج" /></a>
             <span className="header-heading">سیستم مدیریتی داروی اکسیر</span>
-            <a href="#"><img src="pharmacy.png" alt="لوگو" /></a>
+            <a href="home"><img src="pharmacy.png" alt="لوگو" /></a>
         </div>
     )
 }
