@@ -14,7 +14,7 @@ export function SideBar() {
             <DropDownButton  
             dropdownName="فاکتور ها"
             dropdownIcon ="factor.png" 
-            dropdownLink={[{linkName:'فاکتور خرید',linkUrl:'#'},{linkName:'فاکتور فروش',linkUrl:'#'}]} 
+            dropdownLink={[{linkName:'فاکتور خرید',linkUrl:'buyFactor'},{linkName:'فاکتور فروش',linkUrl:'#'}]} 
             />
             <Button buttonText="مشتریان" buttonIcon="customer.png"/>
             <Button buttonText="گدام ها" buttonIcon="stack.png"/>

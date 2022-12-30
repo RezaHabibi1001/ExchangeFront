@@ -4,6 +4,7 @@ import { Home } from './Components/Home/Home';
 import './App.css';
 import { AddDrug } from './Components/Drugs/AddDrug';
 import { Drugs } from './Components/Drugs/Drugs';
+import { BuyFactor } from './Components/Factors/BuyFactor';
 
 function App() {
   return (
@@ -39,6 +40,14 @@ function App() {
         element={
           <Fragment>
             <Drugs />
+          </Fragment>
+        }
+        />
+        <Route 
+        path='/buyFactor'
+        element={
+          <Fragment>
+            <BuyFactor />
           </Fragment>
         }
         />
