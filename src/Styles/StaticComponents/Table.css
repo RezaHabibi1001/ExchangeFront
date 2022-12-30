@@ -2,7 +2,7 @@
 table{
     direction: rtl;
     width: 100%;
-    /* border: 1px solid black; */
+    border: 1px solid #aaa;
     border-collapse: collapse;
     overflow-y: scroll;
 }
@@ -26,4 +26,12 @@ tbody tr td{
 tbody tr:hover{
     cursor: pointer;
     background-color: #bbb;
+}
+tfoot tr td{
+    padding: 5px;
+}
+tfoot tr td:last-child{
+    background-color: var(--color-orange);
+    border: 1px solid #aaa;
+    font-size: 20px;
 }

@@ -186,8 +186,19 @@ export function Table() {
                         <td>350</td>
                         <td>350000</td>
                     </tr>
-                    
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>45524354363</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     )
