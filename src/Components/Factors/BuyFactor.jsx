@@ -44,6 +44,21 @@ export function BuyFactor() {
                             </div>
                         </div>
                     </div>
+                    <div className="factor-content">
+                        <form action="#">
+                            <div className="factor-heading">
+                                <span>ردیف</span>
+                                <span>نوعیت</span>
+                                <span>نام</span>
+                                <span>کمپنی</span>
+                                <span>کشور</span>
+                                <span>تعداد</span>
+                                <span>فی</span>
+                                <span>جمع</span>
+                                <span>شرح دارو</span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
