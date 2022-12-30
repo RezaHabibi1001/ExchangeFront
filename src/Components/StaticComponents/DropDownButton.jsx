@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import "../../Styles/StaticComponents/DropDownButton.css"
 export function DropDownButton(props) {
     const [display,setDisplay] = useState('none')
@@ -19,7 +20,7 @@ export function DropDownButton(props) {
                 <div id="dropdownContent" style={{display:display}} className="dropdown-content">
                    {
                     dropdownLink.map(link=>{
-                        return <a href={link.linkUrl}><img className="dropLink-icon" src="drugs.png" alt="drug" /> {link.linkName}</a>
+                        return <Link to={link.linkUrl}><img className="dropLink-icon" src="drugs.png" alt="drug" /> {link.linkName}</Link>
                     })
                    }                   
                 </div>
