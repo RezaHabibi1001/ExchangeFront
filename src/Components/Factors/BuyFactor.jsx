@@ -36,7 +36,7 @@ export function BuyFactor() {
                             </div>
                             <div className="group">
                                 <span>مانده</span>
-                                <span>91388  بد</span>
+                                <span>91388 <span style={{color:"tomato"}}>بده</span> </span>
                             </div>
                             <div className="group">
                                 <span>تاریخ</span>
@@ -44,7 +44,7 @@ export function BuyFactor() {
                             </div>
                         </div>
                     </div>
-                    <div className="factor-content">
+                    <div className="factor-container">
                         <form action="#">
                             <div className="factor-heading">
                                 <span>ردیف</span>
@@ -56,6 +56,145 @@ export function BuyFactor() {
                                 <span>فی</span>
                                 <span>جمع</span>
                                 <span>شرح دارو</span>
+                            </div>
+                            <div className="factor-content">
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                                <div className="factor-content__row">
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            
+                            <div className="factor-footer">
+                                <span>توضیحات</span>
+                                <input type="text"/>
                             </div>
                         </form>
                     </div>
