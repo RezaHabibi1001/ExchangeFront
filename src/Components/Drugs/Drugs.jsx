@@ -3,6 +3,7 @@ import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import"../../Styles/Drugs/Drugs.css"
 import { Button } from "../StaticComponents/Button";
+import { Table } from "../StaticComponents/Table";
 export function Drugs() {
     return(
         <div className="container">
@@ -19,109 +20,7 @@ export function Drugs() {
                     <span className="btn ">لیست داروها</span>
                 </div>
                 <div className="drugs-content">
-                    <table className="table">
-                        <thead>
-                            <tr className="heading">
-                                <th>شماره</th>
-                                <th>نوعیت</th>
-                                <th>نام</th>
-                                <th>کمپنی</th>
-                                <th>کشور</th>
-                                <th>تعداد</th>
-                                <th>قیمت</th>
-                                <th>جمله</th>
-                                <th>تاریخ انقضاء</th>
-                                <th>عملیات</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>کپسول</td>
-                                <td>آموکسی سیلین 500 ملی</td>
-                                <td>فارابی</td>
-                                <td>ایرانی</td>
-                                <td>20000</td>
-                                <td>250</td>
-                                <td>5000000</td>
-                                <td>2022 / 4/ 1</td>
-                                <td>ویرایش / حذف</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>کپسول</td>
-                                <td>آموکسی سیلین 500 ملی</td>
-                                <td>فارابی</td>
-                                <td>ایرانی</td>
-                                <td>20000</td>
-                                <td>250</td>
-                                <td>5000000</td>
-                                <td>2022 / 4/ 1</td>
-                                <td>ویرایش / حذف</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>کپسول</td>
-                                <td>آموکسی سیلین 500 ملی</td>
-                                <td>فارابی</td>
-                                <td>ایرانی</td>
-                                <td>20000</td>
-                                <td>250</td>
-                                <td>5000000</td>
-                                <td>2022 / 4/ 1</td>
-                                <td>ویرایش / حذف</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>کپسول</td>
-                                <td>آموکسی سیلین 500 ملی</td>
-                                <td>فارابی</td>
-                                <td>ایرانی</td>
-                                <td>20000</td>
-                                <td>250</td>
-                                <td>5000000</td>
-                                <td>2022 / 4/ 1</td>
-                                <td>ویرایش / حذف</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>کپسول</td>
-                                <td>آموکسی سیلین 500 ملی</td>
-                                <td>فارابی</td>
-                                <td>ایرانی</td>
-                                <td>20000</td>
-                                <td>250</td>
-                                <td>5000000</td>
-                                <td>2022 / 4/ 1</td>
-                                <td>ویرایش / حذف</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>کپسول</td>
-                                <td>آموکسی سیلین 500 ملی</td>
-                                <td>فارابی</td>
-                                <td>ایرانی</td>
-                                <td>20000</td>
-                                <td>250</td>
-                                <td>5000000</td>
-                                <td>2022 / 4/ 1</td>
-                                <td>ویرایش / حذف</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>کپسول</td>
-                                <td>آموکسی سیلین 500 ملی</td>
-                                <td>فارابی</td>
-                                <td>ایرانی</td>
-                                <td>20000</td>
-                                <td>250</td>
-                                <td>5000000</td>
-                                <td>2022 / 4/ 1</td>
-                                <td>ویرایش / حذف</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                   <Table />
                 </div>
             </div>
             </div>
