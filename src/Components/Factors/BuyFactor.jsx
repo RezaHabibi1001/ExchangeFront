@@ -12,12 +12,14 @@ export function BuyFactor() {
                         <div className="header-row">
                             <div className="group">
                                 <span>طرف حساب</span>
-                                <input type="text" />
+                                <select name="customer" id="customer">
+                                    <option value="">احمد</option>
+                                    <option value="">احمد</option>
+                                    <option value="">احمد</option>
+                                    <option value="">احمد</option>
+                                    <option value="">احمد</option>
+                                </select>
                             </div>
-                            {/* <div className="group">
-                                <span>کد</span>
-                                <span>00023</span>
-                            </div> */}
                             <div className="group">
                                 <span>تلفن</span>
                                 <span>0098790883362</span>
