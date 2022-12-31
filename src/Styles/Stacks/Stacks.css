@@ -1,0 +1,29 @@
+@import url('../../Styles/StaticComponents/Global.css');
+.stacks-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.stacks-header{
+    width: 90%;
+    height: 60px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    margin: 0 auto;
+    direction: rtl;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+/* stacks content */
+.stacks-content{
+    width: 90%;
+    height: 65vh;
+    margin: 0 auto;
+    /* background-color: #ddd; */
+    overflow-y: scroll;
+}

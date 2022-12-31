@@ -19,7 +19,9 @@ export function SideBar() {
             <Link to={"/customers"} style={{textDecoration:"none"}}>
             <Button buttonText="مشتریان" buttonIcon="customer.png"/>
             </Link>
+            <Link to={'/stacks'} style={{textDecoration:"none"}}>
             <Button buttonText="گدام ها" buttonIcon="stack.png"/>
+            </Link>
             <DropDownButton  
             dropdownName="اسناد" 
             dropdownIcon ="bill.png"

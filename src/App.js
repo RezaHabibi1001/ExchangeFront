@@ -7,6 +7,7 @@ import { Drugs } from './Components/Drugs/Drugs';
 import { BuyFactor } from './Components/Factors/BuyFactor';
 import { SaleFactor } from './Components/Factors/SaleFactor';
 import { Customers } from './Components/Customers/Customers';
+import { Stacks } from './Components/Stacks/Stacks';
 
 function App() {
   return (
@@ -66,6 +67,14 @@ function App() {
         element={
           <Fragment>
             <Customers />
+          </Fragment>
+        }
+        />
+        <Route 
+        path='/stacks'
+        element={
+          <Fragment>
+            <Stacks />
           </Fragment>
         }
         />
