@@ -6,6 +6,7 @@ import { AddDrug } from './Components/Drugs/AddDrug';
 import { Drugs } from './Components/Drugs/Drugs';
 import { BuyFactor } from './Components/Factors/BuyFactor';
 import { SaleFactor } from './Components/Factors/SaleFactor';
+import { Customers } from './Components/Customers/Customers';
 
 function App() {
   return (
@@ -57,6 +58,14 @@ function App() {
         element={
           <Fragment>
             <SaleFactor />
+          </Fragment>
+        }
+        />
+        <Route
+        path='/customers'
+        element={
+          <Fragment>
+            <Customers />
           </Fragment>
         }
         />

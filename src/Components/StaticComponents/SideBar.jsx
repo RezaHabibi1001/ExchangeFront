@@ -16,7 +16,9 @@ export function SideBar() {
             dropdownIcon ="factor.png" 
             dropdownLink={[{linkName:'فاکتور خرید',linkUrl:'/buyFactor'},{linkName:'فاکتور فروش',linkUrl:'/saleFactor'}]} 
             />
+            <Link to={"/customers"} style={{textDecoration:"none"}}>
             <Button buttonText="مشتریان" buttonIcon="customer.png"/>
+            </Link>
             <Button buttonText="گدام ها" buttonIcon="stack.png"/>
             <DropDownButton  
             dropdownName="اسناد" 
