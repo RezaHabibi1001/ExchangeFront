@@ -1,12 +1,12 @@
 @import url('../../Styles/StaticComponents/Global.css');
-.drugs-container{
+.customers-container{
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
 }
-.drugs-header{
+.customers-header{
     width: 90%;
     height: 60px;
     background-color: #ddd;
@@ -19,9 +19,8 @@
     border-radius: 5px;
     margin-bottom: 20px;
 }
-
-/* drugs content */
-.drugs-content{
+/* customers content */
+.customers-content{
     width: 90%;
     height: 65vh;
     margin: 0 auto;

@@ -1,7 +1,7 @@
 import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
-import"../../Styles/Drugs/Drugs.css"
+import"../../Styles/Customers/Customers.css"
 // import { Button } from "../StaticComponents/Button";
 import { Table } from "../StaticComponents/Table";
 export function Customers() {
@@ -10,14 +10,12 @@ export function Customers() {
             <Header />
             <SideBar />
             <div className="content"> 
-            <div className="drugs-container">
-                <div className="drugs-header">
-                    <Search  searchPlaceHolder="جستجوی دارو"/>
+            <div className="customers-container">
+                <div className="customers-header">
+                    <Search  searchPlaceHolder="جستجوی مشتری"/>
                     <span className="btn btn-print">چاپ</span>
-                    <span className="btn btn-save">ثبت دارو</span>
-                    <span className="btn btn-save">ثبت نوعیت</span>
-                    <span className="btn ">لیست نوعیت ها</span>
-                    <span className="btn ">لیست داروها</span>
+                    <span className="btn btn-save">ثبت مشتری</span>
+                    <span className="btn ">لیست مشتریان</span>
                 </div>
                 <div className="drugs-content">
                    <Table />
