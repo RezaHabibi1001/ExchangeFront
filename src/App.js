@@ -8,6 +8,7 @@ import { BuyFactor } from './Components/Factors/BuyFactor';
 import { SaleFactor } from './Components/Factors/SaleFactor';
 import { Customers } from './Components/Customers/Customers';
 import { Stacks } from './Components/Stacks/Stacks';
+import { Users } from './Components/Users/User';
 
 function App() {
   return (
@@ -75,6 +76,14 @@ function App() {
         element={
           <Fragment>
             <Stacks />
+          </Fragment>
+        }
+        />
+        <Route 
+        path='/users'
+        element={
+          <Fragment>
+            <Users />
           </Fragment>
         }
         />

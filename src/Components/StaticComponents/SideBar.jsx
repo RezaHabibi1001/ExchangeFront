@@ -33,7 +33,9 @@ export function SideBar() {
             dropdownIcon ="reportes.png"
             dropdownLink={[{linkName:'گزارش دارو',linkUrl:'#'},{linkName:'گزارش فاکتور خریداری',linkUrl:'#'},{linkName:'گزارش فاکتور فروش',linkUrl:'#'},{linkName:'گزارش مشتریان',linkUrl:'#'},{linkName:'گزارش  گدام ها',linkUrl:'#'},{linkName:'گزارش اسناد دریافتی',linkUrl:'#'},{linkName:'گزارش اسناد پرداختی',linkUrl:'#'},{linkName:'گزارش  کاربران',linkUrl:'#'},{linkName:'گزارش روزنامچه',linkUrl:'#'}]} 
             />
+            <Link to={"/users"} style={{textDecoration:"none"}}>
             <Button buttonText="کاربران" buttonIcon="user.png"/>
+            </Link>
             <Button buttonText="تنظیمات" buttonIcon="settings.png"/>
             <Button buttonText="درباره ما" buttonIcon="aboutUs.png"/>
         </div>
