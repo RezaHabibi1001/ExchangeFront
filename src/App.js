@@ -5,13 +5,14 @@ import './App.css';
 import { AddDrug } from './Components/Drugs/AddDrug';
 import { Drugs } from './Components/Drugs/Drugs';
 import { BuyFactor } from './Components/Factors/BuyFactor';
+import { SaleFactor } from './Components/Factors/SaleFactor';
 
 function App() {
   return (
    <BrowserRouter>
    <Routes>
 
-   <Route
+       <Route
           path="/"          
           element={
             <Fragment>
@@ -48,6 +49,14 @@ function App() {
         element={
           <Fragment>
             <BuyFactor />
+          </Fragment>
+        }
+        />
+        <Route 
+        path='/saleFactor'
+        element={
+          <Fragment>
+            <SaleFactor />
           </Fragment>
         }
         />

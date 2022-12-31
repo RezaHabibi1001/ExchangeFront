@@ -1,7 +1,7 @@
 import { Header } from "../StaticComponents/Header";
 import { SideBar } from "../StaticComponents/SideBar";
 import "../../Styles/Factors/Factors.css"
-export function BuyFactor() {
+export function SaleFactor() {
     return(
         <div className="container">
             <Header />

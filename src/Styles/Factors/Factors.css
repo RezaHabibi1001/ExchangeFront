@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0 2%;
 }
 .header-row{
     width: 100%;
@@ -101,6 +102,12 @@
     border: none;
     outline: none;
     border: 1px solid #bbb;
+}
+.factor-content__row input:hover{
+    background-color: #eee;
+}
+.secondRow{
+    background-color: #ddd;
 }
 
 /* factor footer */
