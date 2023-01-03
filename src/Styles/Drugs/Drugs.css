@@ -28,3 +28,57 @@
     /* background-color: #ddd; */
     overflow-y: scroll;
 }
+/* drugs table */
+table{
+    direction: rtl;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+tr{
+    text-align: center;
+}
+thead tr{
+    background-color: #bbb;
+}
+thead tr th{
+    border: 1px solid black;
+    padding: 5px;
+}
+tbody tr:nth-child(even){
+    background-color: #ddd;
+}
+tbody tr td{
+    padding: 5px;
+    border: 1px solid #aaa;
+}
+tbody tr:hover{
+    cursor: pointer;
+    background-color: #bbb;
+}
+tfoot tr td{
+    padding: 5px;
+}
+tfoot tr td:last-child{
+    background-color: var(--color-orange);
+    border: 1px solid #aaa;
+    font-size: 20px;
+}
+
+.drug-code{
+    width: 5%;
+}
+.drug-type,
+.drug-company,
+.drug-contery,
+.drug-cost{
+    width: 10%;
+}
+.drug-count,
+.drug-total{
+    width: 15%;
+}
+.drug-name{
+    width: 25%;
+}
