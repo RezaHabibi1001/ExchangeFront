@@ -81,7 +81,7 @@
     border-left: 1px solid #000;
     background-color: #bbb;
     padding: 5px;
-    width: 100%;
+    /* width: 25%; */
     font-size: 14px;
     font-weight: 600;
 }
@@ -97,7 +97,7 @@
     direction: rtl;
 }
 .factor-content__row input{
-    width: 11.11%;
+    /* width: 11.11%; */
     padding: 5px;
     border: none;
     outline: none;
@@ -133,4 +133,25 @@
     background-color: #aaa;
     border: none;
     outline: none;
+}
+.factor-code{
+    width: 5%;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    cursor: none;
+}
+.factor-name{
+    width: 20%;
+}
+.factor-explaination{
+    width: 15%;
+}
+.factor-type,
+.factor-company,
+.factor-contery,
+.factor-count,
+.factor-cost,
+.factor-total{
+    width: 10%;
 }
