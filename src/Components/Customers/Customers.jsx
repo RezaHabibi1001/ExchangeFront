@@ -28,7 +28,7 @@ export function Customers() {
                         <th className="customer-phone">مویابل</th>
                         <th className="customer-province">ولایت</th>
                         <th className="customer-accounting">الباقی</th>
-                        <th className="drug-action">عملیات</th>
+                        <th className="customer-action">عملیات</th>
                     </tr>
                 </thead>
                 <tbody>
