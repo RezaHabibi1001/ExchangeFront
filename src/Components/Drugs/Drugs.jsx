@@ -31,6 +31,7 @@ export function Drugs() {
                         <th className="drug-count">تعداد</th>
                         <th className="drug-cost">قیمت</th>
                         <th className="drug-total">جمع</th>
+                        <th className="drug-action">عملیات</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,6 +44,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -53,6 +58,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -63,6 +72,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -73,6 +86,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -83,6 +100,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -93,6 +114,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -103,6 +128,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -113,6 +142,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -123,6 +156,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -133,6 +170,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -143,6 +184,10 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -153,80 +198,15 @@ export function Drugs() {
                         <td>1000</td>
                         <td>350</td>
                         <td>350000</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>کپسول</td>
-                        <td>آموکسی500</td>
-                        <td>فارابی</td>
-                        <td>ایرانی</td>
-                        <td>1000</td>
-                        <td>350</td>
-                        <td>350000</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>کپسول</td>
-                        <td>آموکسی500</td>
-                        <td>فارابی</td>
-                        <td>ایرانی</td>
-                        <td>1000</td>
-                        <td>350</td>
-                        <td>350000</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>کپسول</td>
-                        <td>آموکسی500</td>
-                        <td>فارابی</td>
-                        <td>ایرانی</td>
-                        <td>1000</td>
-                        <td>350</td>
-                        <td>350000</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>کپسول</td>
-                        <td>آموکسی500</td>
-                        <td>فارابی</td>
-                        <td>ایرانی</td>
-                        <td>1000</td>
-                        <td>350</td>
-                        <td>350000</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>کپسول</td>
-                        <td>آموکسی500</td>
-                        <td>فارابی</td>
-                        <td>ایرانی</td>
-                        <td>1000</td>
-                        <td>350</td>
-                        <td>350000</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>کپسول</td>
-                        <td>آموکسی500</td>
-                        <td>فارابی</td>
-                        <td>ایرانی</td>
-                        <td>1000</td>
-                        <td>350</td>
-                        <td>350000</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>کپسول</td>
-                        <td>آموکسی500</td>
-                        <td>فارابی</td>
-                        <td>ایرانی</td>
-                        <td>1000</td>
-                        <td>350</td>
-                        <td>350000</td>
+                        <td className="action">
+                            <img src="edit.png" alt="edit" />
+                            <img src="delete.png" alt="delete" />
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

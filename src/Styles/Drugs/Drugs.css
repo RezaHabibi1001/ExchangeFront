@@ -65,20 +65,25 @@ tfoot tr td:last-child{
     border: 1px solid #aaa;
     font-size: 20px;
 }
-
 .drug-code{
     width: 5%;
 }
 .drug-type,
 .drug-company,
 .drug-contery,
-.drug-cost{
-    width: 10%;
-}
+.drug-cost,
 .drug-count,
 .drug-total{
-    width: 15%;
+    width: 10%;
 }
 .drug-name{
-    width: 25%;
+    width: 20%;
+}
+.drug-action{
+    width:15%;  
+}
+.action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
