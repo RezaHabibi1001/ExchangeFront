@@ -10,6 +10,7 @@ import { Customers } from './Components/Customers/Customers';
 import { Stacks } from './Components/Stacks/Stacks';
 import { Users } from './Components/Users/User';
 import { RecievedCheck } from './Components/Checks/RecievedCheck';
+import { GivenCheck } from './Components/Checks/GivenCheck';
 
 function App() {
   return (
@@ -93,6 +94,14 @@ function App() {
         element={
           <Fragment>
             <RecievedCheck />
+          </Fragment>
+        }
+        />
+        <Route 
+        path='/givenCheck'
+        element={
+          <Fragment>
+            <GivenCheck />
           </Fragment>
         }
         />

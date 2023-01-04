@@ -2,7 +2,7 @@ import { Header } from "../StaticComponents/Header";
 import { SideBar } from "../StaticComponents/SideBar";
 
 import "../../Styles/Checks/RecievedCheck.css"
-export function RecievedCheck() {
+export function GivenCheck() {
     return(
         <div className="container">
             <Header />
@@ -17,7 +17,7 @@ export function RecievedCheck() {
             <div className="checks">
                 <form action="#">
                 <div className="check-header">
-                <span className="check-heading">چک دریافتی</span>
+                <span className="check-heading2">چک پرداختی</span>
                 <div className="heading-group">
                     <span>شماره چک</span>
                     <span className="check-number">200</span>

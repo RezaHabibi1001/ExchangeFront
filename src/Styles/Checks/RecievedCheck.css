@@ -24,11 +24,49 @@
     justify-content: space-around;
     /* align-items: center; */
 }
-
-.check-heading{
+.heading-group{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.heading-group span{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.check-header{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.check-number{
+    width: 60%;
+    padding: 5px;
+    border: 1px solid #aaa;
+    background-color: #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.check-heading,
+.check-heading2{
     text-align: center;
     font-size: 18px;
     font-weight: 600;
+}
+.check-heading{
+    color: var(--color-first);
+}
+.check-heading2{
+    color: var(--color-lightRed);
 }
 .group{
     width:95%;
@@ -61,7 +99,8 @@
     border-color: var(--color-mashi);
 }
 .group select:hover,
-.group input:hover{
+.group input:hover,
+.check-number:hover{
     border-color: var(--color-mashi);
 }
 .group select,input{
