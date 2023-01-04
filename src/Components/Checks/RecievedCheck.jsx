@@ -15,8 +15,34 @@ export function RecievedCheck() {
                     <span className="btn btn-save">ثبت نوعیت</span>
             </div>
             <div className="checks">
+                <span className="check-heading">چک دریافتی</span>
                 <form action="#">
-                    
+                <div className="group">
+                    <span>تاریخ ثبت</span>
+                    <input type="text" placeholder="1 / 2 / 1401"/>
+                </div>
+                <div className="group">
+                    <span>طرف حساب</span>
+                    <select name="customer" id="customer">
+                        <option>احمد</option>
+                        <option>احمد</option>
+                        <option>احمد</option>
+                        <option>احمد</option>
+                        <option>احمد</option>
+                    </select>
+                </div>
+                <div className="group">
+                    <span>مبلغ</span>
+                    <input type="text"/>
+                </div>
+                <div className="group">
+                    <span>تکرار مبلغ</span>
+                    <input type="text"/>
+                </div>
+                <div className="group">
+                    <span>توضیحات</span>
+                    <input type="text"/>
+                </div>
                 </form>
             </div>
             </div>
