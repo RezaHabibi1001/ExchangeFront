@@ -25,7 +25,7 @@ export function SideBar() {
             <DropDownButton  
             dropdownName="اسناد" 
             dropdownIcon ="bill.png"
-            dropdownLink={[{linkName:'سند رسید',linkUrl:'#'},{linkName:'سند بردگی',linkUrl:'#'}]} 
+            dropdownLink={[{linkName:'سند رسید',linkUrl:'/recievedCheck'},{linkName:'سند بردگی',linkUrl:'#'}]} 
             />
             <Button buttonText="روزنامچه" buttonIcon="roznamcha.png"/>
             <DropDownButton  
