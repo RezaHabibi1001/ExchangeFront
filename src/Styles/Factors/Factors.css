@@ -21,9 +21,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .group{
-    width:33.33%;
+    width:32%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

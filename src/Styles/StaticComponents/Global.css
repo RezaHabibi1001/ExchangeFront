@@ -27,8 +27,8 @@ body{
     padding:2% 0;
 }
 .btn{
-    width: 120px;
-    height: 40px;
+    min-width: 120px;
+    min-height: 40px;
     padding: 10px;
     color: var(--color-fourth);
     background-color: var(--color-second);

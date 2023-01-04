@@ -25,11 +25,11 @@ export function RecievedCheck() {
                 </div>    
                 <div className="group">
                     <span>تاریخ ثبت</span>
-                    <input type="text" placeholder="1 / 2 / 1401"/>
+                    <input type="text" placeholder="1 / 2 / 1401" className="check-input"/>
                 </div>
                 <div className="group">
                     <span>طرف حساب</span>
-                    <select name="customer" id="customer">
+                    <select name="customer" id="customer" className="check-select">
                         <option>احمد</option>
                         <option>احمد</option>
                         <option>احمد</option>
@@ -39,15 +39,15 @@ export function RecievedCheck() {
                 </div>
                 <div className="group">
                     <span>مبلغ</span>
-                    <input type="text"/>
+                    <input type="text" className="check-input"/>
                 </div>
                 <div className="group">
                     <span>تکرار مبلغ</span>
-                    <input type="text"/>
+                    <input type="text" className="check-input"/>
                 </div>
                 <div className="group">
                     <span>توضیحات</span>
-                    <input type="text"/>
+                    <input type="text" className="check-input"/>
                 </div>
                 </form>
             </div>
