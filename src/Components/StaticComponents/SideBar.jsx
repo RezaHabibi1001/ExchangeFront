@@ -27,7 +27,9 @@ export function SideBar() {
             dropdownIcon ="bill.png"
             dropdownLink={[{linkName:'سند رسید',linkUrl:'/recievedCheck'},{linkName:'سند پرداخت',linkUrl:'/givenCheck'}]} 
             />
+            <Link to={'/roznamcha'} style={{textDecoration:"none"}}>
             <Button buttonText="روزنامچه" buttonIcon="roznamcha.png"/>
+            </Link>
             <DropDownButton  
             dropdownName="گزارشات"
             dropdownIcon ="reportes.png"

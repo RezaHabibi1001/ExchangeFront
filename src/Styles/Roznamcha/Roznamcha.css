@@ -1,0 +1,14 @@
+@import url('../../Styles/StaticComponents/Global.css');
+.roznamcha-header{
+    width: 80%;
+    height: 60px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    margin: 0 auto;
+    direction: rtl;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

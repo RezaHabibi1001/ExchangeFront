@@ -11,6 +11,7 @@ import { Stacks } from './Components/Stacks/Stacks';
 import { Users } from './Components/Users/User';
 import { RecievedCheck } from './Components/Checks/RecievedCheck';
 import { GivenCheck } from './Components/Checks/GivenCheck';
+import { Roznamcha } from './Components/Roznamcha/Roznamcha';
 
 function App() {
   return (
@@ -105,7 +106,14 @@ function App() {
           </Fragment>
         }
         />
-
+        <Route 
+        path='/roznamcha'
+        element={
+          <Fragment>
+            <Roznamcha />
+          </Fragment>
+        }
+        />
    </Routes>
    </BrowserRouter>
   );
