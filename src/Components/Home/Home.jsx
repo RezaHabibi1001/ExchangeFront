@@ -2,8 +2,6 @@ import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import "../../Styles/Drugs/Drugs.css";
-import { Button } from "../StaticComponents/Button";
-import { DropDownButton } from "../StaticComponents/DropDownButton";
 
 export function Home() {
   return (
