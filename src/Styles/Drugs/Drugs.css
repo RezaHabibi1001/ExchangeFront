@@ -144,9 +144,9 @@ tfoot tr td:last-child {
   justify-content: space-around;
   align-items: center;
   height: 450px;
-  border: 1px solid black;
   padding-top: 10px;
   padding-bottom: 20px;
+  background-color: #ccc;
 }
 .addDrug-body-input {
   width: 80%;

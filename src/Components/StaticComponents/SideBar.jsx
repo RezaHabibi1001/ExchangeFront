@@ -8,7 +8,7 @@ export function SideBar() {
 
   return (
     <div className="sideBar-container">
-      <Link to={"/drugs"} style={{ textDecoration: "none" }}>
+      <Link to={"/home"} style={{ textDecoration: "none" }}>
         <Button buttonText="لیست حواله ها" buttonIcon="factors.png" />
       </Link>
       {/* <DropDownButton  
