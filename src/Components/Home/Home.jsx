@@ -1,8 +1,5 @@
-import { Header } from "../StaticComponents/Header";
-import { SideBar } from "../StaticComponents/SideBar";
 import "../../Styles/StaticComponents/Global.css";
 import "../../Styles/Home/Home.css";
-import { Card } from "../StaticComponents/Card";
 export function Home() {
   return (
     <div className="container">
@@ -13,7 +10,7 @@ export function Home() {
           <img src="factors.png" alt="loginImage" className="login-image" />
         </div>
         <input type="text" placeholder="شماره تماس" className="login-input" />
-        <input type="text" placeholder="رمز عبور" className="login-input" />
+        <input type="password" placeholder="رمز عبور" className="login-input" />
         <input type="button" value="ورود به برنامه" className="login-button" />
       </div>
     </div>

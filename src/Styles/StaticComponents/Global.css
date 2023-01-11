@@ -1,49 +1,50 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family:'Times New Roman', Times, serif;
+body {
+  font-family: "Times New Roman", Times, serif;
 }
-:root{
-    --color-first: #1DC690;
-    --color-second:#278AB0;
-    --color-third:#1C4670;
-    --color-fourth:#EAEAE0;
-    --color-white:#fff;
-    --color-black:#000;
-    --color-orange:#ffb229;
-    --color-mashi:#1D7874;
-    --color-lightRed:#ff6347;
-
+:root {
+  --color-first: #1dc690;
+  --color-second: #278ab0;
+  --color-third: #1c4670;
+  --color-fourth: #eaeae0;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-orange: #ffb229;
+  --color-mashi: #1d7874;
+  --color-lightRed: #ff6347;
 }
-.content{
-    width: 85%;
-    min-height: 100vh ;
-    background-color: var(--color-fourth);
-    position: fixed;
-    top: 80px;
-    padding:2% 0;
+.content {
+  width: 85%;
+  min-height: 100vh;
+  background-color: var(--color-fourth);
+  position: fixed;
+  top: 80px;
+  padding: 2% 0;
 }
-.btn{
-    min-width: 120px;
-    min-height: 40px;
-    padding: 10px;
-    color: var(--color-fourth);
-    background-color: var(--color-second);
-    border-radius: 10px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+.btn {
+  min-width: 120px;
+  min-height: 40px;
+  padding: 10px;
+  color: var(--color-fourth);
+  background-color: var(--color-second);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
-.btn:hover{
-    opacity: 0.8;
+.btn:hover {
+  opacity: 0.8;
 }
-.btn-print{
-    background-color: var(--color-lightRed);
+.btn-print {
+  background-color: var(--color-lightRed);
 }
-.btn-save{
-    background-color: var(--color-first);
+.btn-save {
+  background-color: var(--color-first);
+  min-width: 150px;
+  font-weight: bold;
 }
