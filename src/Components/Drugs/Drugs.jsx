@@ -10,6 +10,20 @@ export function Drugs() {
     <div className="container">
       <Header />
       <SideBar />
+      <div className="addDrug-content">
+        <div className="addDrug-header">
+          <img src="close.png" alt="close" />
+          <span>افزودن حواله جدید</span>
+          <img
+            src="bills.png"
+            alt="logo"
+            styles={{ width: "50px", height: "50px" }}
+          />
+        </div>
+        <div className="addDrug-body"></div>
+        <div className="addDrug-footer"></div>
+      </div>
+
       <div className="content">
         <div className="drugs-container">
           <div className="drugs-header">
