@@ -14,14 +14,63 @@ export function Drugs() {
         <div className="addDrug-header">
           <img src="close.png" alt="close" />
           <span>افزودن حواله جدید</span>
-          <img
-            src="bills.png"
-            alt="logo"
-            styles={{ width: "50px", height: "50px" }}
+          <img src="bills.png" alt="logo" />
+        </div>
+        <div className="addDrug-body">
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="نمبر حواله"
+            className="addDrug-body-input"
+          />
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="نام مشتری"
+            className="addDrug-body-input"
+          />
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="کشور/ شهر "
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="واحد پول"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="مبلغ حواله"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="قیمت خرید"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="قیمت فروش"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="مقدار مفاد"
+            className="addDrug-body-input"
+          />
+          <input
+            type="button"
+            value="ثبت حواله"
+            className="addDrug-body-button"
           />
         </div>
-        <div className="addDrug-body"></div>
-        <div className="addDrug-footer"></div>
       </div>
 
       <div className="content">
@@ -46,13 +95,13 @@ export function Drugs() {
                     <th className="drug-code">شماره</th>
                     <th className="drug-type">نمبر حواله</th>
                     <th className="drug-name">نام مشتری</th>
-                    <th className="drug-company">مبلغ حواله</th>
-                    <th className="drug-contery">کشور</th>
+                    <th className="drug-contery">کشور / شهر</th>
                     <th className="drug-count">واحد پول</th>
+                    <th className="drug-company">مبلغ حواله</th>
                     <th className="drug-cost">قیمت خرید</th>
                     <th className="drug-total">قیمت فروش</th>
                     <th className="drug-total">مقدار مفاد</th>
-                    <th className="drug-action">عملیات</th>
+                    <th className="drug-action">تنظیمات</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -163,6 +212,51 @@ export function Drugs() {
                   </tr>{" "}
                   <tr>
                     <td>7</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
                     <td>1001</td>
                     <td>محمد حسن</td>
                     <td>500</td>
