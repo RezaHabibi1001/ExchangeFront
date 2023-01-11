@@ -9,7 +9,7 @@ export function SideBar() {
   return (
     <div className="sideBar-container">
       <Link to={"/drugs"} style={{ textDecoration: "none" }}>
-        <Button buttonText="لیست حواله ها" buttonIcon="drug.png" />
+        <Button buttonText="لیست حواله ها" buttonIcon="factors.png" />
       </Link>
       {/* <DropDownButton  
             dropdownName="فاکتور ها"
@@ -38,8 +38,8 @@ export function SideBar() {
             <Link to={"/users"} style={{textDecoration:"none"}}>
             <Button buttonText="کاربران" buttonIcon="user.png"/>
             </Link> */}
-      <Button buttonText="تنظیمات" buttonIcon="settings.png" />
-      <Button buttonText="درباره ما" buttonIcon="aboutUs.png" />
+      <Button buttonText="صندوقچه" buttonIcon="stacks.png" />
+      <Button buttonText="درباره ما" buttonIcon="users.png" />
     </div>
   );
 }

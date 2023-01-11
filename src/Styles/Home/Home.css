@@ -14,7 +14,7 @@
 }
 .login-container {
   width: 600px;
-  height: 400px;
+  height: 350px;
   margin: 100px auto;
   background-color: var(--color-mashi);
   display: flex;
@@ -41,7 +41,7 @@
   font-weight: bold;
 }
 .login-input {
-  width: 90%;
+  width: 80%;
   height: 40px;
   text-align: right;
   padding-right: 10px;

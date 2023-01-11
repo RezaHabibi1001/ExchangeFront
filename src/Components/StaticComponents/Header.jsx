@@ -12,7 +12,7 @@ export function Header() {
         <img
           src="factors.png"
           alt="لوگو"
-          style={{ width: "60px", height: "60px" }}
+          style={{ width: "50px", height: "50px" }}
         />
       </Link>
     </div>
