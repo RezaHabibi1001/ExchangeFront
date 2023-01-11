@@ -45,6 +45,7 @@ body {
 }
 .btn-save {
   background-color: var(--color-first);
-  min-width: 150px;
-  font-weight: bold;
+}
+.btn-user {
+  background-color: var(--color-mashi);
 }

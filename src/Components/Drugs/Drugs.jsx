@@ -3,6 +3,8 @@ import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import "../../Styles/Drugs/Drugs.css";
 import { Button } from "../StaticComponents/Button";
+import { DropDownButton } from "../StaticComponents/DropDownButton";
+
 export function Drugs() {
   return (
     <div className="container">
@@ -11,208 +13,157 @@ export function Drugs() {
       <div className="content">
         <div className="drugs-container">
           <div className="drugs-header">
+            <select className="select-search">
+              <option>نمبر حواله</option>
+              <option>نام مشتری</option>
+              <option>تاریخ حواله</option>
+            </select>
             <Search searchPlaceHolder="جستجوی حواله" />
-            <span className="btn btn-save">+ افزودن حواله جدید</span>
+            <span className="btn btn-user">حساب اکبر</span>
+            <span className="btn btn-user">حساب سادات</span>
+            <span className="btn btn-user">حساب عمه نوری</span>
+            <span className="btn btn-add">+ افزودن حواله جدید</span>
           </div>
           <div className="drugs-content">
             <div className="table-container">
               <table>
                 <thead>
                   <tr>
-                    <th className="drug-code">ردیف</th>
-                    <th className="drug-type">نوعیت</th>
-                    <th className="drug-name">نام</th>
-                    <th className="drug-company">کمپنی</th>
+                    <th className="drug-code">شماره</th>
+                    <th className="drug-type">نمبر حواله</th>
+                    <th className="drug-name">نام مشتری</th>
+                    <th className="drug-company">مبلغ حواله</th>
                     <th className="drug-contery">کشور</th>
-                    <th className="drug-count">تعداد</th>
-                    <th className="drug-cost">قیمت</th>
-                    <th className="drug-total">جمع</th>
+                    <th className="drug-count">واحد پول</th>
+                    <th className="drug-cost">قیمت خرید</th>
+                    <th className="drug-total">قیمت فروش</th>
+                    <th className="drug-total">مقدار مفاد</th>
                     <th className="drug-action">عملیات</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
                   </tr>
                   <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>2</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
-                  </tr>
+                  </tr>{" "}
                   <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>3</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
-                  </tr>
+                  </tr>{" "}
                   <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>4</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
-                  </tr>
+                  </tr>{" "}
                   <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>5</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
-                  </tr>
+                  </tr>{" "}
                   <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>6</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
-                  </tr>
+                  </tr>{" "}
                   <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>6</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
-                  </tr>
+                  </tr>{" "}
                   <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>کپسول</td>
-                    <td>آموکسی500</td>
-                    <td>فارابی</td>
-                    <td>ایرانی</td>
-                    <td>1000</td>
-                    <td>350</td>
-                    <td>350000</td>
+                    <td>7</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
                     <td className="action">
                       <img src="edit.png" alt="edit" />
                       <img src="delete.png" alt="delete" />
                     </td>
                   </tr>
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>45524354363</td>
-                  </tr>
-                </tfoot>
+                <tfoot></tfoot>
               </table>
             </div>
           </div>

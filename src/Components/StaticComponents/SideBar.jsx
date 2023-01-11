@@ -1,17 +1,17 @@
-import { useNavigate } from "react-router"
-import { Link } from "react-router-dom"
-import "../../Styles/StaticComponents/SideBar.css"
-import { Button } from "./Button"
-import { DropDownButton } from "./DropDownButton"
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+import "../../Styles/StaticComponents/SideBar.css";
+import { Button } from "./Button";
+import { DropDownButton } from "./DropDownButton";
 export function SideBar() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    return(
-        <div className="sideBar-container">
-            <Link to={"/drugs"} style={{textDecoration:"none"}}>
-            <Button buttonText="داروها"  buttonIcon="drug.png"/>
-            </Link>
-            <DropDownButton  
+  return (
+    <div className="sideBar-container">
+      <Link to={"/drugs"} style={{ textDecoration: "none" }}>
+        <Button buttonText="لیست حواله ها" buttonIcon="drug.png" />
+      </Link>
+      {/* <DropDownButton  
             dropdownName="فاکتور ها"
             dropdownIcon ="factor.png" 
             dropdownLink={[{linkName:'فاکتور خرید',linkUrl:'/buyFactor'},{linkName:'فاکتور فروش',linkUrl:'/saleFactor'}]} 
@@ -37,9 +37,9 @@ export function SideBar() {
             />
             <Link to={"/users"} style={{textDecoration:"none"}}>
             <Button buttonText="کاربران" buttonIcon="user.png"/>
-            </Link>
-            <Button buttonText="تنظیمات" buttonIcon="settings.png"/>
-            <Button buttonText="درباره ما" buttonIcon="aboutUs.png"/>
-        </div>
-    )
+            </Link> */}
+      <Button buttonText="تنظیمات" buttonIcon="settings.png" />
+      <Button buttonText="درباره ما" buttonIcon="aboutUs.png" />
+    </div>
+  );
 }

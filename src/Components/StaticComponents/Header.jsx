@@ -9,7 +9,11 @@ export function Header() {
       </Link>
       <span className="header-heading">سیستم حسابداری صرافی</span>
       <Link to={"#"}>
-        <img src="pharmacy.png" alt="لوگو" />
+        <img
+          src="factors.png"
+          alt="لوگو"
+          style={{ width: "60px", height: "60px" }}
+        />
       </Link>
     </div>
   );
