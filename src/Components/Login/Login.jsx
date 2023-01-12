@@ -1,5 +1,5 @@
 import "../../Styles/StaticComponents/Global.css";
-import "../../Styles/Home/Home.css";
+import "../../Styles/Login/Login.css";
 export function Login() {
   return (
     <div className="container">

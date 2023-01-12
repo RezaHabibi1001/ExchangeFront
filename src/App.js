@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Home } from "./Components/Home/Home";
 import { Login } from "./Components/Login/Login";
+import { Safe } from "./Components/Safe/Safe";
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,14 @@ function App() {
           element={
             <Fragment>
               <Home />
+            </Fragment>
+          }
+        />
+        <Route
+          path="/safe"
+          element={
+            <Fragment>
+              <Safe />
             </Fragment>
           }
         />

@@ -1,7 +1,7 @@
 import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
-import "../../Styles/Drugs/Drugs.css";
+import "../../Styles/Home/Home.css";
 
 export function Home() {
   return (
