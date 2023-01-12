@@ -1,181 +1,162 @@
 @import url("../../Styles/StaticComponents/Global.css");
-.factor-header {
+.drugs-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+.drugs-header {
   width: 90%;
-  height: 100px;
+  height: 60px;
   background-color: #ddd;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   direction: rtl;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.select-search {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #555;
+  height: 30px;
+}
+
+/* drugs content */
+.drugs-content {
+  width: 90%;
+  height: 65vh;
+  margin: 0 auto;
+  /* background-color: #ddd; */
+  overflow-y: scroll;
+}
+/* drugs table */
+table {
+  direction: rtl;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+tr {
+  text-align: center;
+}
+thead tr {
+  background-color: #bbb;
+}
+thead tr th {
+  border: 1px solid black;
+  padding: 5px;
+}
+tbody tr:nth-child(even) {
+  background-color: #ddd;
+}
+tbody tr td {
+  padding: 5px;
+  border: 1px solid #aaa;
+}
+
+tfoot tr td {
+  padding: 5px;
+}
+tfoot tr td:last-child {
+  background-color: var(--color-orange);
+  border: 1px solid #aaa;
+  font-size: 20px;
+}
+.drug-code {
+  width: 5%;
+}
+.drug-type,
+.drug-company,
+.drug-contery,
+.drug-cost,
+.drug-count,
+.drug-total {
+  width: 10%;
+}
+.drug-name {
+  width: 15%;
+}
+.drug-action {
+  width: 15%;
+}
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.addDrug-content {
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: var(--color-fourth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.addDrug-header {
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-mashi);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.addDrug-header span {
+  font-weight: 500;
+  color: #fff;
+  font-weight: bold;
+}
+/* this is temporary logo design */
+.addDrug-header img {
+  width: 24px;
+  height: 24px;
+}
+.addDrug-header img:hover {
+  cursor: pointer;
+}
+.addDrug-body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 2%;
-}
-.header-row {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  height: 450px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #ccc;
 }
-.group {
-  width: 32%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  margin: 2px;
-  /* background-color: aquamarine; */
+.addDrug-body-input {
+  width: 80%;
+  height: 30px;
   text-align: right;
+  padding-right: 10px;
 }
-.group span {
-  padding: 5px;
-}
-
-.group span:first-child {
-  width: 80px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.group span:nth-child(2) {
-  border: 1px solid #aaa;
-  background-color: #ccc;
-  width: 200px;
-  margin-left: auto;
-  text-align: center;
-}
-.group span:nth-child(2):hover {
-  border-color: var(--color-mashi);
-}
-.group select:hover {
-  border-color: var(--color-mashi);
-}
-.group select {
-  width: 200px;
-  margin-left: auto;
-  padding: 5px;
-  border: none;
-  outline: none;
-  border: 1px solid #aaa;
-  background-color: #ccc;
-}
-/* factor content */
-.factor-heading {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
-  border: 1px solid #000;
-  direction: rtl;
-}
-
-.factor-heading span {
-  border-left: 1px solid #000;
-  background-color: #bbb;
-  padding: 5px;
-  /* width: 25%; */
-  font-size: 14px;
-  font-weight: 600;
-}
-.factor-heading:last-child {
-  border-left: none !important;
-}
-/* factor content */
-.factor-content {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  direction: rtl;
-}
-.factor-content__row input {
-  /* width: 11.11%; */
-  padding: 5px;
-  border: none;
-  outline: none;
-  border: 1px solid #bbb;
-}
-.factor-content__row input:hover {
-  background-color: #eee;
-}
-.secondRow {
-  background-color: #ddd;
-}
-
-/* factor footer */
-.factor-footer {
-  width: 90%;
-  margin: 0 auto;
-  direction: rtl;
-  border: 1px solid #000;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--color-mashi);
-}
-.factor-footer span {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 0 10px;
-}
-.factor-footer input {
-  padding: 5px;
-  width: 100%;
-  background-color: #aaa;
-  border: none;
-  outline: none;
-}
-.factor-code {
-  width: 5%;
-  font-size: 13px;
-  font-weight: 600;
-  text-align: center;
-  cursor: none;
-}
-.factor-name {
-  width: 20%;
-}
-.factor-explaination {
-  width: 15%;
-}
-.factor-type,
-.factor-company,
-.factor-contery,
-.factor-count,
-.factor-cost,
-.factor-total {
-  width: 10%;
-}
-
-.money-safe {
-  width: 200px;
-  height: 100px;
-  border: 2px solid var(--color-mashi);
-  border-radius: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-}
-.money-safe-header {
-  color: var(--color-second);
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.money-safe-footer {
-  color: var(--color-mashi);
-  font-weight: bold;
-  font-size: 25px;
+.addDrug-body-button {
+  width: 25%;
+  height: 35px;
+  color: #333;
+  font-size: 16px;
 }

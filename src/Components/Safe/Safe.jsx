@@ -1,257 +1,277 @@
 import { Header } from "../StaticComponents/Header";
+import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import "../../Styles/Safe/Safe.css";
+
 export function Safe() {
   return (
     <div className="container">
       <Header />
       <SideBar />
-      <div className="content">
-        <div className="buyFactor-container">
-          <div className="factor-header">
-            <div className="header-row">
-              <div className="group">
-                <span>طرف حساب</span>
-                <select name="customer" id="customer">
-                  <option value="">اکبر</option>
-                  <option value="">سادات</option>
-                  <option value="">عمه نوری</option>
-                </select>
-              </div>
-              <div className="group">
-                <span> مفاد بر اساس</span>
-                <select name="customer" id="customer">
-                  <option value="">مفاد امروز</option>
-                  <option value="">یک روز قبل</option>
-                  <option value="">هفت روز قبل</option>
-                  <option value="">یک ماه قبل</option>
-                </select>
-              </div>
-              <div className="money-safe">
-                <span className="money-safe-header">صندوق مفاد</span>
-                <span className="money-safe-footer">1245 یورو</span>
-              </div>
-            </div>
-          </div>
-          <div className="factor-container">
-            <form action="#">
-              <div className="factor-heading">
-                <span className="factor-code">ردیف</span>
-                <span className="factor-type">نوعیت</span>
-                <span className="factor-name">نام</span>
-                <span className="factor-company">کمپنی</span>
-                <span className="factor-contery">کشور</span>
-                <span className="factor-count">تعداد</span>
-                <span className="factor-cost">فی</span>
-                <span className="factor-total">جمع</span>
-                <span className="factor-explaination">شرح دارو</span>
-              </div>
-              <div className="factor-content">
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="firstRow factor-code"
-                    value={1}
-                  />
-                  <input type="text" className="firstRow factor-type" />
-                  <input type="text" className="firstRow factor-name" />
-                  <input type="text" className="firstRow factor-company" />
-                  <input type="text" className="firstRow factor-contery" />
-                  <input type="text" className="firstRow factor-count" />
-                  <input type="text" className="firstRow factor-cost" />
-                  <input type="text" className="firstRow factor-total" />
-                  <input type="text" className="firstRow factor-explaination" />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="secondRow factor-code"
-                    value={2}
-                  />
-                  <input type="text" className="secondRow factor-type" />
-                  <input type="text" className="secondRow factor-name" />
-                  <input type="text" className="secondRow factor-company" />
-                  <input type="text" className="secondRow factor-contery" />
-                  <input type="text" className="secondRow factor-count" />
-                  <input type="text" className="secondRow factor-cost" />
-                  <input type="text" className="secondRow factor-total" />
-                  <input
-                    type="text"
-                    className="secondRow factor-explaination"
-                  />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="firstRow factor-code"
-                    value={3}
-                  />
-                  <input type="text" className="firstRow factor-type" />
-                  <input type="text" className="firstRow factor-name" />
-                  <input type="text" className="firstRow factor-company" />
-                  <input type="text" className="firstRow factor-contery" />
-                  <input type="text" className="firstRow factor-count" />
-                  <input type="text" className="firstRow factor-cost" />
-                  <input type="text" className="firstRow factor-total" />
-                  <input type="text" className="firstRow factor-explaination" />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="secondRow factor-code"
-                    value={4}
-                  />
-                  <input type="text" className="secondRow factor-type" />
-                  <input type="text" className="secondRow factor-name" />
-                  <input type="text" className="secondRow factor-company" />
-                  <input type="text" className="secondRow factor-contery" />
-                  <input type="text" className="secondRow factor-count" />
-                  <input type="text" className="secondRow factor-cost" />
-                  <input type="text" className="secondRow factor-total" />
-                  <input
-                    type="text"
-                    className="secondRow factor-explaination"
-                  />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="firstRow factor-code"
-                    value={5}
-                  />
-                  <input type="text" className="firstRow factor-type" />
-                  <input type="text" className="firstRow factor-name" />
-                  <input type="text" className="firstRow factor-company" />
-                  <input type="text" className="firstRow factor-contery" />
-                  <input type="text" className="firstRow factor-count" />
-                  <input type="text" className="firstRow factor-cost" />
-                  <input type="text" className="firstRow factor-total" />
-                  <input type="text" className="firstRow factor-explaination" />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="secondRow factor-code"
-                    value={6}
-                  />
-                  <input type="text" className="secondRow factor-type" />
-                  <input type="text" className="secondRow factor-name" />
-                  <input type="text" className="secondRow factor-company" />
-                  <input type="text" className="secondRow factor-contery" />
-                  <input type="text" className="secondRow factor-count" />
-                  <input type="text" className="secondRow factor-cost" />
-                  <input type="text" className="secondRow factor-total" />
-                  <input
-                    type="text"
-                    className="secondRow factor-explaination"
-                  />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="firstRow factor-code"
-                    value={7}
-                  />
-                  <input type="text" className="firstRow factor-type" />
-                  <input type="text" className="firstRow factor-name" />
-                  <input type="text" className="firstRow factor-company" />
-                  <input type="text" className="firstRow factor-contery" />
-                  <input type="text" className="firstRow factor-count" />
-                  <input type="text" className="firstRow factor-cost" />
-                  <input type="text" className="firstRow factor-total" />
-                  <input type="text" className="firstRow factor-explaination" />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="secondRow factor-code"
-                    value={8}
-                  />
-                  <input type="text" className="secondRow factor-type" />
-                  <input type="text" className="secondRow factor-name" />
-                  <input type="text" className="secondRow factor-company" />
-                  <input type="text" className="secondRow factor-contery" />
-                  <input type="text" className="secondRow factor-count" />
-                  <input type="text" className="secondRow factor-cost" />
-                  <input type="text" className="secondRow factor-total" />
-                  <input
-                    type="text"
-                    className="secondRow factor-explaination"
-                  />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="firstRow factor-code"
-                    value={9}
-                  />
-                  <input type="text" className="firstRow factor-type" />
-                  <input type="text" className="firstRow factor-name" />
-                  <input type="text" className="firstRow factor-company" />
-                  <input type="text" className="firstRow factor-contery" />
-                  <input type="text" className="firstRow factor-count" />
-                  <input type="text" className="firstRow factor-cost" />
-                  <input type="text" className="firstRow factor-total" />
-                  <input type="text" className="firstRow factor-explaination" />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="secondRow factor-code"
-                    value={10}
-                  />
-                  <input type="text" className="secondRow factor-type" />
-                  <input type="text" className="secondRow factor-name" />
-                  <input type="text" className="secondRow factor-company" />
-                  <input type="text" className="secondRow factor-contery" />
-                  <input type="text" className="secondRow factor-count" />
-                  <input type="text" className="secondRow factor-cost" />
-                  <input type="text" className="secondRow factor-total" />
-                  <input
-                    type="text"
-                    className="secondRow factor-explaination"
-                  />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="firstRow factor-code"
-                    value={11}
-                  />
-                  <input type="text" className="firstRow factor-type" />
-                  <input type="text" className="firstRow factor-name" />
-                  <input type="text" className="firstRow factor-company" />
-                  <input type="text" className="firstRow factor-contery" />
-                  <input type="text" className="firstRow factor-count" />
-                  <input type="text" className="firstRow factor-cost" />
-                  <input type="text" className="firstRow factor-total" />
-                  <input type="text" className="firstRow factor-explaination" />
-                </div>
-                <div className="factor-content__row">
-                  <input
-                    type="text"
-                    className="secondRow factor-code"
-                    value={12}
-                  />
-                  <input type="text" className="secondRow factor-type" />
-                  <input type="text" className="secondRow factor-name" />
-                  <input type="text" className="secondRow factor-company" />
-                  <input type="text" className="secondRow factor-contery" />
-                  <input type="text" className="secondRow factor-count" />
-                  <input type="text" className="secondRow factor-cost" />
-                  <input type="text" className="secondRow factor-total" />
-                  <input
-                    type="text"
-                    className="secondRow factor-explaination"
-                  />
-                </div>
-              </div>
+      <div className="addDrug-content">
+        <div className="addDrug-header">
+          <img src="close.png" alt="close" />
+          <span>افزودن حواله جدید</span>
+          <img src="bills.png" alt="logo" />
+        </div>
+        <div className="addDrug-body">
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="نمبر حواله"
+            className="addDrug-body-input"
+          />
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="نام مشتری"
+            className="addDrug-body-input"
+          />
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="کشور/ شهر "
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="واحد پول"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="مبلغ حواله"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="قیمت خرید"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="قیمت فروش"
+            className="addDrug-body-input"
+          />{" "}
+          <input
+            type="text"
+            name="sendNumber"
+            placeholder="مقدار مفاد"
+            className="addDrug-body-input"
+          />
+          <input
+            type="button"
+            value="ثبت حواله"
+            className="addDrug-body-button"
+          />
+        </div>
+      </div>
 
-              <div className="factor-footer">
-                <span>توضیحات</span>
-                <input type="text" />
-              </div>
-            </form>
+      <div className="content">
+        <div className="drugs-container">
+          <div className="drugs-header">
+            <select className="select-search">
+              <option>نمبر حواله</option>
+              <option>نام مشتری</option>
+              <option>تاریخ حواله</option>
+            </select>
+            <Search searchPlaceHolder="جستجوی حواله" />
+            <span className="btn btn-user">حساب اکبر</span>
+            <span className="btn btn-user">حساب سادات</span>
+            <span className="btn btn-user">حساب عمه نوری</span>
+            <span className="btn btn-save"> افزودن حواله </span>
+          </div>
+          <div className="drugs-content">
+            <div className="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th className="drug-code">شماره</th>
+                    <th className="drug-type">نمبر حواله</th>
+                    <th className="drug-name">نام مشتری</th>
+                    <th className="drug-contery">کشور / شهر</th>
+                    <th className="drug-count">واحد پول</th>
+                    <th className="drug-company">مبلغ حواله</th>
+                    <th className="drug-cost">قیمت خرید</th>
+                    <th className="drug-total">قیمت فروش</th>
+                    <th className="drug-total">مقدار مفاد</th>
+                    <th className="drug-action">تنظیمات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td>3</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td>4</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td>5</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td>6</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td>6</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td>7</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>1001</td>
+                    <td>محمد حسن</td>
+                    <td>500</td>
+                    <td>آلمان</td>
+                    <td>یورو</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>40</td>
+                    <td className="action">
+                      <img src="edit.png" alt="edit" />
+                      <img src="delete.png" alt="delete" />
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot></tfoot>
+              </table>
+            </div>
           </div>
         </div>
       </div>
