@@ -13,39 +13,24 @@ export function Safe() {
               <div className="group">
                 <span>طرف حساب</span>
                 <select name="customer" id="customer">
-                  <option value="">احمد</option>
-                  <option value="">احمد</option>
-                  <option value="">احمد</option>
-                  <option value="">احمد</option>
-                  <option value="">احمد</option>
+                  <option value="">اکبر</option>
+                  <option value="">سادات</option>
+                  <option value="">عمه نوری</option>
                 </select>
               </div>
               <div className="group">
-                <span>تلفن</span>
-                <span>0098790883362</span>
+                <span> مفاد بر اساس</span>
+                <select name="customer" id="customer">
+                  <option value="">مفاد امروز</option>
+                  <option value="">یک روز قبل</option>
+                  <option value="">هفت روز قبل</option>
+                  <option value="">یک ماه قبل</option>
+                </select>
               </div>
-              <div className="group">
-                <span>شماره فاکتور</span>
-                <span>12340</span>
+              <div className="money-safe">
+                <span className="money-safe-header">صندوق مفاد</span>
+                <span className="money-safe-footer">1245 یورو</span>
               </div>
-              <span className="btn btn-save">ثبت فاکتور</span>
-            </div>
-            <div className="header-row">
-              <div className="group">
-                <span>آدرس</span>
-                <span>مارکت ابن سینا</span>
-              </div>
-              <div className="group">
-                <span>مانده</span>
-                <span>
-                  91388 <span style={{ color: "tomato" }}>بده</span>{" "}
-                </span>
-              </div>
-              <div className="group">
-                <span>تاریخ</span>
-                <span>1401 / 02 / 15</span>
-              </div>
-              <span className="btn btn-print">چاپ فاکتور</span>
             </div>
           </div>
           <div className="factor-container">
