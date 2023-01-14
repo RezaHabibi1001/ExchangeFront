@@ -23,7 +23,11 @@ export function About() {
             اپلیکشن حسابداری توسط رضا حبیبی دیزاین و طراحی شده است
           </div>
           <div className="about-card">
-            <img src="logo192.png" alt="user" className="about-card-image" />
+            <img
+              src="profileReza.jpeg"
+              alt="user"
+              className="about-card-image"
+            />
             <span className="about-card-fullname">رضا حبیبی</span>
             <span className="about-card-description">
               طراح و سازنده نرم افزار کامپیوتر , نرم افزار موبایل و ویب سایت

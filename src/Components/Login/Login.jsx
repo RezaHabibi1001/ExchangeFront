@@ -11,6 +11,7 @@ export function Login() {
         </div>
         <input type="text" placeholder="شماره تماس" className="login-input" />
         <input type="password" placeholder="رمز عبور" className="login-input" />
+
         <input type="button" value="ورود به برنامه" className="login-button" />
       </div>
     </div>
