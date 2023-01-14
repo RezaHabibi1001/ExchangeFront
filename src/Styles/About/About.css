@@ -125,7 +125,7 @@ tfoot tr td:last-child {
 .about-container {
   width: 80%;
   min-height: 550px;
-  border: 5px solid #aaa;
+  border: 5px solid var(--color-mashi);
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -145,6 +145,8 @@ tfoot tr td:last-child {
   width: 100px;
   height: 100px;
   border-radius: 100%;
+  border: 2px solid var(--color-mashi);
+  padding: 2px;
 }
 .about-card-fullname {
   color: #555;
@@ -186,5 +188,5 @@ tfoot tr td:last-child {
   font-size: 18px;
   color: #555;
   line-height: 25px;
-  border-right: 2px solid #aaa;
+  border-right: 2px solid var(--color-mashi);
 }
