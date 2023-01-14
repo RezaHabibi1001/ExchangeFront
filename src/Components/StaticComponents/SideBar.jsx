@@ -39,10 +39,12 @@ export function SideBar() {
             <Button buttonText="کاربران" buttonIcon="user.png"/>
             </Link> */}
 
+      <Link to={"/market"} style={{ textDecoration: "none" }}>
+        <Button buttonText="خرید و فروش" buttonIcon="users.png" />
+      </Link>
       <Link to={"/safe"} style={{ textDecoration: "none" }}>
         <Button buttonText="صندوقچه" buttonIcon="stacks.png" />
       </Link>
-
       <Link to={"/about"} style={{ textDecoration: "none" }}>
         <Button buttonText="درباره ما" buttonIcon="users.png" />
       </Link>

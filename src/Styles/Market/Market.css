@@ -1,5 +1,5 @@
 @import url("../../Styles/StaticComponents/Global.css");
-.havala-container {
+.market-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@
   margin-bottom: 20px;
 }
 
-.havala-select-search {
+.market-select-search {
   width: 150px;
   height: 150px;
   text-align: center;
@@ -32,7 +32,7 @@
 }
 
 /* drugs content */
-.havala-content {
+.market-content {
   width: 90%;
   /* height: 65vh; */
   margin: 0 auto;
@@ -78,7 +78,7 @@ tfoot tr td:last-child {
 .home-fullname,
 .home-fromCity,
 .home-toCity,
-.home-havalaAmount,
+.home-marketAmount,
 .home-purchased,
 .home-sell,
 .home-safe,
@@ -180,7 +180,7 @@ tfoot tr td:last-child {
   margin-right: 5px;
   margin-left: 5px;
 }
-.add-havala {
+.add-market {
   width: 50px;
   height: 50px;
   font-size: 30px;

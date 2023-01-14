@@ -2,9 +2,9 @@ import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import { useState } from "react";
-import "../../Styles/Home/Home.css";
+import "../../Styles/Market/Market.css";
 
-export function Home() {
+export function Market() {
   const [addPopUp, setAddPopUp] = useState(false);
   const [data, setData] = useState([
     {
@@ -229,14 +229,14 @@ export function Home() {
         </div>
       ) : null}
       <div className="content">
-        <div className="havala-container">
+        <div className="market-container">
           <div className="hawala-header">
-            <select className="havala-select-search">
+            <select className="market-select-search">
               <option>حساب عمه نوری</option>
               <option>حساب اکبر</option>
               <option>حساب محمد</option>
             </select>
-            <select className="havala-select-search">
+            <select className="market-select-search">
               <option>نمبر حواله</option>
               <option>نام مشتری</option>
               <option>تاریخ حواله</option>
@@ -244,13 +244,13 @@ export function Home() {
 
             <Search searchPlaceHolder="جستجوی حواله" />
             <span
-              className="add-havala btn-user"
+              className="add-market btn-user"
               onClick={() => setAddPopUp(true)}
             >
               +
             </span>
           </div>
-          <div className="havala-content">
+          <div className="market-content">
             <div className="table-container">
               <table>
                 <thead>
@@ -260,7 +260,7 @@ export function Home() {
                     <th className="home-fullname">نام مشتری</th>
                     <th className="home-fromCity">از شهر</th>
                     <th className="home-toCity">به شهر</th>
-                    <th className="home-havalaAmount">مبلغ حواله</th>
+                    <th className="home-marketAmount">مبلغ حواله</th>
                     <th className="home-purchased"> خرید به افغانی</th>
                     <th className="home-sell"> فروش به افغانی</th>
                     <th className="home-safe">مقدار مفاد</th>
@@ -269,19 +269,19 @@ export function Home() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((havala, index) => {
+                  {data.map((market, index) => {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{havala.number_havala}</td>
-                        <td>{havala.fullName}</td>
-                        <td>{havala.from_city}</td>
-                        <td>{havala.to_city}</td>
-                        <td>{havala.havala_amount}</td>
-                        <td>{havala.purchased_price}</td>
-                        <td>{havala.sell_price}</td>
-                        <td>{havala.safe}</td>
-                        <td>{havala.havala_date}</td>
+                        <td>{market.number_market}</td>
+                        <td>{market.fullName}</td>
+                        <td>{market.from_city}</td>
+                        <td>{market.to_city}</td>
+                        <td>{market.market_amount}</td>
+                        <td>{market.purchased_price}</td>
+                        <td>{market.sell_price}</td>
+                        <td>{market.safe}</td>
+                        <td>{market.market_date}</td>
 
                         <td className="home-action">
                           <img src="edit.png" alt="edit" />
