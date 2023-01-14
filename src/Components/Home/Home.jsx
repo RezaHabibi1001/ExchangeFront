@@ -1,91 +1,107 @@
 import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
+import { useState } from "react";
 import "../../Styles/Home/Home.css";
 
 export function Home() {
+  const [addPopUp, setAddPopUp] = useState(false);
+
   return (
     <div className="container">
       <Header />
       <SideBar />
-      <div className="addDrug-content">
-        <div className="addDrug-header">
-          <img src="close.png" alt="close" />
-          <span>افزودن حواله جدید</span>
-          <img src="bills.png" alt="logo" />
+      {addPopUp ? (
+        <div className="addDrug-content">
+          <div className="addDrug-header">
+            <img
+              src="close.png"
+              alt="close"
+              onClick={() => setAddPopUp(false)}
+            />
+            <span>افزودن حواله جدید</span>
+            <img src="bills.png" alt="logo" />
+          </div>
+          <div className="addDrug-body">
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نمبر حواله"
+              className="addDrug-body-input"
+            />
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نام مشتری"
+              className="addDrug-body-input"
+            />
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="کشور/ شهر "
+              className="addDrug-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="واحد پول"
+              className="addDrug-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="مبلغ حواله"
+              className="addDrug-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="قیمت خرید"
+              className="addDrug-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="قیمت فروش"
+              className="addDrug-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="مقدار مفاد"
+              className="addDrug-body-input"
+            />
+            <input
+              type="button"
+              value="ثبت حواله"
+              className="addDrug-body-button"
+            />
+          </div>
         </div>
-        <div className="addDrug-body">
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="نمبر حواله"
-            className="addDrug-body-input"
-          />
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="نام مشتری"
-            className="addDrug-body-input"
-          />
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="کشور/ شهر "
-            className="addDrug-body-input"
-          />{" "}
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="واحد پول"
-            className="addDrug-body-input"
-          />{" "}
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="مبلغ حواله"
-            className="addDrug-body-input"
-          />{" "}
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="قیمت خرید"
-            className="addDrug-body-input"
-          />{" "}
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="قیمت فروش"
-            className="addDrug-body-input"
-          />{" "}
-          <input
-            type="text"
-            name="sendNumber"
-            placeholder="مقدار مفاد"
-            className="addDrug-body-input"
-          />
-          <input
-            type="button"
-            value="ثبت حواله"
-            className="addDrug-body-button"
-          />
-        </div>
-      </div>
-
+      ) : null}
       <div className="content">
-        <div className="drugs-container">
-          <div className="drugs-header">
-            <select className="select-search">
+        <div className="havala-container">
+          <div className="hawala-header">
+            <select className="havala-select-search">
+              <option>حساب عمه نوری</option>
+              <option>حساب اکبر</option>
+              <option>حساب محمد</option>
+            </select>
+            <select className="havala-select-search">
               <option>نمبر حواله</option>
               <option>نام مشتری</option>
               <option>تاریخ حواله</option>
             </select>
+
             <Search searchPlaceHolder="جستجوی حواله" />
-            <span className="btn btn-user">حساب اکبر</span>
-            <span className="btn btn-user">حساب سادات</span>
-            <span className="btn btn-user">حساب عمه نوری</span>
-            <span className="btn btn-save"> افزودن حواله </span>
+            <span
+              className="add-havala btn-user"
+              onClick={() => setAddPopUp(true)}
+            >
+              +
+            </span>
           </div>
-          <div className="drugs-content">
+          <div className="havala-content">
             <div className="table-container">
               <table>
                 <thead>
@@ -102,173 +118,7 @@ export function Home() {
                     <th className="drug-action">تنظیمات</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>{" "}
-                  <tr>
-                    <td>3</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>{" "}
-                  <tr>
-                    <td>4</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>{" "}
-                  <tr>
-                    <td>5</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>{" "}
-                  <tr>
-                    <td>6</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>{" "}
-                  <tr>
-                    <td>6</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>{" "}
-                  <tr>
-                    <td>7</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>1001</td>
-                    <td>محمد حسن</td>
-                    <td>500</td>
-                    <td>آلمان</td>
-                    <td>یورو</td>
-                    <td>98</td>
-                    <td>99</td>
-                    <td>40</td>
-                    <td className="action">
-                      <img src="edit.png" alt="edit" />
-                      <img src="delete.png" alt="delete" />
-                    </td>
-                  </tr>
-                </tbody>
+                <tbody></tbody>
                 <tfoot></tfoot>
               </table>
             </div>

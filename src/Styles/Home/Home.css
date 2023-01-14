@@ -1,39 +1,38 @@
 @import url("../../Styles/StaticComponents/Global.css");
-.drugs-container {
+.havala-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
 }
-.drugs-header {
+.hawala-header {
   width: 90%;
   height: 60px;
   background-color: #ddd;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
   direction: rtl;
   border-radius: 5px;
   margin-bottom: 20px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 
-.select-search {
-  width: 100px;
-  height: 30px;
+.havala-select-search {
+  width: 150px;
+  height: 150px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 16px;
   color: #555;
   height: 30px;
+  background-color: var(--color-fourth);
 }
 
 /* drugs content */
-.drugs-content {
+.havala-content {
   width: 90%;
   /* height: 65vh; */
   margin: 0 auto;
@@ -131,9 +130,14 @@ tfoot tr td:last-child {
   font-weight: bold;
 }
 /* this is temporary logo design */
-.addDrug-header img {
+.addDrug-header :nth-child(3) {
   width: 24px;
   height: 24px;
+}
+.addDrug-header :nth-child(1) {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 .addDrug-header img:hover {
   cursor: pointer;
@@ -178,4 +182,16 @@ tfoot tr td:last-child {
   color: #555;
   margin-right: 5px;
   margin-left: 5px;
+}
+.add-havala {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -44,58 +44,7 @@ export function Safe() {
                     <th className="drug-total">مقدار مفاد</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                </tbody>
+                <tbody></tbody>
                 <tfoot></tfoot>
               </table>
             </div>
