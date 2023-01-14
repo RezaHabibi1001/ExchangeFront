@@ -175,7 +175,13 @@ export function Home() {
             <input
               type="text"
               name="sendNumber"
-              placeholder="نمبر حواله"
+              placeholder="نمبر حواله اول "
+              className="addDrug-body-input"
+            />
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نمبر حواله دوم "
               className="addDrug-body-input"
             />
             <input
@@ -187,15 +193,27 @@ export function Home() {
             <input
               type="text"
               name="sendNumber"
-              placeholder="کشور/ شهر "
+              placeholder="از شهر "
               className="addDrug-body-input"
             />{" "}
             <input
               type="text"
               name="sendNumber"
-              placeholder="واحد پول"
+              placeholder="به شهر "
               className="addDrug-body-input"
             />{" "}
+            <select className="addDrug-body-input currency-type">
+              <option>یورو .... افغانی</option>
+              <option>یورو .... تومان</option>
+              <option>یورو .... دالر</option>
+              <option>یورو .... کالدار</option>
+              <option>یورو .... لیره</option>
+              <option>دالر .... افغانی</option>
+              <option>دالر .... تومان</option>
+              <option>دالر .... یورو</option>
+              <option>دالر .... کالدار</option>
+              <option>دالر .... لیره</option>
+            </select>
             <input
               type="text"
               name="sendNumber"

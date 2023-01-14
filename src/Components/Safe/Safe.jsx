@@ -4,6 +4,63 @@ import "../../Styles/Safe/Safe.css";
 import { useState } from "react";
 export function Safe() {
   const [shouldSecure, setShouldSecure] = useState(false);
+  const [pageNumber, setPageNumber] = useState(10);
+
+  const [data, setData] = useState([
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 30,
+    },
+    {
+      havala_number: "1002",
+      safe: 20,
+    },
+    {
+      havala_number: "1002",
+      safe: 20,
+    },
+    {
+      havala_number: "1002",
+      safe: 20,
+    },
+  ]);
   return (
     <div className="container">
       <Header />
@@ -54,13 +111,30 @@ export function Safe() {
                     <th className="drug-total">مقدار مفاد</th>
                   </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                  {data.map((havala, index) => {
+                    if (index + 1 <= pageNumber) {
+                      return (
+                        <tr>
+                          <td>{index + 1}</td>
+                          <td>{havala.havala_number}</td>
+                          <td>{havala.safe}</td>
+                        </tr>
+                      );
+                    }
+                  })}
+                </tbody>
                 <tfoot></tfoot>
               </table>
             </div>
           </div>
           <div className="safe-footer">
-            <input type="button" value=" < " className="safe-footer-backward" />
+            <input
+              type="button"
+              value=" < "
+              className="safe-footer-backward"
+              onClick={() => setPageNumber(pageNumber + 10)}
+            />
             <input type="button" value=" > " className="safe-footer-forward" />
           </div>
         </div>
