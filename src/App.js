@@ -32,6 +32,14 @@ function App() {
             </Fragment>
           }
         />
+        <Route
+          path="/about"
+          element={
+            <Fragment>
+              <Safe />
+            </Fragment>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

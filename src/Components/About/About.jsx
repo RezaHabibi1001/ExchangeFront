@@ -1,9 +1,9 @@
 import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
-import "../../Styles/Safe/Safe.css";
+import "../../Styles/About/About.css";
 
-export function Safe() {
+export function About() {
   return (
     <div className="container">
       <Header />

@@ -272,6 +272,18 @@ export function Home() {
                 <tfoot></tfoot>
               </table>
             </div>
+            <div className="home-footer">
+              <input
+                type="button"
+                value=" < "
+                className="home-footer-backward"
+              />
+              <input
+                type="button"
+                value=" > "
+                className="home-footer-forward"
+              />
+            </div>
           </div>
         </div>
       </div>

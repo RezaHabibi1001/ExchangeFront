@@ -38,10 +38,14 @@ export function SideBar() {
             <Link to={"/users"} style={{textDecoration:"none"}}>
             <Button buttonText="کاربران" buttonIcon="user.png"/>
             </Link> */}
+
       <Link to={"/safe"} style={{ textDecoration: "none" }}>
         <Button buttonText="صندوقچه" buttonIcon="stacks.png" />
       </Link>
-      <Button buttonText="درباره ما" buttonIcon="users.png" />
+
+      <Link to={"/about"} style={{ textDecoration: "none" }}>
+        <Button buttonText="درباره ما" buttonIcon="users.png" />
+      </Link>
     </div>
   );
 }
