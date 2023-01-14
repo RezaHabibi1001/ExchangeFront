@@ -4,6 +4,8 @@ import "./App.css";
 import { Home } from "./Components/Home/Home";
 import { Login } from "./Components/Login/Login";
 import { Safe } from "./Components/Safe/Safe";
+import { About } from "./Components/About/About";
+
 function App() {
   return (
     <BrowserRouter>
@@ -36,7 +38,7 @@ function App() {
           path="/about"
           element={
             <Fragment>
-              <Safe />
+              <About />
             </Fragment>
           }
         />

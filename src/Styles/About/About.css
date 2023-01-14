@@ -153,3 +153,69 @@ tfoot tr td:last-child {
   margin-right: 5px;
   margin-left: 5px;
 }
+
+.about-container {
+  width: 80%;
+  min-height: 550px;
+  border: 5px solid #aaa;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+}
+.about-card {
+  width: 40%;
+  height: 450px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-card-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.about-card-fullname {
+  color: #555;
+  font-size: 25px;
+  font-weight: bold;
+}
+.about-card-description {
+  color: #555;
+}
+.about-social-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-card-footer {
+  min-height: 150px;
+  width: 100%;
+  border-top: 3px solid #aaa;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.about-card-footer-skill {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+.about-text {
+  width: 50%;
+  height: 450px;
+  border-radius: 10px;
+  text-align: right;
+  padding: 10px;
+  font-size: 18px;
+  color: #555;
+  line-height: 25px;
+}

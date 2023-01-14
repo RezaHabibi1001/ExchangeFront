@@ -10,99 +10,66 @@ export function About() {
       <SideBar />
 
       <div className="content">
-        <div className="drugs-container">
-          <div className="drugs-header">
-            <div className="tarafhesab-container">
-              <span>طرف حساب</span>
-              <select className="safe-select-box">
-                <option>سادات</option>
-                <option>اکبر</option>
-                <option>عمه نوری</option>
-              </select>
-            </div>
-            <div className="profit-container">
-              <span>مفاد بر اساس</span>
-              <select className="safe-select-box">
-                <option>مفاد امروز</option>
-                <option>مفاد دیروز</option>
-                <option>هفت روز قبل</option>
-                <option>یک ماه قبل</option>
-              </select>
-            </div>
-            <div className="money-safe">
-              <span className="money-safe-label">صندوق مفاد</span>
-              <span className="money-safe-value">4543 یورو</span>
-            </div>
+        <div className="about-container">
+          <div className="about-text">
+            این اپلیکشن حسابداری توسط رضا حبیبی دیزاین و طراحی شده است این
+            اپلیکشن حسابداری توسط رضا حبیبی دیزاین و طراحی شده استاین اپلیکشن
+            حسابداری توسط رضا حبیبی دیزاین و طراحی شده استاین اپلیکشن حسابداری
+            توسط رضا حبیبی دیزاین و طراحی شده استاین اپلیکشن حسابداری توسط رضا
+            حبیبی دیزاین و طراحی شده استاین اپلیکشن حسابداری توسط رضا حبیبی
+            دیزاین و طراحی شده استاین اپلیکشن حسابداری توسط رضا حبیبی دیزاین و
+            طراحی شده استاین اپلیکشن حسابداری توسط رضا حبیبی دیزاین و طراحی شده
+            استاین اپلیکشن حسابداری توسط رضا حبیبی دیزاین و طراحی شده استاین
+            اپلیکشن حسابداری توسط رضا حبیبی دیزاین و طراحی شده است
           </div>
-          <div className="safe-content">
-            <div className="table-container">
-              <table>
-                <thead>
-                  <tr>
-                    <th className="drug-code">شماره</th>
-                    <th className="drug-type">نمبر حواله</th>
-                    <th className="drug-total">مقدار مفاد</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>1001</td>
-                    <td>40</td>
-                  </tr>
-                </tbody>
-                <tfoot></tfoot>
-              </table>
+          <div className="about-card">
+            <img src="logo192.png" alt="user" className="about-card-image" />
+            <span className="about-card-fullname">رضا حبیبی</span>
+            <span className="about-card-description">
+              طراح و سازنده نرم افزار کامپیوتر , نرم افزار موبایل و ویب سایت
+            </span>
+            <div className="about-social-container">
+              <a href="https://github.com/RezaHabibi1001">
+                <img
+                  src="002-github.png"
+                  alt="github"
+                  className="social-icon"
+                />
+              </a>
+              <a href="https://www.facebook.com/reza.habibi.98434">
+                <img
+                  src="001-facebook.png"
+                  alt="facebook"
+                  className="social-icon"
+                />
+              </a>
+              <a href="https://twitter.com/RezaHabbibi1001">
+                <img
+                  src="005-twitter.png"
+                  alt="twitter"
+                  className="social-icon"
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/reza-habibi-1a7b99238/">
+                <img
+                  src="007-linkedin.png"
+                  alt="linked in"
+                  className="social-icon"
+                />
+              </a>
             </div>
-          </div>
-          <div className="safe-footer">
-            <input type="button" value=" < " className="safe-footer-backward" />
-            <input type="button" value=" > " className="safe-footer-forward" />
+            <div className="about-card-footer">
+              <span className="about-card-footer-skill">HTML</span>
+              <span className="about-card-footer-skill">CSS</span>
+              <span className="about-card-footer-skill">JAVASCRIPT</span>
+              <span className="about-card-footer-skill">REACT.JS</span>
+              <span className="about-card-footer-skill">REACT-NATIVE</span>
+              <span className="about-card-footer-skill">NODE.JS</span>
+              <span className="about-card-footer-skill">EXPRESS</span>
+              <span className="about-card-footer-skill">GRAPHQL</span>
+              <span className="about-card-footer-skill">MONGODB</span>
+              <span className="about-card-footer-skill">MYSQL</span>
+            </div>
           </div>
         </div>
       </div>
