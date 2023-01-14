@@ -1,12 +1,12 @@
 @import url("../../Styles/StaticComponents/Global.css");
-.drugs-container {
+.safe-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
 }
-.drugs-header {
+.safe-header {
   width: 90%;
   height: 120px;
   background-color: #ddd;
@@ -22,7 +22,7 @@
   padding-left: 10px;
 }
 
-.select-search {
+.safe-search {
   width: 100px;
   height: 30px;
   text-align: center;
@@ -32,7 +32,7 @@
   height: 30px;
 }
 
-/* drugs content */
+/* safe content */
 .safe-content {
   width: 90%;
   /* height: 65vh; */
@@ -40,7 +40,7 @@
   /* background-color: #ddd; */
   overflow-y: scroll;
 }
-/* drugs table */
+/* safe table */
 table {
   direction: rtl;
   width: 100%;
@@ -99,28 +99,30 @@ tfoot tr td:last-child {
 
 .tarafhesab-container,
 .profit-container {
-  width: 30%;
+  width: 250px;
   height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
 }
 
-.safe-select-box {
+.safe-select-boxes {
   height: 35px;
-  width: 75%;
-  background-color: #ddd;
+  width: 150px;
+  border-radius: 5px;
+  background-color: var(--color-fourth);
 }
 
 .money-safe {
   width: 150px;
   height: 120px;
   border: 2px solid var(--color-mashi);
-  border-radius: 100%;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--color-fourth);
 }
@@ -152,4 +154,9 @@ tfoot tr td:last-child {
   color: #555;
   margin-right: 5px;
   margin-left: 5px;
+}
+.safe-secure-image {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
 }

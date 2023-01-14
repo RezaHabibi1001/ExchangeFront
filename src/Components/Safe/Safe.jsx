@@ -1,28 +1,28 @@
 import { Header } from "../StaticComponents/Header";
-import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import "../../Styles/Safe/Safe.css";
-
+import { useState } from "react";
 export function Safe() {
+  const [shouldSecure, setShouldSecure] = useState(false);
   return (
     <div className="container">
       <Header />
       <SideBar />
 
       <div className="content">
-        <div className="drugs-container">
-          <div className="drugs-header">
+        <div className="safe-container">
+          <div className="safe-header">
             <div className="tarafhesab-container">
               <span>طرف حساب</span>
-              <select className="safe-select-box">
-                <option>سادات</option>
-                <option>اکبر</option>
+              <select className="safe-select-boxes">
                 <option>عمه نوری</option>
+                <option>اکبر</option>
+                <option>محمد</option>
               </select>
             </div>
             <div className="profit-container">
               <span>مفاد بر اساس</span>
-              <select className="safe-select-box">
+              <select className="safe-select-boxes">
                 <option>مفاد امروز</option>
                 <option>مفاد دیروز</option>
                 <option>هفت روز قبل</option>
@@ -31,7 +31,17 @@ export function Safe() {
             </div>
             <div className="money-safe">
               <span className="money-safe-label">صندوق مفاد</span>
-              <span className="money-safe-value">4543 یورو</span>
+              {shouldSecure ? (
+                <span className="money-safe-value">4543 یورو</span>
+              ) : (
+                <span className="money-safe-value"> . . . . </span>
+              )}
+              <img
+                src={shouldSecure ? "stack.png" : "close.png"}
+                alt="secureImage"
+                className="safe-secure-image"
+                onClick={() => setShouldSecure(!shouldSecure)}
+              />
             </div>
           </div>
           <div className="safe-content">
