@@ -8,56 +8,53 @@ export function Safe() {
 
   const [data, setData] = useState([
     {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
-      safe: 30,
-    },
-    {
-      havala_number: "1002",
+      havala_number1: "1003",
+      havala_number2: "2450",
       safe: 20,
     },
     {
-      havala_number: "1002",
+      havala_number1: "1003",
+      havala_number2: "2450",
       safe: 20,
     },
     {
-      havala_number: "1002",
+      havala_number1: "1003",
+      havala_number2: "2450",
+      safe: 20,
+    },
+    {
+      havala_number1: "1003",
+      havala_number2: "2450",
+      safe: 20,
+    },
+    {
+      havala_number1: "1003",
+      havala_number2: "2450",
+      safe: 20,
+    },
+    {
+      havala_number1: "1003",
+      havala_number2: "2450",
+      safe: 20,
+    },
+    {
+      havala_number1: "1003",
+      havala_number2: "2450",
+      safe: 20,
+    },
+    {
+      havala_number1: "1003",
+      havala_number2: "2450",
+      safe: 20,
+    },
+    {
+      havala_number1: "1003",
+      havala_number2: "2450",
+      safe: 20,
+    },
+    {
+      havala_number1: "1003",
+      havala_number2: "2450",
       safe: 20,
     },
   ]);
@@ -107,7 +104,8 @@ export function Safe() {
                 <thead>
                   <tr>
                     <th className="drug-code">شماره</th>
-                    <th className="drug-type">نمبر حواله</th>
+                    <th className="drug-type">نمیر حواله اول</th>
+                    <th className="drug-total">نمبر حواله دوم</th>
                     <th className="drug-total">مقدار مفاد</th>
                   </tr>
                 </thead>
@@ -117,7 +115,9 @@ export function Safe() {
                       return (
                         <tr>
                           <td>{index + 1}</td>
-                          <td>{havala.havala_number}</td>
+                          <td>{havala.havala_number1}</td>
+                          <td>{havala.havala_number2}</td>
+
                           <td>{havala.safe}</td>
                         </tr>
                       );

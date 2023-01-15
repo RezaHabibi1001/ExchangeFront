@@ -18,6 +18,7 @@ export function Home() {
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
@@ -172,6 +173,10 @@ export function Home() {
             <img src="bills.png" alt="logo" />
           </div>
           <div className="addDrug-body">
+            <select className="addDrug-body-input currency-type">
+              <option>معمولی</option>
+              <option>کارت به کارت</option>
+            </select>
             <input
               type="text"
               name="sendNumber"

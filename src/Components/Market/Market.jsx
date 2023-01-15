@@ -231,17 +231,6 @@ export function Market() {
       <div className="content">
         <div className="market-container">
           <div className="hawala-header">
-            <select className="market-select-search">
-              <option>حساب عمه نوری</option>
-              <option>حساب اکبر</option>
-              <option>حساب محمد</option>
-            </select>
-            <select className="market-select-search">
-              <option>نمبر حواله</option>
-              <option>نام مشتری</option>
-              <option>تاریخ حواله</option>
-            </select>
-
             <Search searchPlaceHolder="جستجوی حواله" />
             <span
               className="add-market btn-user"
