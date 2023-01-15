@@ -270,7 +270,7 @@ export function Home() {
               className="add-havala btn-user"
               onClick={() => setAddPopUp(true)}
             >
-              +
+              افزودن حواله
             </span>
           </div>
           <div className="havala-content">

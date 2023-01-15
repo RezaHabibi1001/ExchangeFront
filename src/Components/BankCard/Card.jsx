@@ -8,153 +8,39 @@ export function Card() {
   const [addPopUp, setAddPopUp] = useState(false);
   const [data, setData] = useState([
     {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      commision: 100,
-      safe: 30,
-      havala_date: "2022-03-07",
+      id: "1",
+      backName: "بانک صادارت",
+      cardNumber: "32897384",
+      shabaNumber: "9234829038490238490",
+      hesabNumber: "378394738874",
+      existance: "4485845",
     },
     {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
+      id: "2",
+      backName: "باک ملت",
+      cardNumber: "32897384",
+      shabaNumber: "9234829038490238490",
+      hesabNumber: "378394738874",
 
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
+      existance: "4485845",
     },
     {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
+      id: "3",
+      backName: "بانک سپهر",
+      cardNumber: "32897384",
+      shabaNumber: "9234829038490238490",
+      hesabNumber: "378394738874",
 
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
+      existance: "4485845",
     },
     {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
+      id: "4",
+      backName: "بانک ملت",
+      cardNumber: "32897384",
+      hesabNumber: "378394738874",
 
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
+      shabaNumber: "9234829038490238490",
+      existance: "4485845",
     },
   ]);
   return (
@@ -253,24 +139,13 @@ export function Card() {
       ) : null}
       <div className="content">
         <div className="havala-container">
-          <div className="hawala-header">
-            <select className="havala-select-search">
-              <option>حساب عمه نوری</option>
-              <option>حساب اکبر</option>
-              <option>حساب محمد</option>
-            </select>
-            <select className="havala-select-search">
-              <option>نمبر حواله</option>
-              <option>نام مشتری</option>
-              <option>تاریخ حواله</option>
-            </select>
-
+          <div className="card-header">
             <Search searchPlaceHolder="جستجوی حواله" />
             <span
-              className="add-havala btn-user"
+              className="add-newDard btn-user"
               onClick={() => setAddPopUp(true)}
             >
-              +
+              افزودن کارت
             </span>
           </div>
           <div className="havala-content">
@@ -278,17 +153,15 @@ export function Card() {
               <table>
                 <thead>
                   <tr>
-                    <th className="home-code">شماره</th>
-                    <th className="home-number">نمبر حواله</th>
-                    <th className="home-fullname">نام مشتری</th>
-                    <th className="home-fromCity">از شهر</th>
-                    <th className="home-toCity">به شهر</th>
-                    <th className="home-havalaAmount">مبلغ حواله</th>
-                    <th className="home-purchased"> خرید به افغانی</th>
-                    <th className="home-sell"> فروش به افغانی</th>
-                    <th className="home-safe">مقدار مفاد</th>
-                    <th className="home-date">تاریخ حواله</th>
-                    <th className="home-setting">تنظیمات</th>
+                    <th className="mycard-code">شماره</th>
+                    <th className="mycard-name">نام کارت</th>
+                    <th className="mycard-number">شماره کارت</th>
+                    <th className="mycard-shaba">شماره شبا</th>
+                    <th className="mycard-hesab">شماره حساب</th>
+
+                    <th className="mycard-existance">موجودی کارت</th>
+
+                    <th className="mycard-setting">تنظیمات</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -296,15 +169,11 @@ export function Card() {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{havala.number_havala}</td>
-                        <td>{havala.fullName}</td>
-                        <td>{havala.from_city}</td>
-                        <td>{havala.to_city}</td>
-                        <td>{havala.havala_amount}</td>
-                        <td>{havala.purchased_price}</td>
-                        <td>{havala.sell_price}</td>
-                        <td>{havala.safe}</td>
-                        <td>{havala.havala_date}</td>
+                        <td>{havala.backName}</td>
+                        <td>{havala.cardNumber}</td>
+                        <td>{havala.shabaNumber}</td>
+                        <td>{havala.existance}</td>
+                        <td>{havala.hesabNumber}</td>
 
                         <td className="home-action">
                           <img src="edit.png" alt="edit" />
