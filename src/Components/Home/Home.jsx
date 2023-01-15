@@ -7,7 +7,18 @@ import "../../Styles/Home/Home.css";
 export function Home() {
   const [cardToCard, setcardToCard] = useState(false);
   const [normaHavala, setNormalHavala] = useState(false);
-
+  const [info, setInfo] = useState({
+    havalaNumber1: "",
+    havalaNumber2: "",
+    customerName: "",
+    fromCity: "",
+    toCity: "",
+    havalaAmount: "",
+    purchasedPrice: "",
+    sellPrice: "",
+    safeAmount: "",
+  });
+  window.alert("dsksdfs", info);
   const [data, setData] = useState([
     {
       id: "49384934",
@@ -276,36 +287,73 @@ export function Home() {
             <span>افزودن حواله جدید</span>
             <img src="bills.png" alt="logo" />
           </div>
+
           <div className="addNormalHavala-body">
             <input
               type="text"
-              name="sendNumber"
+              name="havalaNumber1"
+              id="havalaNumber1"
+              defaultValue={info.havalaNumber1}
               placeholder="نمبر حواله اول "
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  havalaNumber1: text,
+                }))
+              }
             />
             <input
               type="text"
-              name="sendNumber"
+              name="havalaNumber2"
+              defaultValue={info.havalaNumber2}
               placeholder="نمبر حواله دوم "
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  havalaNumber2: text,
+                }))
+              }
             />
             <input
               type="text"
-              name="sendNumber"
+              name="customerName"
+              defaultValue={info.customerName}
               placeholder="نام مشتری"
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  customerName: text,
+                }))
+              }
             />
             <input
               type="text"
-              name="sendNumber"
+              name="fromCity"
+              defaultValue={info.fromCity}
               placeholder="از شهر "
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  fromCity: text,
+                }))
+              }
             />{" "}
             <input
               type="text"
-              name="sendNumber"
+              name="toCity"
+              defaultValue={info.toCity}
               placeholder="به شهر "
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  toCity: text,
+                }))
+              }
             />{" "}
             <select className="addNormalHavala-body-input currency-type">
               <option>یورو .... افغانی</option>
@@ -321,32 +369,58 @@ export function Home() {
             </select>
             <input
               type="text"
-              name="sendNumber"
+              name="havalaAmount"
+              defaultValue={info.havalaAmount}
               placeholder="مبلغ حواله"
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  havalaAmount: text,
+                }))
+              }
             />{" "}
             <input
               type="text"
-              name="sendNumber"
+              name="purchasedPrice"
+              valdefaultValueue={info.purchasedPrice}
               placeholder="قیمت خرید"
               className="addNormalHavala-body-input"
             />{" "}
             <input
               type="text"
-              name="sendNumber"
+              name="sellPrice"
+              defaultValue={info.sellPrice}
               placeholder="قیمت فروش"
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  sellPrice: text,
+                }))
+              }
             />{" "}
             <input
               type="text"
-              name="sendNumber"
+              name="safeAmount"
+              id="safeAmount"
+              defaultValue={info.safeAmount}
               placeholder="مقدار مفاد"
               className="addNormalHavala-body-input"
+              onChangeText={(text) =>
+                setInfo((prevState) => ({
+                  ...prevState,
+                  safeAmount: text,
+                }))
+              }
             />
             <input
               type="button"
               value="ثبت حواله"
               className="addNormalHavala-body-button"
+              onClick={() => {
+                window.alert(info);
+              }}
             />
           </div>
         </div>

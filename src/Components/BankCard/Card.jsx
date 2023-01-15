@@ -59,79 +59,39 @@ export function Card() {
             <img src="bills.png" alt="logo" />
           </div>
           <div className="addDrug-body">
-            <select className="addDrug-body-input currency-type">
-              <option>معمولی</option>
-              <option>کارت به کارت</option>
-            </select>
             <input
               type="text"
               name="sendNumber"
-              placeholder="نمبر حواله اول "
+              placeholder="نام کارت بانکی"
               className="addDrug-body-input"
             />
             <input
               type="text"
               name="sendNumber"
-              placeholder="نمبر حواله دوم "
+              placeholder="شماره حساب  "
               className="addDrug-body-input"
             />
             <input
               type="text"
               name="sendNumber"
-              placeholder="نام مشتری"
+              placeholder="شماره بانکی"
               className="addDrug-body-input"
             />
             <input
               type="text"
               name="sendNumber"
-              placeholder="از شهر "
+              placeholder="شماره شبا"
               className="addDrug-body-input"
             />{" "}
             <input
               type="text"
               name="sendNumber"
-              placeholder="به شهر "
+              placeholder="موجودی "
               className="addDrug-body-input"
             />{" "}
-            <select className="addDrug-body-input currency-type">
-              <option>یورو .... افغانی</option>
-              <option>یورو .... تومان</option>
-              <option>یورو .... دالر</option>
-              <option>یورو .... کالدار</option>
-              <option>یورو .... لیره</option>
-              <option>دالر .... افغانی</option>
-              <option>دالر .... تومان</option>
-              <option>دالر .... یورو</option>
-              <option>دالر .... کالدار</option>
-              <option>دالر .... لیره</option>
-            </select>
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="مبلغ حواله"
-              className="addDrug-body-input"
-            />{" "}
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="قیمت خرید"
-              className="addDrug-body-input"
-            />{" "}
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="قیمت فروش"
-              className="addDrug-body-input"
-            />{" "}
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="مقدار مفاد"
-              className="addDrug-body-input"
-            />
             <input
               type="button"
-              value="ثبت حواله"
+              value="ثبت کارت"
               className="addDrug-body-button"
             />
           </div>
