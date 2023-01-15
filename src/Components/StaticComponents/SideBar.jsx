@@ -8,17 +8,17 @@ export function SideBar() {
 
   return (
     <div className="sideBar-container">
-      <Link to={"/market"} style={{ textDecoration: "none" }}>
-        <Button buttonText="موجودی" buttonIcon="users.png" />
-      </Link>
       <Link to={"/home"} style={{ textDecoration: "none" }}>
         <Button buttonText="لیست حواله ها" buttonIcon="factors.png" />
+      </Link>
+      <Link to={"/safe"} style={{ textDecoration: "none" }}>
+        <Button buttonText="صندوقچه" buttonIcon="stacks.png" />
       </Link>
       <Link to={"/card"} style={{ textDecoration: "none" }}>
         <Button buttonText="کارت ها" buttonIcon="factors.png" />
       </Link>
-      <Link to={"/safe"} style={{ textDecoration: "none" }}>
-        <Button buttonText="صندوقچه" buttonIcon="stacks.png" />
+      <Link to={"/market"} style={{ textDecoration: "none" }}>
+        <Button buttonText="موجودی" buttonIcon="users.png" />
       </Link>
       <Link to={"/about"} style={{ textDecoration: "none" }}>
         <Button buttonText="درباره ما" buttonIcon="users.png" />

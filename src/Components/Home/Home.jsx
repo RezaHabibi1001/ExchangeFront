@@ -254,18 +254,18 @@ export function Home() {
       <div className="content">
         <div className="havala-container">
           <div className="hawala-header">
-            <select className="havala-select-search">
-              <option>حساب عمه نوری</option>
-              <option>حساب اکبر</option>
-              <option>حساب محمد</option>
-            </select>
+            <Search searchPlaceHolder="جستجوی حواله" />
             <select className="havala-select-search">
               <option>نمبر حواله</option>
               <option>نام مشتری</option>
               <option>تاریخ حواله</option>
             </select>
+            <select className="havala-select-search">
+              <option>حساب عمه نوری</option>
+              <option>حساب اکبر</option>
+              <option>حساب محمد</option>
+            </select>
 
-            <Search searchPlaceHolder="جستجوی حواله" />
             <span
               className="add-havala btn-user"
               onClick={() => setAddPopUp(true)}
