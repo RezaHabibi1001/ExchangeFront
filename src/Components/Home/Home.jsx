@@ -5,7 +5,9 @@ import { useState } from "react";
 import "../../Styles/Home/Home.css";
 
 export function Home() {
-  const [addPopUp, setAddPopUp] = useState(false);
+  const [cardToCard, setcardToCard] = useState(false);
+  const [normaHavala, setNormalHavala] = useState(false);
+
   const [data, setData] = useState([
     {
       id: "49384934",
@@ -161,53 +163,151 @@ export function Home() {
     <div className="container">
       <Header />
       <SideBar />
-      {addPopUp ? (
-        <div className="addDrug-content">
-          <div className="addDrug-header">
+      {/* card to card form comes here  */}
+      {cardToCard ? (
+        <div className="addCardToCard-content">
+          <div className="addCardToCard-header">
             <img
               src="close.png"
               alt="close"
-              onClick={() => setAddPopUp(false)}
+              onClick={() => setcardToCard(false)}
             />
             <span>افزودن حواله جدید</span>
             <img src="bills.png" alt="logo" />
           </div>
-          <div className="addDrug-body">
-            <select className="addDrug-body-input currency-type">
-              <option>معمولی</option>
-              <option>کارت به کارت</option>
+          <div className="addCardToCard-body">
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نمبر حواله  "
+              className="addCardToCard-body-input"
+            />
+            <select className="addCardToCard-body-input currency-type">
+              <option>کارت را انتخاب نمایید</option>
+              <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
+              <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
+              <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
+              <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
             </select>
             <input
               type="text"
               name="sendNumber"
-              placeholder="نمبر حواله اول "
-              className="addDrug-body-input"
+              placeholder="شماره کارت ارسال کننده "
+              className="addCardToCard-body-input"
             />
             <input
               type="text"
               name="sendNumber"
-              placeholder="نمبر حواله دوم "
-              className="addDrug-body-input"
+              placeholder="شماره کارت گیرنده "
+              className="addCardToCard-body-input"
             />
             <input
               type="text"
               name="sendNumber"
               placeholder="نام مشتری"
-              className="addDrug-body-input"
+              className="addCardToCard-body-input"
             />
             <input
               type="text"
               name="sendNumber"
               placeholder="از شهر "
-              className="addDrug-body-input"
+              className="addCardToCard-body-input"
             />{" "}
             <input
               type="text"
               name="sendNumber"
               placeholder="به شهر "
-              className="addDrug-body-input"
+              className="addCardToCard-body-input"
             />{" "}
-            <select className="addDrug-body-input currency-type">
+            <select className="addCardToCard-body-input currency-type">
+              <option>یورو ----- افغانی</option>
+              <option>یورو ----- تومان</option>
+              <option>یورو ----- دالر</option>
+              <option>یورو ----- کالدار</option>
+              <option>یورو ----- لیره</option>
+              <option>دالر ----- افغانی</option>
+              <option>دالر ----- تومان</option>
+              <option>دالر ----- یورو</option>
+              <option>دالر ----- کالدار</option>
+              <option>دالر ----- لیره</option>
+            </select>
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="مبلغ حواله"
+              className="addCardToCard-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="قیمت خرید"
+              className="addCardToCard-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="قیمت فروش"
+              className="addCardToCard-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="مقدار مفاد"
+              className="addCardToCard-body-input"
+            />
+            <input
+              type="button"
+              value="ثبت حواله"
+              className="addCardToCard-body-button"
+            />
+          </div>
+        </div>
+      ) : null}
+
+      {/*   normal havala   form comes here */}
+      {normaHavala ? (
+        <div className="addNormalHavala-content">
+          <div className="addNormalHavala-header">
+            <img
+              src="close.png"
+              alt="close"
+              onClick={() => setNormalHavala(false)}
+            />
+            <span>افزودن حواله جدید</span>
+            <img src="bills.png" alt="logo" />
+          </div>
+          <div className="addNormalHavala-body">
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نمبر حواله اول "
+              className="addNormalHavala-body-input"
+            />
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نمبر حواله دوم "
+              className="addNormalHavala-body-input"
+            />
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نام مشتری"
+              className="addNormalHavala-body-input"
+            />
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="از شهر "
+              className="addNormalHavala-body-input"
+            />{" "}
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="به شهر "
+              className="addNormalHavala-body-input"
+            />{" "}
+            <select className="addNormalHavala-body-input currency-type">
               <option>یورو .... افغانی</option>
               <option>یورو .... تومان</option>
               <option>یورو .... دالر</option>
@@ -223,34 +323,35 @@ export function Home() {
               type="text"
               name="sendNumber"
               placeholder="مبلغ حواله"
-              className="addDrug-body-input"
+              className="addNormalHavala-body-input"
             />{" "}
             <input
               type="text"
               name="sendNumber"
               placeholder="قیمت خرید"
-              className="addDrug-body-input"
+              className="addNormalHavala-body-input"
             />{" "}
             <input
               type="text"
               name="sendNumber"
               placeholder="قیمت فروش"
-              className="addDrug-body-input"
+              className="addNormalHavala-body-input"
             />{" "}
             <input
               type="text"
               name="sendNumber"
               placeholder="مقدار مفاد"
-              className="addDrug-body-input"
+              className="addNormalHavala-body-input"
             />
             <input
               type="button"
               value="ثبت حواله"
-              className="addDrug-body-button"
+              className="addNormalHavala-body-button"
             />
           </div>
         </div>
       ) : null}
+
       <div className="content">
         <div className="havala-container">
           <div className="hawala-header">
@@ -268,11 +369,18 @@ export function Home() {
 
             <span
               className="add-havala btn-user"
-              onClick={() => setAddPopUp(true)}
+              onClick={() => setcardToCard(true)}
             >
-              افزودن حواله
+              کارت به کارت
+            </span>
+            <span
+              className="add-havala btn-user"
+              onClick={() => setNormalHavala(true)}
+            >
+              معمولی
             </span>
           </div>
+
           <div className="havala-content">
             <div className="table-container">
               <table>

@@ -93,7 +93,7 @@ tfoot tr td:last-child {
   justify-content: space-around;
 }
 
-.addDrug-content {
+.addCardToCard-content {
   position: absolute;
   top: 100px;
   left: 25%;
@@ -108,7 +108,7 @@ tfoot tr td:last-child {
   border-radius: 10px;
 }
 
-.addDrug-header {
+.addCardToCard-header {
   width: 100%;
   height: 50px;
   background-color: var(--color-mashi);
@@ -121,25 +121,94 @@ tfoot tr td:last-child {
   border-top-right-radius: 10px;
 }
 
-.addDrug-header span {
+.addCardToCard-header span {
   font-weight: 500;
   color: #fff;
   font-weight: bold;
 }
 /* this is temporary logo design */
-.addDrug-header :nth-child(3) {
+.addCardToCard-header :nth-child(3) {
   width: 24px;
   height: 24px;
 }
-.addDrug-header :nth-child(1) {
+.addCardToCard-header :nth-child(1) {
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
-.addDrug-header img:hover {
+.addCardToCard-header img:hover {
   cursor: pointer;
 }
-.addDrug-body {
+.addCardToCard-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #ccc;
+}
+.addCardToCard-body-input {
+  width: 80%;
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+}
+.addCardToCard-body-button {
+  width: 25%;
+  height: 35px;
+  color: #333;
+  font-size: 16px;
+}
+
+.addNormalHavala-content {
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: var(--color-fourth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.addNormalHavala-header {
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-mashi);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.addNormalHavala-header span {
+  font-weight: 500;
+  color: #fff;
+  font-weight: bold;
+}
+/* this is temporary logo design */
+.addNormalHavala-header :nth-child(3) {
+  width: 24px;
+  height: 24px;
+}
+.addNormalHavala-header :nth-child(1) {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.addNormalHavala-header img:hover {
+  cursor: pointer;
+}
+.addNormalHavala-body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -149,19 +218,18 @@ tfoot tr td:last-child {
   padding-bottom: 20px;
   background-color: #ccc;
 }
-.addDrug-body-input {
+.addNormalHavala-body-input {
   width: 80%;
   height: 30px;
   text-align: right;
   padding-right: 10px;
 }
-.addDrug-body-button {
+.addNormalHavala-body-button {
   width: 25%;
   height: 35px;
   color: #333;
   font-size: 16px;
 }
-
 .home-footer {
   width: 90%;
   height: 50px;
