@@ -88,12 +88,6 @@ export function Market() {
                 className="repository-header-img"
                 alt="edit"
               />
-
-              <img
-                src="delete.png"
-                className="repository-header-img"
-                alt="delete"
-              />
             </div>
             <span className="repository-title">موجودی کل</span>
             <span className="repository-amount">798789</span>
