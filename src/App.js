@@ -6,6 +6,7 @@ import { Login } from "./Components/Login/Login";
 import { Safe } from "./Components/Safe/Safe";
 import { About } from "./Components/About/About";
 import { Market } from "./Components/Market/Market";
+import { Card } from "./Components/BankCard/Card";
 
 function App() {
   return (
@@ -48,6 +49,14 @@ function App() {
           element={
             <Fragment>
               <Market />
+            </Fragment>
+          }
+        />
+        <Route
+          path="/card"
+          element={
+            <Fragment>
+              <Card />
             </Fragment>
           }
         />

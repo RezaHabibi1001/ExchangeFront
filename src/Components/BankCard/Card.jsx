@@ -2,9 +2,9 @@ import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import { useState } from "react";
-import "../../Styles/Market/Market.css";
+import "../../Styles/BankCard/Card.css";
 
-export function Market() {
+export function Card() {
   const [addPopUp, setAddPopUp] = useState(false);
   const [data, setData] = useState([
     {
@@ -18,6 +18,7 @@ export function Market() {
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
@@ -172,10 +173,20 @@ export function Market() {
             <img src="bills.png" alt="logo" />
           </div>
           <div className="addDrug-body">
+            <select className="addDrug-body-input currency-type">
+              <option>معمولی</option>
+              <option>کارت به کارت</option>
+            </select>
             <input
               type="text"
               name="sendNumber"
-              placeholder="نمبر حواله"
+              placeholder="نمبر حواله اول "
+              className="addDrug-body-input"
+            />
+            <input
+              type="text"
+              name="sendNumber"
+              placeholder="نمبر حواله دوم "
               className="addDrug-body-input"
             />
             <input
@@ -187,15 +198,27 @@ export function Market() {
             <input
               type="text"
               name="sendNumber"
-              placeholder="کشور/ شهر "
+              placeholder="از شهر "
               className="addDrug-body-input"
             />{" "}
             <input
               type="text"
               name="sendNumber"
-              placeholder="واحد پول"
+              placeholder="به شهر "
               className="addDrug-body-input"
             />{" "}
+            <select className="addDrug-body-input currency-type">
+              <option>یورو .... افغانی</option>
+              <option>یورو .... تومان</option>
+              <option>یورو .... دالر</option>
+              <option>یورو .... کالدار</option>
+              <option>یورو .... لیره</option>
+              <option>دالر .... افغانی</option>
+              <option>دالر .... تومان</option>
+              <option>دالر .... یورو</option>
+              <option>دالر .... کالدار</option>
+              <option>دالر .... لیره</option>
+            </select>
             <input
               type="text"
               name="sendNumber"
@@ -229,27 +252,38 @@ export function Market() {
         </div>
       ) : null}
       <div className="content">
-        <div className="market-container">
+        <div className="havala-container">
           <div className="hawala-header">
+            <select className="havala-select-search">
+              <option>حساب عمه نوری</option>
+              <option>حساب اکبر</option>
+              <option>حساب محمد</option>
+            </select>
+            <select className="havala-select-search">
+              <option>نمبر حواله</option>
+              <option>نام مشتری</option>
+              <option>تاریخ حواله</option>
+            </select>
+
             <Search searchPlaceHolder="جستجوی حواله" />
             <span
-              className="add-market btn-user"
+              className="add-havala btn-user"
               onClick={() => setAddPopUp(true)}
             >
               +
             </span>
           </div>
-          <div className="market-content">
+          <div className="havala-content">
             <div className="table-container">
               <table>
                 <thead>
                   <tr>
                     <th className="home-code">شماره</th>
-                    <th className="home-number">موجودی یورو</th>
-                    <th className="home-fullname">خرید به افغانی</th>
-                    <th className="home-fromCity">خرید به تومان</th>
-                    <th className="home-toCity">خرید به </th>
-                    <th className="home-marketAmount">مبلغ حواله</th>
+                    <th className="home-number">نمبر حواله</th>
+                    <th className="home-fullname">نام مشتری</th>
+                    <th className="home-fromCity">از شهر</th>
+                    <th className="home-toCity">به شهر</th>
+                    <th className="home-havalaAmount">مبلغ حواله</th>
                     <th className="home-purchased"> خرید به افغانی</th>
                     <th className="home-sell"> فروش به افغانی</th>
                     <th className="home-safe">مقدار مفاد</th>
@@ -258,19 +292,19 @@ export function Market() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((market, index) => {
+                  {data.map((havala, index) => {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{market.number_market}</td>
-                        <td>{market.fullName}</td>
-                        <td>{market.from_city}</td>
-                        <td>{market.to_city}</td>
-                        <td>{market.market_amount}</td>
-                        <td>{market.purchased_price}</td>
-                        <td>{market.sell_price}</td>
-                        <td>{market.safe}</td>
-                        <td>{market.market_date}</td>
+                        <td>{havala.number_havala}</td>
+                        <td>{havala.fullName}</td>
+                        <td>{havala.from_city}</td>
+                        <td>{havala.to_city}</td>
+                        <td>{havala.havala_amount}</td>
+                        <td>{havala.purchased_price}</td>
+                        <td>{havala.sell_price}</td>
+                        <td>{havala.safe}</td>
+                        <td>{havala.havala_date}</td>
 
                         <td className="home-action">
                           <img src="edit.png" alt="edit" />

@@ -9,10 +9,13 @@ export function SideBar() {
   return (
     <div className="sideBar-container">
       <Link to={"/market"} style={{ textDecoration: "none" }}>
-        <Button buttonText="خرید و فروش" buttonIcon="users.png" />
+        <Button buttonText="موجودی" buttonIcon="users.png" />
       </Link>
       <Link to={"/home"} style={{ textDecoration: "none" }}>
         <Button buttonText="لیست حواله ها" buttonIcon="factors.png" />
+      </Link>
+      <Link to={"/card"} style={{ textDecoration: "none" }}>
+        <Button buttonText="کارت ها" buttonIcon="factors.png" />
       </Link>
       <Link to={"/safe"} style={{ textDecoration: "none" }}>
         <Button buttonText="صندوقچه" buttonIcon="stacks.png" />
