@@ -167,7 +167,7 @@ tfoot tr td:last-child {
   top: 100px;
   left: 25%;
   width: 50%;
-  height: 500px;
+  height: 550px;
   margin: 0 auto;
   background-color: var(--color-fourth);
   display: flex;
@@ -213,7 +213,7 @@ tfoot tr td:last-child {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 450px;
+  height: 500px;
   padding-top: 10px;
   padding-bottom: 20px;
   background-color: #ccc;
