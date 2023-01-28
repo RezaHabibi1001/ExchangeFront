@@ -3,11 +3,14 @@ import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import { useState } from "react";
 import "../../Styles/Home/Home.css";
-
+import { useGlobal } from "../../zustand";
 export function Home() {
+  const items = useGlobal((state) => state.items);
+  const handleItems = useGlobal((state) => state.hamdleItems);
   const [cardToCard, setcardToCard] = useState(false);
   const [normaHavala, setNormalHavala] = useState(false);
   const [havalaTypeSelected, setHavalaTypeSelected] = useState("");
+  console.log("havalaTypeSelected", havalaTypeSelected);
   let havalaData = {};
   const [info, setInfo] = useState({
     havalaNumber1: "",
@@ -20,178 +23,46 @@ export function Home() {
     sellPrice: "",
     safeAmount: "",
   });
-  function handleForm(e) {
+  function handleNormalHavala(e) {
     e.preventDefault();
     havalaData = {
-      id: "1",
-      havala_type: e.target.havala_type?.value,
+      havala_type: "normal",
       havala_number1: e.target.havala_number1?.value,
-      havala_number2: e.target.havala_number2?.value || null,
-      from_card: e.target.from_card?.value || null,
-      to_card: e.target.to_card?.value || null,
+      havala_number2: e.target.havala_number2?.value,
+      from_card: null,
+      to_card: null,
       from_city: e.target.from_city?.value,
       to_city: e.target.to_city?.value,
       havala_amount: e.target.havala_amount?.value,
       fromMoney_toMoney: e.target.fromMoney_toMoney?.value,
       purchased_price: e.target.purchased_price?.value,
       sell_price: e.target.sell_price?.value,
-      commision_amount: e.target.commision_amount?.value || 0,
+      commision_amount: e.target.commision_amount?.value,
       safe_amount: e.target.safe_amount?.value,
-      something: e.target.something?.value || null,
     };
-    console.log(havalaData);
+    console.log("normal havala ", havalaData);
+    handleItems([...items, havalaData]);
   }
-  const [data, setData] = useState([
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      commision: 100,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
+  function handleCardtoCard(e) {
+    e.preventDefault();
+    havalaData = {
+      havala_type: "card_to_card",
+      havala_number1: e.target.havala_number1?.value,
+      havala_number2: null,
+      from_card: e.target.from_card?.value,
+      to_card: e.target.to_card?.value,
+      from_city: e.target.from_city?.value,
+      to_city: e.target.to_city?.value,
+      havala_amount: e.target.havala_amount?.value,
+      fromMoney_toMoney: e.target.fromMoney_toMoney?.value,
+      purchased_price: e.target.purchased_price?.value,
+      commision_amount: 0,
+      sell_price: e.target.sell_price?.value,
+      safe_amount: e.target.safe_amount?.value,
+    };
+    console.log("card to card  data ", havalaData);
+  }
 
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-  ]);
   return (
     <div className="container">
       <Header />
@@ -207,18 +78,8 @@ export function Home() {
             <span>افزودن حواله جدید</span>
             <img src="bills.png" alt="logo" />
           </div>
-          <form onSubmit={handleForm}>
+          <form onSubmit={handleNormalHavala}>
             <div className="addNormalHavala-body">
-              <select
-                id="havala_type"
-                name="havala_type"
-                className="addNormalHavala-body-input currency-type"
-                onSelect={(value) => setHavalaTypeSelected(value)}
-              >
-                <option>نوعیت حواله را انتخاب نمایید</option>
-                <option value="card_to_card">کارت به کارت</option>
-                <option value="normal">معمولی</option>
-              </select>
               <input
                 type="text"
                 name="havala_number1"
@@ -227,37 +88,12 @@ export function Home() {
                 placeholder="نمبر حواله اول "
                 className="addNormalHavala-body-input"
               />
-              {havalaTypeSelected == "normal" ? (
-                <input
-                  type="text"
-                  name="havala_number2"
-                  id="havala_number2"
-                  defaultValue={info.havalaNumber2}
-                  placeholder="نمبر حواله دوم "
-                  className="addNormalHavala-body-input"
-                />
-              ) : null}
-              <select className="addCardToCard-body-input currency-type">
-                <option>کارت را انتخاب نمایید</option>
-                <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
-                <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
-                <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
-                <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
-              </select>
               <input
                 type="text"
-                name="from_card"
-                id="from_card"
-                defaultValue={info.havalaNumber1}
-                placeholder="شماره کارت مبدا "
-                className="addNormalHavala-body-input"
-              />
-              <input
-                type="text"
-                name="to_card"
-                id="to_card"
+                name="havala_number2"
+                id="havala_number2"
                 defaultValue={info.havalaNumber2}
-                placeholder="شماره کارت مقصد"
+                placeholder="نمبر حواله دوم "
                 className="addNormalHavala-body-input"
               />
               <input
@@ -350,6 +186,132 @@ export function Home() {
           </form>
         </div>
       ) : null}
+      {cardToCard ? (
+        <div className="addNormalHavala-content">
+          <div className="addNormalHavala-header">
+            <img
+              src="close.png"
+              alt="close"
+              onClick={() => setcardToCard(false)}
+            />
+            <span>افزودن حواله جدید</span>
+            <img src="bills.png" alt="logo" />
+          </div>
+          <form onSubmit={handleCardtoCard}>
+            <div className="addNormalHavala-body">
+              <input
+                type="text"
+                name="havala_number1"
+                id="havala_number1"
+                defaultValue={info.havalaNumber1}
+                placeholder="نمبر حواله اول "
+                className="addNormalHavala-body-input"
+              />
+              <select className="addCardToCard-body-input currency-type">
+                <option>کارت را انتخاب نمایید</option>
+                <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
+                <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
+                <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
+                <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
+              </select>
+              <input
+                type="text"
+                name="from_card"
+                id="from_card"
+                defaultValue={info.havalaNumber1}
+                placeholder="شماره کارت مبدا "
+                className="addNormalHavala-body-input"
+              />
+              <input
+                type="text"
+                name="to_card"
+                id="to_card"
+                defaultValue={info.havalaNumber2}
+                placeholder="شماره کارت مقصد"
+                className="addNormalHavala-body-input"
+              />
+              <input
+                type="text"
+                name="customer_name"
+                id="customer_name"
+                defaultValue={info.customerName}
+                placeholder="نام مشتری"
+                className="addNormalHavala-body-input"
+              />
+              <input
+                type="text"
+                name="from_city"
+                id="from_city"
+                defaultValue={info.fromCity}
+                placeholder="از شهر "
+                className="addNormalHavala-body-input"
+              />{" "}
+              <input
+                type="text"
+                name="to_city"
+                id="to-city"
+                defaultValue={info.toCity}
+                placeholder="به شهر "
+                className="addNormalHavala-body-input"
+              />{" "}
+              <select
+                id="fromMoney_toMoney"
+                name="fromMoney_toMoney"
+                className="addNormalHavala-body-input currency-type"
+              >
+                <option value="ya">یورو .... افغانی</option>
+                <option value="yt">یورو .... تومان</option>
+                <option value="yd">یورو .... دالر</option>
+                <option value="yk">یورو .... کالدار</option>
+                <option value="yl">یورو .... لیره</option>
+                <option value="da">دالر .... افغانی</option>
+                <option value="dt">دالر .... تومان</option>
+                <option value="dy">دالر .... یورو</option>
+                <option value="dk">دالر .... کالدار</option>
+                <option value="dl">دالر .... لیره</option>
+              </select>
+              <input
+                type="text"
+                name="havala_amount"
+                id="havala_amount"
+                defaultValue={info.havalaAmount}
+                placeholder="مبلغ حواله"
+                className="addNormalHavala-body-input"
+              />{" "}
+              <input
+                type="text"
+                name="purchased_price"
+                id="purchased_price"
+                valdefaultValueue={info.purchasedPrice}
+                placeholder="قیمت خرید"
+                className="addNormalHavala-body-input"
+              />{" "}
+              <input
+                type="text"
+                name="sell_price"
+                id="sell_price"
+                // defaultValue={info.sellPrice}
+                placeholder="قیمت فروش"
+                className="addNormalHavala-body-input"
+              />{" "}
+              <input
+                type="text"
+                name="safe_amount"
+                id="safe_amount"
+                defaultValue={info.safeAmount}
+                placeholder="مقدار مفاد"
+                className="addNormalHavala-body-input"
+              />
+              <input
+                type="submit"
+                value="ثبت حواله"
+                className="addNormalHavala-body-button"
+                name="submit"
+              />
+            </div>
+          </form>
+        </div>
+      ) : null}
 
       <div className="content">
         <div className="havala-container">
@@ -368,9 +330,15 @@ export function Home() {
 
             <span
               className="add-havala btn-user"
+              onClick={() => setcardToCard(true)}
+            >
+              کارت به کارت
+            </span>
+            <span
+              className="add-havala btn-user"
               onClick={() => setNormalHavala(true)}
             >
-              افزودن
+              حواله جدید
             </span>
           </div>
 
@@ -393,7 +361,7 @@ export function Home() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((havala, index) => {
+                  {items.map((havala, index) => {
                     return (
                       <tr>
                         <td>{index + 1}</td>
