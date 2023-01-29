@@ -56,7 +56,6 @@ thead tr {
   background-color: #bbb;
 }
 thead tr th {
-  border: 1px solid black;
   padding: 5px;
 }
 tbody tr:nth-child(even) {
