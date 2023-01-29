@@ -5,8 +5,144 @@ import { useState } from "react";
 import "../../Styles/Home/Home.css";
 import { useGlobal } from "../../zustand";
 export function Home() {
-  const items = useGlobal((state) => state.items);
-  const handleItems = useGlobal((state) => state.hamdleItems);
+  const [items, setItems] = useState([
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision: 100,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      havala_type: "کارت به کارت",
+      number_havala: "1001",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+  ]);
+
   const [cardToCard, setcardToCard] = useState(false);
   const [normaHavala, setNormalHavala] = useState(false);
   const [havalaTypeSelected, setHavalaTypeSelected] = useState("");
@@ -41,7 +177,8 @@ export function Home() {
       safe_amount: e.target.safe_amount?.value,
     };
     console.log("normal havala ", havalaData);
-    handleItems([...items, havalaData]);
+    setItems([...items, havalaData]);
+    setNormalHavala(false);
   }
   function handleCardtoCard(e) {
     e.preventDefault();
@@ -60,7 +197,8 @@ export function Home() {
       sell_price: e.target.sell_price?.value,
       safe_amount: e.target.safe_amount?.value,
     };
-    console.log("card to card  data ", havalaData);
+    setItems([...items, havalaData]);
+    setcardToCard(false);
   }
 
   return (
