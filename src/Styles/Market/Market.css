@@ -7,7 +7,7 @@
   /* justify-content: space-between; */
 }
 .hawala-header {
-  width: 90%;
+  width: 95%;
   height: 60px;
   background-color: #ddd;
   display: flex;
@@ -75,21 +75,8 @@ tfoot tr td:last-child {
   border: 1px solid #aaa;
   font-size: 20px;
 }
-.home-code,
-.home-number,
-.home-fullname,
-.home-fromCity,
-.home-toCity,
-.home-marketAmount,
-.home-purchased,
-.home-sell,
-.home-safe,
-.home-date,
-.home-setting {
-  width: 9%;
-}
+
 .home-action {
-  width: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

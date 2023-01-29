@@ -8,8 +8,12 @@ export function Home() {
   const [items, setItems] = useState([
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
@@ -17,120 +21,132 @@ export function Home() {
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      commision: 100,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
-
       purchased_price: 98,
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
-
       purchased_price: 98,
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-
-    {
-      id: "49384934",
-      havala_type: "کارت به کارت",
-      number_havala: "1001",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
-
       purchased_price: 98,
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
-
       purchased_price: 98,
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
-
       purchased_price: 98,
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
-
       purchased_price: 98,
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
     {
       id: "49384934",
+      corporator: "mohammad",
       havala_type: "کارت به کارت",
-      number_havala: "1001",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
       fullName: "رضا حبیبی",
       from_city: "هامبورگ",
       to_city: "کابل",
@@ -138,6 +154,45 @@ export function Home() {
       sell_price: 102,
       havala_amount: 500,
       // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      corporator: "mohammad",
+      havala_type: "کارت به کارت",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
+      safe: 30,
+      havala_date: "2022-03-07",
+    },
+    {
+      id: "49384934",
+      corporator: "mohammad",
+      havala_type: "کارت به کارت",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
+      fullName: "رضا حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
     },
@@ -177,7 +232,7 @@ export function Home() {
       safe_amount: e.target.safe_amount?.value,
     };
     console.log("normal havala ", havalaData);
-    setItems([...items, havalaData]);
+    setItems([havalaData, ...items]);
     setNormalHavala(false);
   }
   function handleCardtoCard(e) {
@@ -197,7 +252,7 @@ export function Home() {
       sell_price: e.target.sell_price?.value,
       safe_amount: e.target.safe_amount?.value,
     };
-    setItems([...items, havalaData]);
+    setItems([havalaData, ...items]);
     setcardToCard(false);
   }
 
@@ -482,20 +537,24 @@ export function Home() {
 
           <div className="havala-content">
             <div className="table-container">
-              <table>
+              <table className="home-table">
                 <thead>
                   <tr>
-                    <th className="home-code">شماره</th>
-                    <th className="home-number">نمبر حواله</th>
-                    <th className="home-fullname">نام مشتری</th>
-                    <th className="home-fromCity">از شهر</th>
-                    <th className="home-toCity">به شهر</th>
-                    <th className="home-havalaAmount">مبلغ حواله</th>
-                    <th className="home-purchased"> خرید به افغانی</th>
-                    <th className="home-sell"> فروش به افغانی</th>
-                    <th className="home-safe">مقدار مفاد</th>
-                    <th className="home-date">تاریخ حواله</th>
-                    <th className="home-setting">تنظیمات</th>
+                    <th className="">شماره</th>
+                    <th className="">نمبر حواله یک</th>
+                    <th className="">نمبر حواله دو</th>
+                    <th className="">شماره کارت مبدا</th>
+                    <th className="">شماره کارت مقصد</th>
+
+                    <th className="">نام مشتری</th>
+                    <th className="">از شهر - به شهر</th>
+                    <th className="">مبلغ حواله</th>
+                    <th className=""> خرید - فروش</th>
+                    <th className="">مبلغ کمیشن</th>
+
+                    <th className="">مقدار مفاد</th>
+                    <th className="">تاریخ حواله</th>
+                    <th className="">تنظیمات</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -503,13 +562,18 @@ export function Home() {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{havala.number_havala}</td>
+                        <td>{havala.number_havala1}</td>
+                        <td>{havala.number_havala2}</td>
+                        <td>{havala.from_card}</td>
+                        <td>{havala.to_card}</td>
                         <td>{havala.fullName}</td>
-                        <td>{havala.from_city}</td>
-                        <td>{havala.to_city}</td>
+                        <td>{havala.from_city + " - " + havala.to_city}</td>
                         <td>{havala.havala_amount}</td>
-                        <td>{havala.purchased_price}</td>
-                        <td>{havala.sell_price}</td>
+                        <td>
+                          {havala.purchased_price + " - " + havala.sell_price}
+                        </td>
+                        <td>{havala.commision_amount}</td>
+
                         <td>{havala.safe}</td>
                         <td>{havala.havala_date}</td>
 
