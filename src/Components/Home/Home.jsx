@@ -633,7 +633,21 @@ export function Home() {
 
                         <td className="home-action">
                           <img src="edit.png" alt="edit" />
-                          <img src="delete.png" alt="delete" />
+                          <img
+                            src="delete.png"
+                            alt="delete"
+                            onClick={() => {
+                              const filteredRows = items.filter((item) => {
+                                if (
+                                  item.havala_number1 != havala.havala_number1
+                                ) {
+                                  return item;
+                                }
+                              });
+
+                              setItems(filteredRows);
+                            }}
+                          />
                         </td>
                       </tr>
                     );
