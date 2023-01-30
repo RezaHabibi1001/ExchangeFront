@@ -216,6 +216,10 @@ export function Home() {
   });
   function handleNormalHavala(e) {
     e.preventDefault();
+    const date = new Date();
+    let havala_date =
+      date.getFullYear() + "-" + date.getDay() + "-" + date.getDate();
+
     havalaData = {
       havala_type: "normal",
       havala_number1: e.target.havala_number1?.value,
@@ -224,12 +228,14 @@ export function Home() {
       to_card: null,
       from_city: e.target.from_city?.value,
       to_city: e.target.to_city?.value,
+      fullName: e.target.fullName.value,
       havala_amount: e.target.havala_amount?.value,
       fromMoney_toMoney: e.target.fromMoney_toMoney?.value,
       purchased_price: e.target.purchased_price?.value,
       sell_price: e.target.sell_price?.value,
       commision_amount: e.target.commision_amount?.value,
       safe_amount: e.target.safe_amount?.value,
+      havala_date: havala_date,
     };
     console.log("normal havala ", havalaData);
     setItems([havalaData, ...items]);
@@ -237,12 +243,19 @@ export function Home() {
   }
   function handleCardtoCard(e) {
     e.preventDefault();
+    const date = new Date();
+    let havala_date =
+      date.getFullYear() + "-" + date.getDay() + "-" + date.getDate();
     havalaData = {
       havala_type: "card_to_card",
       havala_number1: e.target.havala_number1?.value,
       havala_number2: null,
-      from_card: e.target.from_card?.value,
+      from_card:
+        e.target.my_card?.value != ""
+          ? e.target.my_card?.value
+          : e.target.from_card?.value,
       to_card: e.target.to_card?.value,
+      fullName: e.target.fullName.value,
       from_city: e.target.from_city?.value,
       to_city: e.target.to_city?.value,
       havala_amount: e.target.havala_amount?.value,
@@ -251,6 +264,7 @@ export function Home() {
       commision_amount: 0,
       sell_price: e.target.sell_price?.value,
       safe_amount: e.target.safe_amount?.value,
+      havala_date: havala_date,
     };
     setItems([havalaData, ...items]);
     setcardToCard(false);
@@ -291,8 +305,8 @@ export function Home() {
               />
               <input
                 type="text"
-                name="customer_name"
-                id="customer_name"
+                name="fullName"
+                id="fullName"
                 defaultValue={info.customerName}
                 placeholder="نام مشتری"
                 className="addNormalHavala-body-input"
@@ -400,12 +414,24 @@ export function Home() {
                 placeholder="نمبر حواله اول "
                 className="addNormalHavala-body-input"
               />
-              <select className="addCardToCard-body-input currency-type">
-                <option>کارت را انتخاب نمایید</option>
-                <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
-                <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
-                <option>بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷</option>
-                <option>بانک ملت --- ۸۳۴۹۷۴۸۳۵۴ </option>
+              <select
+                name="my_card"
+                id="my_card"
+                className="addCardToCard-body-input currency-type"
+              >
+                <option value="">کارت را انتخاب نمایید</option>
+                <option value="بانک صادرات - ۳۴۳۴۳۴۳۴">
+                  بانک صادرات --- ۸۴۷۸۳۴۸۳۴۷
+                </option>
+                <option value="بانک ملت - ۳۴۳۴۳۴۳۴">
+                  بانک ملت --- ۸۳۴۹۷۴۸۳۵۴{" "}
+                </option>
+                <option value="بانک سپهر - ۳۴۳۴۳۴۳۴">
+                  بانک سپهر --- ۸۴۷۸۳۴۸۳۴۷
+                </option>
+                <option value="بانک ایلام - ۳۴۳۴۳۴۳۴">
+                  بانک ایلام --- ۸۳۴۹۷۴۸۳۵۴{" "}
+                </option>
               </select>
               <input
                 type="text"
@@ -425,8 +451,8 @@ export function Home() {
               />
               <input
                 type="text"
-                name="customer_name"
-                id="customer_name"
+                name="fullName"
+                id="fullName"
                 defaultValue={info.customerName}
                 placeholder="نام مشتری"
                 className="addNormalHavala-body-input"
@@ -562,8 +588,8 @@ export function Home() {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{havala.number_havala1}</td>
-                        <td>{havala.number_havala2}</td>
+                        <td>{havala.havala_number1}</td>
+                        <td>{havala.havala_number2}</td>
                         <td>{havala.from_card}</td>
                         <td>{havala.to_card}</td>
                         <td>{havala.fullName}</td>
@@ -574,7 +600,7 @@ export function Home() {
                         </td>
                         <td>{havala.commision_amount}</td>
 
-                        <td>{havala.safe}</td>
+                        <td>{havala.safe_amount}</td>
                         <td>{havala.havala_date}</td>
 
                         <td className="home-action">
