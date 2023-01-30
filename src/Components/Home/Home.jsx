@@ -221,7 +221,8 @@ export function Home() {
       date.getFullYear() + "-" + date.getDay() + "-" + date.getDate();
 
     havalaData = {
-      havala_type: "normal",
+      havala_type: "معمولی",
+      tarafHesab: e.target.tarafHesab.value,
       havala_number1: e.target.havala_number1?.value,
       havala_number2: e.target.havala_number2?.value,
       from_card: null,
@@ -234,7 +235,12 @@ export function Home() {
       purchased_price: e.target.purchased_price?.value,
       sell_price: e.target.sell_price?.value,
       commision_amount: e.target.commision_amount?.value,
-      safe_amount: e.target.safe_amount?.value,
+      safe_amount:
+        (
+          (e.target.havala_amount?.value *
+            (e.target.sell_price?.value - e.target.purchased_price?.value)) /
+          e.target.purchased_price?.value
+        ).toFixed(2) - e.target.commision_amount?.value,
       havala_date: havala_date,
     };
     console.log("normal havala ", havalaData);
@@ -247,7 +253,8 @@ export function Home() {
     let havala_date =
       date.getFullYear() + "-" + date.getDay() + "-" + date.getDate();
     havalaData = {
-      havala_type: "card_to_card",
+      havala_type: "کارت به کارت",
+      tarafHesab: e.target.tarafHesab.value,
       havala_number1: e.target.havala_number1?.value,
       havala_number2: null,
       from_card:
@@ -268,6 +275,7 @@ export function Home() {
     };
     setItems([havalaData, ...items]);
     setcardToCard(false);
+    console.log(havalaData);
   }
 
   return (
@@ -287,6 +295,16 @@ export function Home() {
           </div>
           <form onSubmit={handleNormalHavala}>
             <div className="addNormalHavala-body">
+              <select
+                name="tarafHesab"
+                id="tarafHesab"
+                className="addCardToCard-body-input currency-type"
+              >
+                <option value="">طرف حساب را انتخاب نمایید</option>
+                <option value="عمه نوری">عمه نوری</option>
+                <option value="محمد">محمد</option>
+                <option value="اکبر">اکبر</option>
+              </select>
               <input
                 type="text"
                 name="havala_number1"
@@ -406,6 +424,16 @@ export function Home() {
           </div>
           <form onSubmit={handleCardtoCard}>
             <div className="addNormalHavala-body">
+              <select
+                name="tarafHesab"
+                id="tarafHesab"
+                className="addCardToCard-body-input currency-type"
+              >
+                <option value="">طرف حساب را انتخاب نمایید</option>
+                <option value="عمه نوری">عمه نوری</option>
+                <option value="محمد">محمد</option>
+                <option value="اکبر">اکبر</option>
+              </select>
               <input
                 type="text"
                 name="havala_number1"
@@ -598,7 +626,7 @@ export function Home() {
                         <td>
                           {havala.purchased_price + " - " + havala.sell_price}
                         </td>
-                        <td>{havala.commision_amount}</td>
+                        <td>{havala.payed_amount}</td>
 
                         <td>{havala.safe_amount}</td>
                         <td>{havala.havala_date}</td>
