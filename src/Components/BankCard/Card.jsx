@@ -9,7 +9,7 @@ export function Card() {
   const [data, setData] = useState([
     {
       id: "1",
-      backName: "بانک صادارت",
+      bankName: "بانک صادارت",
       cardNumber: "32897384",
       shabaNumber: "9234829038490238490",
       hesabNumber: "378394738874",
@@ -17,7 +17,7 @@ export function Card() {
     },
     {
       id: "2",
-      backName: "باک ملت",
+      bankName: "باک ملت",
       cardNumber: "32897384",
       shabaNumber: "9234829038490238490",
       hesabNumber: "378394738874",
@@ -26,7 +26,7 @@ export function Card() {
     },
     {
       id: "3",
-      backName: "بانک سپهر",
+      bankName: "بانک سپهر",
       cardNumber: "32897384",
       shabaNumber: "9234829038490238490",
       hesabNumber: "378394738874",
@@ -35,14 +35,26 @@ export function Card() {
     },
     {
       id: "4",
-      backName: "بانک ملت",
+      bankName: "بانک ملت",
       cardNumber: "32897384",
       hesabNumber: "378394738874",
-
       shabaNumber: "9234829038490238490",
       existance: "4485845",
     },
   ]);
+
+  const addCard = (e) => {
+    e.preventDefault();
+    let newCard = {
+      bankName: e.target.bankName?.value,
+      cardNumber: e.target.cardNumber?.value,
+      hesabNumber: e.target.hesabNumber?.value,
+      shabaNumber: e.target.shabaNumber?.value,
+      existance: e.target.existance?.value,
+    };
+    setData([...data, newCard]);
+    setAddPopUp(false);
+  };
   return (
     <div className="container">
       <Header />
@@ -58,43 +70,45 @@ export function Card() {
             <span>افزودن حواله جدید</span>
             <img src="bills.png" alt="logo" />
           </div>
-          <div className="addDrug-body">
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="نام کارت بانکی"
-              className="addDrug-body-input"
-            />
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="شماره حساب  "
-              className="addDrug-body-input"
-            />
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="شماره بانکی"
-              className="addDrug-body-input"
-            />
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="شماره شبا"
-              className="addDrug-body-input"
-            />{" "}
-            <input
-              type="text"
-              name="sendNumber"
-              placeholder="موجودی "
-              className="addDrug-body-input"
-            />{" "}
-            <input
-              type="button"
-              value="ثبت کارت"
-              className="addDrug-body-button"
-            />
-          </div>
+          <form onSubmit={addCard}>
+            <div className="addDrug-body">
+              <input
+                type="text"
+                name="bankName"
+                placeholder="نام کارت بانکی"
+                className="addDrug-body-input"
+              />
+              <input
+                type="text"
+                name="cardNumber"
+                placeholder="شماره حساب  "
+                className="addDrug-body-input"
+              />
+              <input
+                type="text"
+                name="hesabNumber"
+                placeholder="شماره بانکی"
+                className="addDrug-body-input"
+              />
+              <input
+                type="text"
+                name="shabaNumber"
+                placeholder="شماره شبا"
+                className="addDrug-body-input"
+              />{" "}
+              <input
+                type="text"
+                name="existance"
+                placeholder="موجودی "
+                className="addDrug-body-input"
+              />{" "}
+              <input
+                type="submit"
+                value="ثبت کارت"
+                className="addDrug-body-button"
+              />
+            </div>
+          </form>
         </div>
       ) : null}
       <div className="content">
@@ -129,7 +143,7 @@ export function Card() {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{havala.backName}</td>
+                        <td>{havala.bankName}</td>
                         <td>{havala.cardNumber}</td>
                         <td>{havala.shabaNumber}</td>
                         <td>{havala.existance}</td>
@@ -137,7 +151,19 @@ export function Card() {
 
                         <td className="home-action">
                           <img src="edit.png" alt="edit" />
-                          <img src="delete.png" alt="delete" />
+                          <img
+                            src="delete.png"
+                            alt="delete"
+                            onClick={() => {
+                              const filteredRows = data.filter((item) => {
+                                if (item.cardNumber != havala.cardNumber) {
+                                  return item;
+                                }
+                              });
+
+                              setData([...filteredRows]);
+                            }}
+                          />
                         </td>
                       </tr>
                     );
