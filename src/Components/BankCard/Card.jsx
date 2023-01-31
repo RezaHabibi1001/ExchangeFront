@@ -98,7 +98,7 @@ export function Card() {
               alt="close"
               onClick={() => setAddPopUp(false)}
             />
-            <span>افزودن حواله جدید</span>
+            <span>افزودن کارت بانکی جدید</span>
             <img src="bills.png" alt="logo" />
           </div>
           <form onSubmit={addCard}>
@@ -150,7 +150,7 @@ export function Card() {
               alt="close"
               onClick={() => setEditPopUp(false)}
             />
-            <span>ویرایش حواله</span>
+            <span>ویرایش کارت بانکی</span>
             <img src="bills.png" alt="logo" />
           </div>
           <form onSubmit={editCard}>
