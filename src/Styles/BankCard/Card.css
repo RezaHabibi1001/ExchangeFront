@@ -34,13 +34,15 @@
 }
 
 /* drugs content */
-.havala-content {
+.card-content {
   width: 95%;
   /* height: 65vh; */
   margin: 0 auto;
   /* background-color: #ddd; */
   overflow-y: scroll;
   font-size: 14px;
+  /* border: 1px solid red; */
+  height: 400px;
 }
 /* drugs table */
 table {

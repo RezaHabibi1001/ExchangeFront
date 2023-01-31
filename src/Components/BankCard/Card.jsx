@@ -6,6 +6,8 @@ import "../../Styles/BankCard/Card.css";
 
 export function Card() {
   const [addPopUp, setAddPopUp] = useState(false);
+  const [editPopUp, setEditPopUp] = useState(false);
+
   const [editRow, setEditRow] = useState();
   const [data, setData] = useState([
     {
@@ -46,6 +48,7 @@ export function Card() {
 
   const addCard = (e) => {
     e.preventDefault();
+
     let newCard = {
       bankName: e.target.bankName?.value,
       cardNumber: e.target.cardNumber?.value,
@@ -55,6 +58,24 @@ export function Card() {
     };
     setData([...data, newCard]);
     setAddPopUp(false);
+  };
+  const editCard = (e) => {
+    e.preventDefault();
+
+    const filteredRows = data.filter((item) => {
+      if (item.cardNumber != editRow.cardNumber) {
+        return item;
+      }
+    });
+    let updatedRow = {
+      bankName: e.target.bankName.value,
+      cardNumber: e.target.cardNumber.value,
+      hesabNumber: e.target.hesabNumber.value,
+      shabaNumber: e.target.shabaNumber.value,
+      existance: e.target.existance.value,
+    };
+    setData([...filteredRows, updatedRow]);
+    setEditPopUp(false);
   };
   return (
     <div className="container">
@@ -74,35 +95,30 @@ export function Card() {
           <form onSubmit={addCard}>
             <div className="addDrug-body">
               <input
-                defaultValue={editRow.bankName}
                 type="text"
                 name="bankName"
                 placeholder="نام کارت بانکی"
                 className="addDrug-body-input"
               />
               <input
-                defaultValue={editRow.cardNumber}
                 type="text"
                 name="cardNumber"
                 placeholder="شماره حساب  "
                 className="addDrug-body-input"
               />
               <input
-                defaultValue={editRow.hesabNumber}
                 type="text"
                 name="hesabNumber"
                 placeholder="شماره بانکی"
                 className="addDrug-body-input"
               />
               <input
-                defaultValue={editRow.shabaNumber}
                 type="text"
                 name="shabaNumber"
                 placeholder="شماره شبا"
                 className="addDrug-body-input"
               />{" "}
               <input
-                defaultValue={editRow.existance}
                 type="text"
                 name="existance"
                 placeholder="موجودی "
@@ -111,6 +127,63 @@ export function Card() {
               <input
                 type="submit"
                 value="ثبت کارت"
+                className="addDrug-body-button"
+              />
+            </div>
+          </form>
+        </div>
+      ) : null}
+      {editPopUp ? (
+        <div className="addDrug-content">
+          <div className="addDrug-header">
+            <img
+              src="close.png"
+              alt="close"
+              onClick={() => setEditPopUp(false)}
+            />
+            <span>ویرایش حواله</span>
+            <img src="bills.png" alt="logo" />
+          </div>
+          <form onSubmit={editCard}>
+            <div className="addDrug-body">
+              <input
+                defaultValue={editRow?.bankName}
+                type="text"
+                name="bankName"
+                placeholder="نام کارت بانکی"
+                className="addDrug-body-input"
+              />
+              <input
+                defaultValue={editRow?.cardNumber}
+                type="text"
+                name="cardNumber"
+                placeholder="شماره حساب  "
+                className="addDrug-body-input"
+              />
+              <input
+                defaultValue={editRow?.hesabNumber}
+                type="text"
+                name="hesabNumber"
+                placeholder="شماره بانکی"
+                className="addDrug-body-input"
+              />
+              <input
+                defaultValue={editRow?.shabaNumber}
+                type="text"
+                name="shabaNumber"
+                placeholder="شماره شبا"
+                className="addDrug-body-input"
+              />{" "}
+              <input
+                defaultValue={editRow?.existance}
+                type="text"
+                name="existance"
+                placeholder="موجودی "
+                className="addDrug-body-input"
+              />{" "}
+              <input
+                type="submit"
+                value="ثبت تغییرات"
                 className="addDrug-body-button"
               />
             </div>
@@ -128,7 +201,7 @@ export function Card() {
               افزودن کارت
             </span>
           </div>
-          <div className="havala-content">
+          <div className="card-content">
             <div className="table-container">
               <table>
                 <thead>
@@ -149,11 +222,11 @@ export function Card() {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{card.bankName}</td>
-                        <td>{card.cardNumber}</td>
-                        <td>{card.shabaNumber}</td>
-                        <td>{card.existance}</td>
-                        <td>{card.hesabNumber}</td>
+                        <td>{card?.bankName}</td>
+                        <td>{card?.cardNumber}</td>
+                        <td>{card?.shabaNumber}</td>
+                        <td>{card?.existance}</td>
+                        <td>{card?.hesabNumber}</td>
 
                         <td className="home-action">
                           <img
@@ -161,7 +234,7 @@ export function Card() {
                             alt="edit"
                             onClick={() => {
                               setEditRow(card);
-                              setAddPopUp(true);
+                              setEditPopUp(true);
                             }}
                           />
                           <img
@@ -185,18 +258,10 @@ export function Card() {
                 <tfoot></tfoot>
               </table>
             </div>
-            <div className="home-footer">
-              <input
-                type="button"
-                value=" < "
-                className="home-footer-backward"
-              />
-              <input
-                type="button"
-                value=" > "
-                className="home-footer-forward"
-              />
-            </div>
+          </div>
+          <div className="home-footer">
+            <input type="button" value=" < " className="home-footer-backward" />
+            <input type="button" value=" > " className="home-footer-forward" />
           </div>
         </div>
       </div>
