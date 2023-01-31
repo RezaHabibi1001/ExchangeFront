@@ -1,5 +1,4 @@
 import { Header } from "../StaticComponents/Header";
-import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import { useState } from "react";
 import "../../Styles/BankCard/Card.css";
@@ -7,7 +6,7 @@ import "../../Styles/BankCard/Card.css";
 export function Card() {
   const [addPopUp, setAddPopUp] = useState(false);
   const [editPopUp, setEditPopUp] = useState(false);
-
+  const [searchValue, setSearchValue] = useState("");
   const [editRow, setEditRow] = useState();
   const [data, setData] = useState([
     {
@@ -46,6 +45,7 @@ export function Card() {
     },
   ]);
 
+  //  This function is for inserting a new card
   const addCard = (e) => {
     e.preventDefault();
 
@@ -59,6 +59,8 @@ export function Card() {
     setData([...data, newCard]);
     setAddPopUp(false);
   };
+
+  //  This  function is for uodating a card
   const editCard = (e) => {
     e.preventDefault();
 
@@ -77,6 +79,13 @@ export function Card() {
     setData([...filteredRows, updatedRow]);
     setEditPopUp(false);
   };
+
+  //  This function  is  for searchnig a   card
+
+  const handleSearch = (e) => {
+    setSearchValue(e.target.value);
+  };
+
   return (
     <div className="container">
       <Header />
@@ -193,7 +202,15 @@ export function Card() {
       <div className="content">
         <div className="havala-container">
           <div className="card-header">
-            <Search searchPlaceHolder="جستجوی حواله" />
+            <div className="search-container">
+              <input
+                type="seach"
+                name="searchCard"
+                placeholder={"جستجوی کارت بانکی"}
+                className="search"
+                onChange={handleSearch}
+              />
+            </div>{" "}
             <span
               className="add-newDard btn-user"
               onClick={() => setAddPopUp(true)}
@@ -211,48 +228,86 @@ export function Card() {
                     <th className="mycard-number">شماره کارت</th>
                     <th className="mycard-shaba">شماره شبا</th>
                     <th className="mycard-hesab">شماره حساب</th>
-
                     <th className="mycard-existance">موجودی کارت</th>
-
                     <th className="mycard-setting">تنظیمات</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.map((card, index) => {
-                    return (
-                      <tr>
-                        <td>{index + 1}</td>
-                        <td>{card?.bankName}</td>
-                        <td>{card?.cardNumber}</td>
-                        <td>{card?.shabaNumber}</td>
-                        <td>{card?.existance}</td>
-                        <td>{card?.hesabNumber}</td>
+                    if (searchValue == "") {
+                      return (
+                        <tr>
+                          <td>{index + 1}</td>
+                          <td>{card?.bankName}</td>
+                          <td>{card?.cardNumber}</td>
+                          <td>{card?.shabaNumber}</td>
+                          <td>{card?.existance}</td>
+                          <td>{card?.hesabNumber}</td>
 
-                        <td className="home-action">
-                          <img
-                            src="edit.png"
-                            alt="edit"
-                            onClick={() => {
-                              setEditRow(card);
-                              setEditPopUp(true);
-                            }}
-                          />
-                          <img
-                            src="delete.png"
-                            alt="delete"
-                            onClick={() => {
-                              const filteredRows = data.filter((item) => {
-                                if (item.cardNumber != card.cardNumber) {
-                                  return item;
-                                }
-                              });
+                          <td className="home-action">
+                            <img
+                              src="edit.png"
+                              alt="edit"
+                              onClick={() => {
+                                setEditRow(card);
+                                setEditPopUp(true);
+                              }}
+                            />
+                            <img
+                              src="delete.png"
+                              alt="delete"
+                              onClick={() => {
+                                const filteredRows = data.filter((item) => {
+                                  if (item.cardNumber != card.cardNumber) {
+                                    return item;
+                                  }
+                                });
 
-                              setData([...filteredRows]);
-                            }}
-                          />
-                        </td>
-                      </tr>
-                    );
+                                setData([...filteredRows]);
+                              }}
+                            />
+                          </td>
+                        </tr>
+                      );
+                    }
+                    if (searchValue != "") {
+                      if (card.bankName.includes(searchValue)) {
+                        return (
+                          <tr>
+                            <td>{index + 1}</td>
+                            <td>{card?.bankName}</td>
+                            <td>{card?.cardNumber}</td>
+                            <td>{card?.shabaNumber}</td>
+                            <td>{card?.existance}</td>
+                            <td>{card?.hesabNumber}</td>
+
+                            <td className="home-action">
+                              <img
+                                src="edit.png"
+                                alt="edit"
+                                onClick={() => {
+                                  setEditRow(card);
+                                  setEditPopUp(true);
+                                }}
+                              />
+                              <img
+                                src="delete.png"
+                                alt="delete"
+                                onClick={() => {
+                                  const filteredRows = data.filter((item) => {
+                                    if (item.cardNumber != card.cardNumber) {
+                                      return item;
+                                    }
+                                  });
+
+                                  setData([...filteredRows]);
+                                }}
+                              />
+                            </td>
+                          </tr>
+                        );
+                      }
+                    }
                   })}
                 </tbody>
                 <tfoot></tfoot>
