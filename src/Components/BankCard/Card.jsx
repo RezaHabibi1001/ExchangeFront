@@ -6,6 +6,7 @@ import "../../Styles/BankCard/Card.css";
 
 export function Card() {
   const [addPopUp, setAddPopUp] = useState(false);
+  const [editRow, setEditRow] = useState();
   const [data, setData] = useState([
     {
       id: "1",
@@ -73,30 +74,35 @@ export function Card() {
           <form onSubmit={addCard}>
             <div className="addDrug-body">
               <input
+                defaultValue={editRow.bankName}
                 type="text"
                 name="bankName"
                 placeholder="نام کارت بانکی"
                 className="addDrug-body-input"
               />
               <input
+                defaultValue={editRow.cardNumber}
                 type="text"
                 name="cardNumber"
                 placeholder="شماره حساب  "
                 className="addDrug-body-input"
               />
               <input
+                defaultValue={editRow.hesabNumber}
                 type="text"
                 name="hesabNumber"
                 placeholder="شماره بانکی"
                 className="addDrug-body-input"
               />
               <input
+                defaultValue={editRow.shabaNumber}
                 type="text"
                 name="shabaNumber"
                 placeholder="شماره شبا"
                 className="addDrug-body-input"
               />{" "}
               <input
+                defaultValue={editRow.existance}
                 type="text"
                 name="existance"
                 placeholder="موجودی "
@@ -139,24 +145,31 @@ export function Card() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((havala, index) => {
+                  {data.map((card, index) => {
                     return (
                       <tr>
                         <td>{index + 1}</td>
-                        <td>{havala.bankName}</td>
-                        <td>{havala.cardNumber}</td>
-                        <td>{havala.shabaNumber}</td>
-                        <td>{havala.existance}</td>
-                        <td>{havala.hesabNumber}</td>
+                        <td>{card.bankName}</td>
+                        <td>{card.cardNumber}</td>
+                        <td>{card.shabaNumber}</td>
+                        <td>{card.existance}</td>
+                        <td>{card.hesabNumber}</td>
 
                         <td className="home-action">
-                          <img src="edit.png" alt="edit" />
+                          <img
+                            src="edit.png"
+                            alt="edit"
+                            onClick={() => {
+                              setEditRow(card);
+                              setAddPopUp(true);
+                            }}
+                          />
                           <img
                             src="delete.png"
                             alt="delete"
                             onClick={() => {
                               const filteredRows = data.filter((item) => {
-                                if (item.cardNumber != havala.cardNumber) {
+                                if (item.cardNumber != card.cardNumber) {
                                   return item;
                                 }
                               });
