@@ -234,7 +234,7 @@ export function Card() {
                 </thead>
                 <tbody>
                   {data.map((card, index) => {
-                    if (searchValue == "") {
+                    if (card.bankName.includes(searchValue)) {
                       return (
                         <tr>
                           <td>{index + 1}</td>
@@ -262,51 +262,12 @@ export function Card() {
                                     return item;
                                   }
                                 });
-
                                 setData([...filteredRows]);
                               }}
                             />
                           </td>
                         </tr>
                       );
-                    }
-                    if (searchValue != "") {
-                      if (card.bankName.includes(searchValue)) {
-                        return (
-                          <tr>
-                            <td>{index + 1}</td>
-                            <td>{card?.bankName}</td>
-                            <td>{card?.cardNumber}</td>
-                            <td>{card?.shabaNumber}</td>
-                            <td>{card?.existance}</td>
-                            <td>{card?.hesabNumber}</td>
-
-                            <td className="home-action">
-                              <img
-                                src="edit.png"
-                                alt="edit"
-                                onClick={() => {
-                                  setEditRow(card);
-                                  setEditPopUp(true);
-                                }}
-                              />
-                              <img
-                                src="delete.png"
-                                alt="delete"
-                                onClick={() => {
-                                  const filteredRows = data.filter((item) => {
-                                    if (item.cardNumber != card.cardNumber) {
-                                      return item;
-                                    }
-                                  });
-
-                                  setData([...filteredRows]);
-                                }}
-                              />
-                            </td>
-                          </tr>
-                        );
-                      }
                     }
                   })}
                 </tbody>

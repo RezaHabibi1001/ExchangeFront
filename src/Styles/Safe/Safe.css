@@ -39,6 +39,7 @@
   margin: 0 auto;
   /* background-color: #ddd; */
   overflow-y: scroll;
+  height: 400px;
 }
 /* safe table */
 table {

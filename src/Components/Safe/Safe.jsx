@@ -111,17 +111,15 @@ export function Safe() {
                 </thead>
                 <tbody>
                   {data.map((havala, index) => {
-                    if (index + 1 <= pageNumber) {
-                      return (
-                        <tr>
-                          <td>{index + 1}</td>
-                          <td>{havala.havala_number1}</td>
-                          <td>{havala.havala_number2}</td>
+                    return (
+                      <tr>
+                        <td>{index + 1}</td>
+                        <td>{havala.havala_number1}</td>
+                        <td>{havala.havala_number2}</td>
 
-                          <td>{havala.safe}</td>
-                        </tr>
-                      );
-                    }
+                        <td>{havala.safe}</td>
+                      </tr>
+                    );
                   })}
                 </tbody>
                 <tfoot></tfoot>
