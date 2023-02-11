@@ -3,8 +3,10 @@ import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
 import { useState } from "react";
 import "../../Styles/Home/Home.css";
-import { useGlobal } from "../../zustand";
 export function Home() {
+  const [searchedValue, setSearchedValue] = useState("");
+  const [currentTarafHesab, setCurrentTarafHesab] = useState("");
+
   const [items, setItems] = useState([
     {
       id: "49384934",
@@ -14,7 +16,7 @@ export function Home() {
       number_havala2: "1001",
       from_card: "4573333",
       to_card: "73847834",
-      fullName: "رضا حبیبی",
+      fullName: "جواد",
       from_city: "هامبورگ",
       to_city: "کابل",
       purchased_price: 98,
@@ -24,6 +26,47 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
+      tarafhesab: "نوری",
+    },
+    {
+      id: "49384934",
+      corporator: "mohammad",
+      havala_type: "کارت به کارت",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
+      fullName: "کاظم حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
+      safe: 30,
+      havala_date: "2022-03-07",
+      tarafhesab: "نوری",
+    },
+    {
+      id: "49384934",
+      corporator: "mohammad",
+      havala_type: "کارت به کارت",
+      number_havala1: "1001",
+      number_havala2: "1001",
+      from_card: "4573333",
+      to_card: "73847834",
+      fullName: "قاسم حبیبی",
+      from_city: "هامبورگ",
+      to_city: "کابل",
+      purchased_price: 98,
+      sell_price: 102,
+      havala_amount: 500,
+      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
+      commision_amount: 100,
+      safe: 30,
+      havala_date: "2022-03-07",
+      tarafhesab: "نوری",
     },
     {
       id: "49384934",
@@ -43,6 +86,7 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
+      tarafhesab: "نوری",
     },
     {
       id: "49384934",
@@ -62,6 +106,7 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
+      tarafhesab: "اکبر",
     },
     {
       id: "49384934",
@@ -81,6 +126,7 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
+      tarafhesab: "اکبر",
     },
     {
       id: "49384934",
@@ -100,6 +146,7 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
+      tarafhesab: "اکبر",
     },
     {
       id: "49384934",
@@ -119,6 +166,7 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
+      tarafhesab: "اکبر",
     },
     {
       id: "49384934",
@@ -138,6 +186,7 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
+      tarafhesab: "محمد",
     },
     {
       id: "49384934",
@@ -157,50 +206,12 @@ export function Home() {
       commision_amount: 100,
       safe: 30,
       havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      corporator: "mohammad",
-      havala_type: "کارت به کارت",
-      number_havala1: "1001",
-      number_havala2: "1001",
-      from_card: "4573333",
-      to_card: "73847834",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      commision_amount: 100,
-      safe: 30,
-      havala_date: "2022-03-07",
-    },
-    {
-      id: "49384934",
-      corporator: "mohammad",
-      havala_type: "کارت به کارت",
-      number_havala1: "1001",
-      number_havala2: "1001",
-      from_card: "4573333",
-      to_card: "73847834",
-      fullName: "رضا حبیبی",
-      from_city: "هامبورگ",
-      to_city: "کابل",
-      purchased_price: 98,
-      sell_price: 102,
-      havala_amount: 500,
-      // safe: ((sell_price - purchased_price) * havala_amount) / purchased_price,
-      commision_amount: 100,
-      safe: 30,
-      havala_date: "2022-03-07",
+      tarafhesab: "محمد",
     },
   ]);
   const [cardToCard, setcardToCard] = useState(false);
   const [normaHavala, setNormalHavala] = useState(false);
   const [havalaTypeSelected, setHavalaTypeSelected] = useState("");
-  const [searchBy, setSearchBy] = useState("");
   console.log("havalaTypeSelected", havalaTypeSelected);
   let havalaData = {};
   const [info, setInfo] = useState({
@@ -278,8 +289,12 @@ export function Home() {
     console.log(havalaData);
   }
 
-  const handleSearchBy = (e) => {
-    setSearchBy(e.target.value);
+  const handleSearch = (e) => {
+    setSearchedValue(e.target.value);
+  };
+  const handleTarafHesabFilter = (e) => {
+    console.log("e.target.tarafhesab.value", e.target.value);
+    setCurrentTarafHesab(e.target.value);
   };
   return (
     <div className="container">
@@ -428,12 +443,12 @@ export function Home() {
           <form onSubmit={handleCardtoCard}>
             <div className="addNormalHavala-body">
               <select
-                name="tarafHesab"
                 id="tarafHesab"
+                name="tarafhesab"
                 className="addCardToCard-body-input currency-type"
               >
                 <option value="">طرف حساب را انتخاب نمایید</option>
-                <option value="عمه نوری">عمه نوری</option>
+                <option value="نوری">عمه نوری</option>
                 <option value="محمد">محمد</option>
                 <option value="اکبر">اکبر</option>
               </select>
@@ -566,17 +581,25 @@ export function Home() {
       <div className="content">
         <div className="havala-container">
           <div className="hawala-header">
-            <Search searchPlaceHolder="جستجوی حواله" />
-            <select className="havala-select-search" onChange={handleSearchBy}>
-              <option value="havala_number1">نمبر حواله</option>
-              <option value="fullName">نام مشتری</option>
-            </select>
-            <select className="havala-select-search">
-              <option>حساب عمه نوری</option>
-              <option>حساب اکبر</option>
-              <option>حساب محمد</option>
-            </select>
+            <div className="search-container">
+              <input
+                type="seach"
+                name="searchCard"
+                placeholder={"جستجوی حواله"}
+                className="search"
+                onChange={handleSearch}
+              />
+            </div>
+            <select
+              onChange={handleTarafHesabFilter}
+              className="havala-select-search"
+            >
+              <option value="">همه موارد</option>
 
+              <option value="نوری">حساب عمه نوری</option>
+              <option value="اکبر">حساب اکبر</option>
+              <option value="محمد">حساب محمد</option>
+            </select>
             <span
               className="add-havala btn-user"
               onClick={() => setcardToCard(true)}
@@ -615,44 +638,51 @@ export function Home() {
                 </thead>
                 <tbody>
                   {items.map((havala, index) => {
-                    return (
-                      <tr>
-                        <td>{index + 1}</td>
-                        <td>{havala.havala_number1}</td>
-                        <td>{havala.havala_number2}</td>
-                        <td>{havala.from_card}</td>
-                        <td>{havala.to_card}</td>
-                        <td>{havala.fullName}</td>
-                        <td>{havala.from_city + " - " + havala.to_city}</td>
-                        <td>{havala.havala_amount}</td>
-                        <td>
-                          {havala.purchased_price + " - " + havala.sell_price}
-                        </td>
-                        <td>{havala.payed_amount}</td>
+                    if (havala?.tarafhesab.includes(currentTarafHesab)) {
+                      if (havala.fullName.includes(searchedValue)) {
+                        return (
+                          <tr>
+                            <td>{index + 1}</td>
+                            <td>{havala.havala_number1}</td>
+                            <td>{havala.havala_number2}</td>
+                            <td>{havala.from_card}</td>
+                            <td>{havala.to_card}</td>
+                            <td>{havala.fullName}</td>
+                            <td>{havala.from_city + " - " + havala.to_city}</td>
+                            <td>{havala.havala_amount}</td>
+                            <td>
+                              {havala.purchased_price +
+                                " - " +
+                                havala.sell_price}
+                            </td>
+                            <td>{havala.payed_amount}</td>
 
-                        <td>{havala.safe_amount}</td>
-                        <td>{havala.havala_date}</td>
+                            <td>{havala.safe_amount}</td>
+                            <td>{havala.havala_date}</td>
 
-                        <td className="home-action">
-                          <img src="edit.png" alt="edit" />
-                          <img
-                            src="delete.png"
-                            alt="delete"
-                            onClick={() => {
-                              const filteredRows = items.filter((item) => {
-                                if (
-                                  item.havala_number1 != havala.havala_number1
-                                ) {
-                                  return item;
-                                }
-                              });
+                            <td className="home-action">
+                              <img src="edit.png" alt="edit" />
+                              <img
+                                src="delete.png"
+                                alt="delete"
+                                onClick={() => {
+                                  const filteredRows = items.filter((item) => {
+                                    if (
+                                      item.havala_number1 !=
+                                      havala.havala_number1
+                                    ) {
+                                      return item;
+                                    }
+                                  });
 
-                              setItems(filteredRows);
-                            }}
-                          />
-                        </td>
-                      </tr>
-                    );
+                                  setItems(filteredRows);
+                                }}
+                              />
+                            </td>
+                          </tr>
+                        );
+                      }
+                    }
                   })}
                 </tbody>
                 <tfoot></tfoot>

@@ -210,7 +210,7 @@ export function Card() {
                 className="search"
                 onChange={handleSearch}
               />
-            </div>{" "}
+            </div>
             <span
               className="add-newDard btn-user"
               onClick={() => setAddPopUp(true)}
