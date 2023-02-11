@@ -4,6 +4,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
   /* justify-content: space-between; */
 }
 .hawala-header {
@@ -96,7 +97,20 @@ tfoot tr td:last-child {
   z-index: 2;
   border-radius: 10px;
 }
-
+.editMarket-content {
+  position: absolute;
+  top: 50px;
+  left: 30%;
+  width: 40%;
+  height: 180px;
+  margin: 0 auto;
+  background-color: var(--color-fourth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  border-radius: 10px;
+}
 .addDrug-header {
   width: 100%;
   height: 50px;
