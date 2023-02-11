@@ -58,7 +58,7 @@ export function Market() {
                 alt="edit"
               />
             </div>
-            <span className="repository-title">موجودی کل</span>
+            <span className="repository-title">موجودی مارکت</span>
             <span className="repository-amount">{marketValue}</span>
           </div>
         </div>
