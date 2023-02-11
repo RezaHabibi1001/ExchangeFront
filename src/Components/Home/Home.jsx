@@ -197,10 +197,10 @@ export function Home() {
       havala_date: "2022-03-07",
     },
   ]);
-
   const [cardToCard, setcardToCard] = useState(false);
   const [normaHavala, setNormalHavala] = useState(false);
   const [havalaTypeSelected, setHavalaTypeSelected] = useState("");
+  const [searchBy, setSearchBy] = useState("");
   console.log("havalaTypeSelected", havalaTypeSelected);
   let havalaData = {};
   const [info, setInfo] = useState({
@@ -278,6 +278,9 @@ export function Home() {
     console.log(havalaData);
   }
 
+  const handleSearchBy = (e) => {
+    setSearchBy(e.target.value);
+  };
   return (
     <div className="container">
       <Header />
@@ -564,10 +567,9 @@ export function Home() {
         <div className="havala-container">
           <div className="hawala-header">
             <Search searchPlaceHolder="جستجوی حواله" />
-            <select className="havala-select-search">
-              <option>نمبر حواله</option>
-              <option>نام مشتری</option>
-              <option>تاریخ حواله</option>
+            <select className="havala-select-search" onChange={handleSearchBy}>
+              <option value="havala_number1">نمبر حواله</option>
+              <option value="fullName">نام مشتری</option>
             </select>
             <select className="havala-select-search">
               <option>حساب عمه نوری</option>

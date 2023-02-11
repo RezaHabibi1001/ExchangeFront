@@ -275,10 +275,6 @@ export function Card() {
               </table>
             </div>
           </div>
-          <div className="home-footer">
-            <input type="button" value=" < " className="home-footer-backward" />
-            <input type="button" value=" > " className="home-footer-forward" />
-          </div>
         </div>
       </div>
     </div>

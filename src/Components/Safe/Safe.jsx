@@ -10,72 +10,107 @@ export function Safe() {
   const [data, setData] = useState([
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "noori",
       havala_date: "2023-01-22T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "noori",
       havala_date: "2023-01-23T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "noori",
       havala_date: "2023-01-31T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "noori",
       havala_date: "2023-01-30T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "akbar",
       havala_date: "2023-01-29T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "akbar",
       havala_date: "2023-01-28T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "akbar",
       havala_date: "2023-01-27T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "mohammad",
       havala_date: "2023-01-26T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "mohammad",
       havala_date: "2023-01-25T11:45:26.074Z",
     },
     {
       havala_number1: "1003",
-      havala_number2: "2450",
+
       safe: 20,
       tarafhesab: "mohammad",
+      havala_date: "2023-01-24T11:45:26.074Z",
+    },
+    {
+      havala_number1: "1003",
+
+      safe: 20,
+      tarafhesab: "تایتسی",
+      havala_date: "2023-01-24T11:45:26.074Z",
+    },
+    {
+      havala_number1: "1003",
+
+      safe: 20,
+      tarafhesab: "۳۸۲۹۳۴",
+      havala_date: "2023-01-24T11:45:26.074Z",
+    },
+    {
+      havala_number1: "1003",
+
+      safe: 20,
+      tarafhesab: "ستثیمشیتنمشستی",
+      havala_date: "2023-01-24T11:45:26.074Z",
+    },
+    {
+      havala_number1: "1003",
+
+      safe: 20,
+      tarafhesab: "jdajkdjs sdjs",
+      havala_date: "2023-01-24T11:45:26.074Z",
+    },
+    {
+      havala_number1: "1003",
+
+      safe: 20,
+      tarafhesab: "hsjsiajssidj",
       havala_date: "2023-01-24T11:45:26.074Z",
     },
   ]);
@@ -169,7 +204,7 @@ export function Safe() {
                 <span className="money-safe-value"> . . . . </span>
               )}
               <img
-                src={shouldSecure ? "stack.png" : "close.png"}
+                src={shouldSecure ? "eye.png" : "hidden.png"}
                 alt="secureImage"
                 className="safe-secure-image"
                 onClick={() => setShouldSecure(!shouldSecure)}
@@ -183,9 +218,9 @@ export function Safe() {
                   <tr>
                     <th className="drug-code">شماره</th>
                     <th className="drug-type">نمیر حواله اول</th>
-                    <th className="drug-total">نمبر حواله دوم</th>
-                    <th className="drug-total">تاریخ حواله</th>
+                    <th className="drug-total">طرف حساب</th>
 
+                    <th className="drug-total">تاریخ حواله</th>
                     <th className="drug-total">مقدار مفاد</th>
                   </tr>
                 </thead>
@@ -197,8 +232,8 @@ export function Safe() {
                           <tr>
                             <td>{index + 1}</td>
                             <td>{havala.havala_number1}</td>
-                            <td>{havala.havala_number2}</td>
-                            <td>{havala.havala_date}</td>
+                            <td>{havala.tarafhesab}</td>
+                            <td>{havala.havala_date.slice(0, 10)}</td>
                             <td>{havala.safe}</td>
                           </tr>
                         );
