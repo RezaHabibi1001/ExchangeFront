@@ -2,8 +2,15 @@ import { Header } from "../StaticComponents/Header";
 import { SideBar } from "../StaticComponents/SideBar";
 import "../../Styles/Safe/Safe.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function Safe() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!localStorage.getItem("login")) {
+      navigate("/");
+    }
+  }, []);
   const [shouldSecure, setShouldSecure] = useState(false);
   const [filterTarafHesab, setFilterTarafHesab] = useState("");
   const [dateFilter, setDateFilter] = useState("");

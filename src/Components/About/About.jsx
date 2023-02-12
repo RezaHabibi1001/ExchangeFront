@@ -1,9 +1,17 @@
 import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import "../../Styles/About/About.css";
 
 export function About() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!localStorage.getItem("login")) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div className="container">
       <Header />

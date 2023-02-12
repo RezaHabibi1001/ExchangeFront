@@ -1,9 +1,16 @@
 import { Header } from "../StaticComponents/Header";
 import { SideBar } from "../StaticComponents/SideBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../Styles/BankCard/Card.css";
 
 export function Card() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!localStorage.getItem("login")) {
+      navigate("/");
+    }
+  }, []);
   const [addPopUp, setAddPopUp] = useState(false);
   const [editPopUp, setEditPopUp] = useState(false);
   const [searchValue, setSearchValue] = useState("");

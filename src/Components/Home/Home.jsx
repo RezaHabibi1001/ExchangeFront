@@ -1,9 +1,16 @@
 import { Header } from "../StaticComponents/Header";
 import { Search } from "../StaticComponents/Search";
 import { SideBar } from "../StaticComponents/SideBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../Styles/Home/Home.css";
 export function Home() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!localStorage.getItem("login")) {
+      navigate("/");
+    }
+  }, []);
   const [searchedValue, setSearchedValue] = useState("");
   const [currentTarafHesab, setCurrentTarafHesab] = useState("");
 

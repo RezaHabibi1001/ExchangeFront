@@ -1,9 +1,16 @@
 import { Header } from "../StaticComponents/Header";
 import { SideBar } from "../StaticComponents/SideBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../Styles/Market/Market.css";
 
 export function Market() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!localStorage.getItem("login")) {
+      navigate("/");
+    }
+  }, []);
   const [marketValue, setMarketValue] = useState(3843);
   const [editPopUp, setEditPopUp] = useState(false);
 
