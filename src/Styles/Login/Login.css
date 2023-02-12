@@ -12,6 +12,10 @@
   left: 10%;
   top: 5%;
 }
+body {
+  background-image: url("/public/exchangebg.avif");
+  background-size: cover;
+}
 .login-container {
   width: 600px;
   height: 350px;
