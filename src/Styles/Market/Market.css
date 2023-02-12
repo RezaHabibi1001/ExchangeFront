@@ -207,6 +207,8 @@ tfoot tr td:last-child {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  background-color: #ddd;
 }
 .repository-header {
   width: 50px;
