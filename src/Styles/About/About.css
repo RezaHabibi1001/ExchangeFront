@@ -6,6 +6,7 @@
   flex-direction: column;
   /* justify-content: space-between; */
 }
+
 .drugs-header {
   width: 90%;
   height: 120px;
@@ -131,6 +132,8 @@ tfoot tr td:last-child {
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;
+  background-image: url("/public/aboutbg.jpeg");
+  background-size: cover;
 }
 .about-card {
   width: 40%;
@@ -149,12 +152,12 @@ tfoot tr td:last-child {
   padding: 2px;
 }
 .about-card-fullname {
-  color: #555;
+  color: #fff;
   font-size: 25px;
   font-weight: bold;
 }
 .about-card-description {
-  color: #555;
+  color: #fff;
 }
 .about-social-container {
   width: 90%;
@@ -165,7 +168,7 @@ tfoot tr td:last-child {
 .about-card-footer {
   min-height: 150px;
   width: 100%;
-  border-top: 3px solid #aaa;
+  border-top: 3px solid #fff;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
@@ -174,7 +177,7 @@ tfoot tr td:last-child {
   padding: 10px;
 }
 .about-card-footer-skill {
-  border: 1px solid #aaa;
+  border: 1px solid #fff;
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
@@ -186,7 +189,7 @@ tfoot tr td:last-child {
   text-align: right;
   padding: 10px;
   font-size: 18px;
-  color: #555;
+  color: #fff;
   line-height: 25px;
   border-right: 2px solid var(--color-mashi);
 }
