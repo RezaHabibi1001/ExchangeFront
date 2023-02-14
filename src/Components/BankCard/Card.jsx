@@ -83,7 +83,7 @@ export function Card() {
       setTimeout(() => {
         setEditCardSuccess(false);
         setEditPopUp(false);
-      }, 2000);
+      }, 1000);
     } catch (err) {
       console.log(err);
     }
@@ -105,8 +105,7 @@ export function Card() {
       setDeleteCardSuccess(true);
       setTimeout(() => {
         setDeleteCardSuccess(false);
-      }, 2000);
-      console.log("deleted is here");
+      }, 1000);
     } catch (err) {
       console.log(err);
     }

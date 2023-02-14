@@ -36,7 +36,7 @@ export function Market() {
       setTimeout(() => {
         setMarketEditSuccess(false);
         setEditPopUp(false);
-      }, 2000);
+      }, 1000);
     } catch (err) {
       console.log(err);
     }
