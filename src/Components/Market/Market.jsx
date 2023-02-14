@@ -3,16 +3,23 @@ import { SideBar } from "../StaticComponents/SideBar";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Styles/Market/Market.css";
+import axios from "axios";
 
 export function Market() {
   const navigate = useNavigate();
+  const [marketValue, setMarketValue] = useState();
+  const [editPopUp, setEditPopUp] = useState(false);
+
   useEffect(() => {
     if (!localStorage.getItem("login")) {
       navigate("/");
     }
+    const loadMarketValue = async () => {
+      const res = await axios.get("http://localhost:4000/market");
+      setMarketValue(res.data.marketValue);
+    };
+    loadMarketValue();
   }, []);
-  const [marketValue, setMarketValue] = useState(3843);
-  const [editPopUp, setEditPopUp] = useState(false);
 
   const editMarket = (e) => {
     e.preventDefault();
