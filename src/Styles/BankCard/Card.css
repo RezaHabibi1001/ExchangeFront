@@ -9,7 +9,7 @@
 .card-header {
   width: 95%;
   height: 60px;
-  background-color: #ddd;
+  background-color: gray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -113,7 +113,7 @@ tfoot tr td:last-child {
 .addDrug-header {
   width: 100%;
   height: 50px;
-  background-color: var(--color-mashi);
+  background-color: gray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -125,7 +125,7 @@ tfoot tr td:last-child {
 .my-cardHeader {
   width: 100%;
   height: 50px;
-  background-color: var(--color-mashi);
+  background-color: gray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

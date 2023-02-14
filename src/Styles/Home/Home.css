@@ -7,9 +7,9 @@
   /* justify-content: space-between; */
 }
 .hawala-header {
-  width: 95%;
+  width: 98%;
   height: 60px;
-  background-color: #ddd;
+  background-color: gray;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -33,7 +33,7 @@
 
 /* drugs content */
 .havala-content {
-  width: 95%;
+  width: 98%;
   /* height: 65vh; */
   margin: 0 auto;
   /* background-color: #ddd; */
@@ -167,7 +167,7 @@ tfoot tr td:last-child {
 .addNormalHavala-header {
   width: 100%;
   height: 50px;
-  background-color: var(--color-mashi);
+  background-color: gray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
