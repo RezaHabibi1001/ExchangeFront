@@ -7,6 +7,9 @@ import axios from "axios";
 
 export function Market() {
   const navigate = useNavigate();
+  const [marketEditError, setMarketEditError] = useState(false);
+  const [marketEditSuccess, setMarketEditSuccess] = useState(false);
+
   const [marketValue, setMarketValue] = useState();
   const [editPopUp, setEditPopUp] = useState(false);
 
@@ -21,10 +24,22 @@ export function Market() {
     loadMarketValue();
   }, []);
 
-  const editMarket = (e) => {
+  const editMarket = async (e) => {
     e.preventDefault();
-    setMarketValue(e.target.marketValue.value);
-    setEditPopUp(false);
+
+    try {
+      await axios.put("http://localhost:4000/market", {
+        marketValue: e.target.marketValue.value,
+      });
+      setMarketValue(e.target.marketValue.value);
+      setMarketEditSuccess(true);
+      setTimeout(() => {
+        setMarketEditSuccess(false);
+        setEditPopUp(false);
+      }, 2000);
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <div className="container">
@@ -41,7 +56,22 @@ export function Market() {
                   alt="close"
                   onClick={() => setEditPopUp(false)}
                 />
-                <span>ویرایش موجودی مارکت</span>
+                {marketEditSuccess ? (
+                  <span
+                    style={{
+                      color: "#fff",
+                      border: "1px solid #6a6",
+                      padding: "8px",
+                      fontWeight: "bold",
+                      fontSize: "18px",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    موجودی ویرایش شد
+                  </span>
+                ) : (
+                  <span>ویرایش موجودی مارکت</span>
+                )}
                 <img src="bills.png" alt="logo" />
               </div>
               <form onSubmit={editMarket}>
