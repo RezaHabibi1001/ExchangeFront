@@ -241,18 +241,18 @@ export function Home() {
     havalaData = {
       havala_type: "معمولی",
       tarafHesab: e.target.tarafHesab.value,
-      havala_number1: e.target.havala_number1?.value,
-      havala_number2: e.target.havala_number2?.value,
+      havala_number1: e.target.havala_number1.value,
+      havala_number2: e.target.havala_number2.value,
       from_card: null,
       to_card: null,
-      from_city: e.target.from_city?.value,
-      to_city: e.target.to_city?.value,
+      from_city: e.target.from_city.value,
+      to_city: e.target.to_city.value,
       fullName: e.target.fullName.value,
-      havala_amount: e.target.havala_amount?.value,
-      fromMoney_toMoney: e.target.fromMoney_toMoney?.value,
-      purchased_price: e.target.purchased_price?.value,
-      sell_price: e.target.sell_price?.value,
-      commision_amount: e.target.commision_amount?.value,
+      havala_amount: e.target.havala_amount.value,
+      fromMoney_toMoney: e.target.fromMoney_toMoney.value,
+      purchased_price: e.target.purchased_price.value,
+      sell_price: e.target.sell_price.value,
+      commision_amount: e.target.commision_amount.value,
       safe_amount:
         (
           (e.target.havala_amount?.value *
@@ -645,50 +645,51 @@ export function Home() {
                 </thead>
                 <tbody>
                   {items.map((havala, index) => {
-                    if (havala?.tarafhesab.includes(currentTarafHesab)) {
-                      if (havala.fullName.includes(searchedValue)) {
-                        return (
-                          <tr>
-                            <td>{index + 1}</td>
-                            <td>{havala.havala_number1}</td>
-                            <td>{havala.havala_number2}</td>
-                            <td>{havala.from_card}</td>
-                            <td>{havala.to_card}</td>
-                            <td>{havala.fullName}</td>
-                            <td>{havala.from_city + " - " + havala.to_city}</td>
-                            <td>{havala.havala_amount}</td>
-                            <td>
-                              {havala.purchased_price +
-                                " - " +
-                                havala.sell_price}
-                            </td>
-                            <td>{havala.payed_amount}</td>
+                    {
+                      /* if (havala?.tarafhesab?.includes(currentTarafHesab)) { */
+                    }
+                    if (havala.fullName.includes(searchedValue)) {
+                      return (
+                        <tr>
+                          <td>{index + 1}</td>
+                          <td>{havala.havala_number1}</td>
+                          <td>{havala.havala_number2}</td>
+                          <td>{havala.from_card}</td>
+                          <td>{havala.to_card}</td>
+                          <td>{havala.fullName}</td>
+                          <td>{havala.from_city + " - " + havala.to_city}</td>
+                          <td>{havala.havala_amount}</td>
+                          <td>
+                            {havala.purchased_price + " - " + havala.sell_price}
+                          </td>
+                          <td>{havala.payed_amount}</td>
 
-                            <td>{havala.safe_amount}</td>
-                            <td>{havala.havala_date}</td>
+                          <td>{havala.safe_amount}</td>
+                          <td>{havala.havala_date}</td>
 
-                            <td className="home-action">
-                              <img src="edit.png" alt="edit" />
-                              <img
-                                src="delete.png"
-                                alt="delete"
-                                onClick={() => {
-                                  const filteredRows = items.filter((item) => {
-                                    if (
-                                      item.havala_number1 !=
-                                      havala.havala_number1
-                                    ) {
-                                      return item;
-                                    }
-                                  });
+                          <td className="home-action">
+                            <img src="edit.png" alt="edit" />
+                            <img
+                              src="delete.png"
+                              alt="delete"
+                              onClick={() => {
+                                const filteredRows = items.filter((item) => {
+                                  if (
+                                    item.havala_number1 != havala.havala_number1
+                                  ) {
+                                    return item;
+                                  }
+                                });
 
-                                  setItems(filteredRows);
-                                }}
-                              />
-                            </td>
-                          </tr>
-                        );
-                      }
+                                setItems(filteredRows);
+                              }}
+                            />
+                          </td>
+                        </tr>
+                      );
+                    }
+                    {
+                      /* }s */
                     }
                   })}
                 </tbody>

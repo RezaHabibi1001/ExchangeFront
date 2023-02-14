@@ -41,7 +41,7 @@
 }
 /* drugs table */
 .home-table {
-  height: 45vh;
+  /* height: 45vh; */
   direction: rtl;
   width: 100%;
   border: 1px solid #aaa;
