@@ -3,68 +3,61 @@ import { SideBar } from "../StaticComponents/SideBar";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Styles/BankCard/Card.css";
-
+import axios from "axios";
 export function Card() {
+  const [crud, setCrud] = useState("");
   const navigate = useNavigate();
-  useEffect(() => {
-    if (!localStorage.getItem("login")) {
-      navigate("/");
-    }
-  }, []);
+  const [addCardError, setAddCardError] = useState(false);
+  const [addCardSuccess, setAddCardSuccess] = useState(false);
+  const [deleteCardError, setDeleteCardError] = useState(false);
+  const [deleteCardSuccess, setDeleteCardSuccess] = useState(false);
+
   const [addPopUp, setAddPopUp] = useState(false);
   const [editPopUp, setEditPopUp] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [editRow, setEditRow] = useState();
-  const [data, setData] = useState([
-    {
-      id: "1",
-      bankName: "بانک صادارت",
-      cardNumber: "32897384",
-      shabaNumber: "9234829038490238490",
-      hesabNumber: "378394738874",
-      existance: "4485845",
-    },
-    {
-      id: "2",
-      bankName: "باک ملت",
-      cardNumber: "32897384",
-      shabaNumber: "9234829038490238490",
-      hesabNumber: "378394738874",
-
-      existance: "4485845",
-    },
-    {
-      id: "3",
-      bankName: "بانک سپهر",
-      cardNumber: "32897384",
-      shabaNumber: "9234829038490238490",
-      hesabNumber: "378394738874",
-
-      existance: "4485845",
-    },
-    {
-      id: "4",
-      bankName: "بانک ملت",
-      cardNumber: "32897384",
-      hesabNumber: "378394738874",
-      shabaNumber: "9234829038490238490",
-      existance: "4485845",
-    },
-  ]);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    if (!localStorage.getItem("login")) {
+      navigate("/");
+    }
+    const fetchAllCards = async () => {
+      try {
+        const res = await axios.get("http://localhost:4000/card");
+        setData(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchAllCards();
+  }, [crud]);
 
   //  This function is for inserting a new card
-  const addCard = (e) => {
+  const addCard = async (e) => {
     e.preventDefault();
 
     let newCard = {
-      bankName: e.target.bankName?.value,
+      cardName: e.target.cardName?.value,
       cardNumber: e.target.cardNumber?.value,
       hesabNumber: e.target.hesabNumber?.value,
       shabaNumber: e.target.shabaNumber?.value,
       existance: e.target.existance?.value,
     };
-    setData([...data, newCard]);
-    setAddPopUp(false);
+
+    try {
+      await axios.post("http://localhost:4000/card", newCard);
+      setCrud(Math.random());
+
+      setAddCardSuccess(true);
+
+      setTimeout(() => {
+        setAddCardSuccess(false);
+        setAddPopUp(false);
+      }, 1000);
+    } catch (err) {
+      console.log(err);
+    }
+    // setData([...data, newCard]);
   };
 
   //  This  function is for uodating a card
@@ -77,7 +70,7 @@ export function Card() {
       }
     });
     let updatedRow = {
-      bankName: e.target.bankName.value,
+      cardName: e.target.cardName.value,
       cardNumber: e.target.cardNumber.value,
       hesabNumber: e.target.hesabNumber.value,
       shabaNumber: e.target.shabaNumber.value,
@@ -93,26 +86,65 @@ export function Card() {
     setSearchValue(e.target.value);
   };
 
+  //  this function is for handleing   delete api
+  const handleDelete = async (existance) => {
+    console.log("existance", existance);
+    try {
+      await axios.delete("http://localhost:4000/card/" + existance);
+      setCrud(Math.random());
+      setDeleteCardSuccess(true);
+      setTimeout(() => {
+        setDeleteCardSuccess(false);
+      }, 2000);
+      console.log("deleted is here");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="container">
       <Header />
       <SideBar />
       {addPopUp ? (
         <div className="addDrug-content">
-          <div className="addDrug-header">
+          <div className="my-cardHeader">
             <img
+              style={{ width: "20px", height: "20px" }}
               src="close.png"
               alt="close"
               onClick={() => setAddPopUp(false)}
             />
-            <span>افزودن کارت بانکی جدید</span>
-            <img src="bills.png" alt="logo" />
+            {addCardSuccess ? (
+              <span
+                style={{
+                  color: "#fff",
+                  border: "1px solid #6a6",
+                  padding: "8px",
+                  fontWeight: "bold",
+                  fontSize: "18px",
+                  borderRadius: "10px",
+                }}
+              >
+                کارت افزوده شد
+              </span>
+            ) : (
+              <span style={{ color: "#fff", fontWeight: "bold" }}>
+                افزودن کارت بانکی جدید
+              </span>
+            )}
+
+            <img
+              style={{ width: "20px", height: "20px" }}
+              src="bills.png"
+              alt="logo"
+            />
           </div>
           <form onSubmit={addCard}>
             <div className="addDrug-body">
               <input
                 type="text"
-                name="bankName"
+                name="cardName"
                 placeholder="نام کارت بانکی"
                 className="addDrug-body-input"
               />
@@ -163,9 +195,9 @@ export function Card() {
           <form onSubmit={editCard}>
             <div className="addDrug-body">
               <input
-                defaultValue={editRow?.bankName}
+                defaultValue={editRow?.cardName}
                 type="text"
-                name="bankName"
+                name="cardName"
                 placeholder="نام کارت بانکی"
                 className="addDrug-body-input"
               />
@@ -218,6 +250,20 @@ export function Card() {
                 onChange={handleSearch}
               />
             </div>
+            {deleteCardSuccess ? (
+              <span
+                style={{
+                  color: "#6a6",
+                  border: "1px solid #6a6",
+                  padding: "8px",
+                  fontWeight: "bold",
+                  fontSize: "18px",
+                  borderRadius: "10px",
+                }}
+              >
+                کارت موفقانه حذف شد
+              </span>
+            ) : null}
             <span
               className="add-newDard btn-user"
               onClick={() => setAddPopUp(true)}
@@ -240,16 +286,16 @@ export function Card() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((card, index) => {
-                    if (card.bankName.includes(searchValue)) {
+                  {data?.map((card, index) => {
+                    if (card.cardName.includes(searchValue)) {
                       return (
                         <tr>
                           <td>{index + 1}</td>
-                          <td>{card?.bankName}</td>
-                          <td>{card?.cardNumber}</td>
-                          <td>{card?.shabaNumber}</td>
-                          <td>{card?.existance}</td>
-                          <td>{card?.hesabNumber}</td>
+                          <td>{card.cardName}</td>
+                          <td>{card.cardNumber}</td>
+                          <td>{card.shabaNumber}</td>
+                          <td>{card.hesabNumber}</td>
+                          <td>{card.existance}</td>
 
                           <td className="home-action">
                             <img
@@ -263,14 +309,7 @@ export function Card() {
                             <img
                               src="delete.png"
                               alt="delete"
-                              onClick={() => {
-                                const filteredRows = data.filter((item) => {
-                                  if (item.cardNumber != card.cardNumber) {
-                                    return item;
-                                  }
-                                });
-                                setData([...filteredRows]);
-                              }}
+                              onClick={() => handleDelete(card.existance)}
                             />
                           </td>
                         </tr>
