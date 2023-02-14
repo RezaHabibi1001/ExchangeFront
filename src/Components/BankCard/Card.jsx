@@ -11,6 +11,8 @@ export function Card() {
   const [addCardSuccess, setAddCardSuccess] = useState(false);
   const [deleteCardError, setDeleteCardError] = useState(false);
   const [deleteCardSuccess, setDeleteCardSuccess] = useState(false);
+  const [editCardError, setEditCardError] = useState(false);
+  const [editCardSuccess, setEditCardSuccess] = useState(false);
 
   const [addPopUp, setAddPopUp] = useState(false);
   const [editPopUp, setEditPopUp] = useState(false);
@@ -46,8 +48,8 @@ export function Card() {
 
     try {
       await axios.post("http://localhost:4000/card", newCard);
-      setCrud(Math.random());
 
+      setCrud(Math.random());
       setAddCardSuccess(true);
 
       setTimeout(() => {
@@ -61,14 +63,9 @@ export function Card() {
   };
 
   //  This  function is for uodating a card
-  const editCard = (e) => {
+  const editCard = async (e) => {
     e.preventDefault();
 
-    const filteredRows = data.filter((item) => {
-      if (item.cardNumber != editRow.cardNumber) {
-        return item;
-      }
-    });
     let updatedRow = {
       cardName: e.target.cardName.value,
       cardNumber: e.target.cardNumber.value,
@@ -76,8 +73,21 @@ export function Card() {
       shabaNumber: e.target.shabaNumber.value,
       existance: e.target.existance.value,
     };
-    setData([...filteredRows, updatedRow]);
-    setEditPopUp(false);
+    try {
+      await axios.put(
+        "http://localhost:4000/card/" + editRow.existance,
+        updatedRow
+      );
+      setEditCardSuccess(true);
+      setCrud(Math.random());
+      setTimeout(() => {
+        setEditCardSuccess(false);
+        setEditPopUp(false);
+      }, 2000);
+    } catch (err) {
+      console.log(err);
+    }
+    // setData([...filteredRows, updatedRow]);
   };
 
   //  This function  is  for searchnig a   card
@@ -189,7 +199,23 @@ export function Card() {
               alt="close"
               onClick={() => setEditPopUp(false)}
             />
-            <span>ویرایش کارت بانکی</span>
+
+            {editCardSuccess ? (
+              <span
+                style={{
+                  color: "#fff",
+                  border: "1px solid #6a6",
+                  padding: "8px",
+                  fontWeight: "bold",
+                  fontSize: "18px",
+                  borderRadius: "10px",
+                }}
+              >
+                کارت ویرایش شد
+              </span>
+            ) : (
+              <span>ویرایش کارت بانکی</span>
+            )}
             <img src="bills.png" alt="logo" />
           </div>
           <form onSubmit={editCard}>
