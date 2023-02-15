@@ -7,6 +7,16 @@ import "../../Styles/Home/Home.css";
 import axios from "axios";
 export function Home() {
   const navigate = useNavigate();
+  const [crud, setCrud] = useState();
+  const [searchedValue, setSearchedValue] = useState("");
+  const [currentTarafHesab, setCurrentTarafHesab] = useState("");
+
+  const [items, setItems] = useState([]);
+  const [cardToCard, setcardToCard] = useState(false);
+  const [normaHavala, setNormalHavala] = useState(false);
+  const [havalaTypeSelected, setHavalaTypeSelected] = useState("");
+
+  const [deleteSuccess, setDeleteSuccess] = useState(false);
   useEffect(() => {
     if (!localStorage.getItem("login")) {
       navigate("/");
@@ -20,15 +30,7 @@ export function Home() {
       }
     };
     loadAllRemittances();
-  }, []);
-  const [searchedValue, setSearchedValue] = useState("");
-  const [currentTarafHesab, setCurrentTarafHesab] = useState("");
-
-  const [items, setItems] = useState([]);
-  const [cardToCard, setcardToCard] = useState(false);
-  const [normaHavala, setNormalHavala] = useState(false);
-  const [havalaTypeSelected, setHavalaTypeSelected] = useState("");
-  console.log("havalaTypeSelected", havalaTypeSelected);
+  }, [crud]);
   let havalaData = {};
   const [info, setInfo] = useState({
     havalaNumber1: "",
@@ -41,14 +43,11 @@ export function Home() {
     sellPrice: "",
     safeAmount: "",
   });
-  function handleNormalHavala(e) {
+  const handleNormalHavala = async (e) => {
     e.preventDefault();
     const date = new Date();
-    let havala_date =
-      date.getFullYear() + "-" + date.getDay() + "-" + date.getDate();
 
     havalaData = {
-      havala_type: "معمولی",
       tarafHesab: e.target.tarafHesab.value,
       havala_number1: e.target.havala_number1.value,
       havala_number2: e.target.havala_number2.value,
@@ -63,11 +62,17 @@ export function Home() {
       sell_price: e.target.sell_price.value,
       commision_amount: e.target.commision_amount.value,
       safe_amount: e.target.safe_amount.value,
-      havala_date: havala_date,
+      havala_date: date.toISOString(),
     };
-    setItems([havalaData, ...items]);
+    try {
+      await axios.post("http://localhost:4000/createHavala", havalaData);
+      setCrud(Math.random());
+    } catch (err) {
+      console.log(err);
+    }
+    // setItems([havalaData, ...items]);
     setNormalHavala(false);
-  }
+  };
   function handleCardtoCard(e) {
     e.preventDefault();
     const date = new Date();
@@ -106,6 +111,20 @@ export function Home() {
     console.log("e.target.tarafhesab.value", e.target.value);
     setCurrentTarafHesab(e.target.value);
   };
+
+  const handleDelete = async (ID) => {
+    try {
+      await axios.delete("http://localhost:4000/remittances/" + ID);
+      setDeleteSuccess(true);
+      setCrud(Math.random());
+      setTimeout(() => {
+        setDeleteSuccess(false);
+      }, 2000);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="container">
       <Header />
@@ -408,6 +427,11 @@ export function Home() {
               <option value="اکبر">حساب اکبر</option>
               <option value="محمد">حساب محمد</option>
             </select>
+            {deleteSuccess ? (
+              <span style={{ fontWeight: "bold", color: "#fff" }}>
+                حواله حذف شد
+              </span>
+            ) : null}
             <span
               className="add-havala btn-user"
               onClick={() => setcardToCard(true)}
@@ -471,17 +495,7 @@ export function Home() {
                             <img
                               src="delete.png"
                               alt="delete"
-                              onClick={() => {
-                                const filteredRows = items.filter((item) => {
-                                  if (
-                                    item.havala_number1 != havala.havala_number1
-                                  ) {
-                                    return item;
-                                  }
-                                });
-
-                                setItems(filteredRows);
-                              }}
+                              onClick={() => handleDelete(havala.ID)}
                             />
                           </td>
                         </tr>

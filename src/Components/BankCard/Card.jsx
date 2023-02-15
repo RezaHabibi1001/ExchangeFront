@@ -98,7 +98,6 @@ export function Card() {
 
   //  this function is for handleing   delete api
   const handleDelete = async (existance) => {
-    console.log("existance", existance);
     try {
       await axios.delete("http://localhost:4000/card/" + existance);
       setCrud(Math.random());

@@ -49,3 +49,6 @@ body {
 .btn-user {
   background-color: var(--color-mashi);
 }
+img:hover {
+  cursor: pointer;
+}
