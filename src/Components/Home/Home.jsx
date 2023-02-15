@@ -73,36 +73,36 @@ export function Home() {
     // setItems([havalaData, ...items]);
     setNormalHavala(false);
   };
-  function handleCardtoCard(e) {
+  const handleCardtoCard = async (e) => {
     e.preventDefault();
     const date = new Date();
-    let havala_date =
-      date.getFullYear() + "-" + date.getDay() + "-" + date.getDate();
+
     havalaData = {
-      havala_type: "کارت به کارت",
       tarafHesab: e.target.tarafHesab.value,
-      havala_number1: e.target.havala_number1?.value,
+      havala_number1: e.target.havala_number1.value,
       havala_number2: null,
-      from_card:
-        e.target.my_card?.value != ""
-          ? e.target.my_card?.value
-          : e.target.from_card?.value,
-      to_card: e.target.to_card?.value,
+      from_card: e.target.from_card.value,
+      to_card: e.target.to_card.value,
+      from_city: e.target.from_city.value,
+      to_city: e.target.to_city.value,
       fullName: e.target.fullName.value,
-      from_city: e.target.from_city?.value,
-      to_city: e.target.to_city?.value,
-      havala_amount: e.target.havala_amount?.value,
-      fromMoney_toMoney: e.target.fromMoney_toMoney?.value,
-      purchased_price: e.target.purchased_price?.value,
+      havala_amount: e.target.havala_amount.value,
+      fromMoney_toMoney: e.target.fromMoney_toMoney.value,
+      purchased_price: e.target.purchased_price.value,
+      sell_price: e.target.sell_price.value,
       commision_amount: 0,
-      sell_price: e.target.sell_price?.value,
-      safe_amount: e.target.safe_amount?.value,
-      havala_date: havala_date,
+      safe_amount: e.target.safe_amount.value,
+      havala_date: date.toISOString(),
     };
-    setItems([havalaData, ...items]);
+    try {
+      await axios.post("http://localhost:4000/createHavala", havalaData);
+      setCrud(Math.random());
+    } catch (err) {
+      console.log(err);
+    }
+    // setItems([havalaData, ...items]);
     setcardToCard(false);
-    console.log(havalaData);
-  }
+  };
 
   const handleSearch = (e) => {
     setSearchedValue(e.target.value);
